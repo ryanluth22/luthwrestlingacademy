@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luth Wrestling Academy</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 28px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8%;
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.92) 0%,
+          rgba(0,0,0,.72) 50%,
+          rgba(0,0,0,.45) 100%
+        ),
+        url("hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(58px, 9vw, 125px);
+      line-height: .86;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: -5px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 600px;
+      color: #d4d4d4;
+      margin-bottom: 38px;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 17px 27px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: #d8d8d8;
+    }
+
+    .btn-secondary {
+      border: 1px solid #777;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: black;
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: white;
+      color: #111;
+      padding: 110px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .intro h2 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -3px;
+    }
+
+    .intro-text p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    /* PROGRAMS */
+
+    .programs {
+      padding: 110px 8%;
+      background: #111;
+    }
+
+    .programs h2 {
+      font-size: clamp(42px, 6vw, 72px);
+      text-transform: uppercase;
+      letter-spacing: -3px;
+      margin-bottom: 55px;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .program {
+      background: #1b1b1b;
+      padding: 48px 38px;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .program-number {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 70px;
+    }
+
+    .program h3 {
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .program p {
+      color: #aaa;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .program a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-top: auto;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 120px 8%;
+      background: white;
+      color: black;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(48px, 8vw, 100px);
+      text-transform: uppercase;
+      line-height: .9;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .cta p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .cta .btn-primary {
+      background: black;
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 8%;
+      background: #080808;
+      display: flex;
+      justify-content: space-between;
+      color: #777;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 22px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 120px 6% 70px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        padding: 80px 6%;
+        gap: 35px;
+      }
+
+      .programs {
+        padding: 80px 6%;
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 90px 6%;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Luth Wrestling Academy</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#programs">Training</a>
+      <a href="#clinics">Clinics</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Middletown, Connecticut
+      </div>
+
+      <h1>
+        Train<br>
+        With Purpose.
+      </h1>
+
+      <p>
+        High-level wrestling training built around technical development,
+        individualized coaching, and competitive growth.
+      </p>
+
+      <div class="buttons">
+        <a href="#programs" class="btn btn-primary">
+          Explore Training
+        </a>
+
+        <a href="#clinics" class="btn btn-secondary">
+          Upcoming Clinics
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="intro" id="about">
+
+    <div>
+      <div class="section-label">
+        Luth Wrestling Academy
+      </div>
+
+      <h2>
+        Better Training.<br>
+        Better Wrestling.
+      </h2>
+    </div>
+
+    <div class="intro-text">
+
+      <p>
+        Luth Wrestling Academy provides focused wrestling instruction
+        for athletes looking to improve technique, develop confidence,
+        and take the next step in their wrestling.
+      </p>
+
+      <p>
+        Training is designed around quality instruction and meaningful
+        repetitions rather than simply putting more hours on the mat.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="programs" id="programs">
+
+    <div class="section-label">
+      Training
+    </div>
+
+    <h2>
+      Ways To Train
+    </h2>
+
+    <div class="program-grid">
+
+      <div class="program">
+
+        <div class="program-number">01</div>
+
+        <h3>Club Training</h3>
+
+        <p>
+          Consistent small-group practices focused on technical
+          development and individualized attention.
+        </p>
+
+        <a href="#">Learn More →</a>
+
+      </div>
+
+
+      <div class="program" id="clinics">
+
+        <div class="program-number">02</div>
+
+        <h3>Clinics</h3>
+
+        <p>
+          Focused training sessions covering specific positions,
+          techniques, and areas of wrestling.
+        </p>
+
+        <a href="#">View Clinics →</a>
+
+      </div>
+
+
+      <div class="program">
+
+        <div class="program-number">03</div>
+
+        <h3>Private Training</h3>
+
+        <p>
+          Individual and small-group instruction built around
+          the specific needs of each wrestler.
+        </p>
+
+        <a href="#">Learn More →</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta" id="contact">
+
+    <div class="section-label">
+      Get Started
+    </div>
+
+    <h2>
+      Ready To<br>
+      Get Better?
+    </h2>
+
+    <p>
+      Learn more about training opportunities and upcoming sessions.
+    </p>
+
+    <a href="#" class="btn btn-primary">
+      Contact Us
+    </a>
+
+  </section>
+
+
+  <footer>
+
+    <div>
+      © 2026 Luth Wrestling Academy
+    </div>
+
+    <div>
+      Middletown, Connecticut
+    </div>
+
+  </footer>
+
+</body>
+</html>
