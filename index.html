@@ -23,8 +23,6 @@
       color: white;
     }
 
-    /* NAVIGATION */
-
     nav {
       position: absolute;
       top: 0;
@@ -58,15 +56,12 @@
       text-transform: uppercase;
     }
 
-    /* HERO */
-
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 120px 8%;
       position: relative;
-
       background:
         linear-gradient(
           90deg,
@@ -75,7 +70,6 @@
           rgba(0,0,0,.45) 100%
         ),
         url("hero.jpg");
-
       background-size: cover;
       background-position: center;
     }
@@ -108,8 +102,6 @@
       color: #d4d4d4;
       margin-bottom: 38px;
     }
-
-    /* BUTTONS */
 
     .buttons {
       display: flex;
@@ -147,8 +139,6 @@
       color: black;
     }
 
-    /* INTRO */
-
     .intro {
       background: white;
       color: #111;
@@ -178,10 +168,8 @@
       font-size: 18px;
       line-height: 1.7;
       color: #555;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
-
-    /* PROGRAMS */
 
     .programs {
       padding: 110px 8%;
@@ -197,7 +185,7 @@
 
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2px;
     }
 
@@ -237,8 +225,6 @@
       margin-top: auto;
     }
 
-    /* CTA */
-
     .cta {
       padding: 120px 8%;
       background: white;
@@ -265,8 +251,6 @@
       color: white;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 45px 8%;
       background: #080808;
@@ -278,10 +262,7 @@
       letter-spacing: 1px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 800px) {
-
       nav {
         padding: 22px 5%;
       }
@@ -321,7 +302,6 @@
         gap: 10px;
       }
     }
-
   </style>
 </head>
 
@@ -333,14 +313,12 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#programs">Training</a>
-      <a href="#clinics">Clinics</a>
+      <a href="#events">Events</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-
   <section class="hero">
-
     <div class="hero-content">
 
       <div class="eyebrow">
@@ -353,24 +331,21 @@
       </h1>
 
       <p>
-        High-level wrestling training built around technical development,
-        individualized coaching, and competitive growth.
+        Individualized instruction with proven results.
       </p>
 
       <div class="buttons">
         <a href="#programs" class="btn btn-primary">
-          Explore Training
+          Practice Availability
         </a>
 
-        <a href="#clinics" class="btn btn-secondary">
-          Upcoming Clinics
+        <a href="#events" class="btn btn-secondary">
+          Upcoming Events
         </a>
       </div>
 
     </div>
-
   </section>
-
 
   <section class="intro" id="about">
 
@@ -388,20 +363,20 @@
     <div class="intro-text">
 
       <p>
-        Luth Wrestling Academy provides focused wrestling instruction
-        for athletes looking to improve technique, develop confidence,
-        and take the next step in their wrestling.
+        The Luth Wrestling Academy specializes in providing focused,
+        individualized training in small group sessions, private lessons,
+        and film review. We also provide open mat opportunities for larger
+        group training, along with specific technique clinic opportunities
+        every month.
       </p>
 
       <p>
-        Training is designed around quality instruction and meaningful
-        repetitions rather than simply putting more hours on the mat.
+        See below for our rates, availability, and ways to train.
       </p>
 
     </div>
 
   </section>
-
 
   <section class="programs" id="programs">
 
@@ -416,56 +391,60 @@
     <div class="program-grid">
 
       <div class="program">
-
         <div class="program-number">01</div>
 
-        <h3>Club Training</h3>
+        <h3>Small Group Lessons</h3>
 
         <p>
-          Consistent small-group practices focused on technical
-          development and individualized attention.
+          A weekly session capped at 14 wrestlers to allow for more focused,
+          individualized lessons. Includes free admission to our open mat
+          sessions, clinics, and discounted rates for private lessons and
+          multi-day camps.
         </p>
 
         <a href="#">Learn More →</a>
-
       </div>
 
-
-      <div class="program" id="clinics">
-
+      <div class="program">
         <div class="program-number">02</div>
 
-        <h3>Clinics</h3>
+        <h3>Private Lessons</h3>
 
         <p>
-          Focused training sessions covering specific positions,
-          techniques, and areas of wrestling.
+          Schedule private / small group lessons with one of our coaches.
+        </p>
+
+        <a href="#">Learn More →</a>
+      </div>
+
+      <div class="program" id="events">
+        <div class="program-number">03</div>
+
+        <h3>Upcoming Clinics</h3>
+
+        <p>
+          Check for any upcoming clinics.
         </p>
 
         <a href="#">View Clinics →</a>
-
       </div>
 
-
       <div class="program">
+        <div class="program-number">04</div>
 
-        <div class="program-number">03</div>
-
-        <h3>Private Training</h3>
+        <h3>Open Mat Sessions</h3>
 
         <p>
-          Individual and small-group instruction built around
-          the specific needs of each wrestler.
+          Our open mat sessions are for any wrestlers ages 13 &amp; up who
+          are seeking an additional night to train with high-level coaching.
         </p>
 
-        <a href="#">Learn More →</a>
-
+        <a href="#">View Availability →</a>
       </div>
 
     </div>
 
   </section>
-
 
   <section class="cta" id="contact">
 
@@ -488,9 +467,7 @@
 
   </section>
 
-
   <footer>
-
     <div>
       © 2026 Luth Wrestling Academy
     </div>
@@ -498,7 +475,6 @@
     <div>
       Middletown, Connecticut
     </div>
-
   </footer>
 
 </body>
