@@ -23,6 +23,8 @@
       color: white;
     }
 
+    /* NAVIGATION */
+
     nav {
       position: absolute;
       top: 0;
@@ -56,12 +58,15 @@
       text-transform: uppercase;
     }
 
+    /* HERO */
+
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 120px 8%;
       position: relative;
+
       background:
         linear-gradient(
           90deg,
@@ -70,6 +75,7 @@
           rgba(0,0,0,.45) 100%
         ),
         url("hero.jpg");
+
       background-size: cover;
       background-position: center;
     }
@@ -102,6 +108,8 @@
       color: #d4d4d4;
       margin-bottom: 38px;
     }
+
+    /* BUTTONS */
 
     .buttons {
       display: flex;
@@ -139,6 +147,8 @@
       color: black;
     }
 
+    /* INTRO */
+
     .intro {
       background: white;
       color: #111;
@@ -171,6 +181,8 @@
       margin-bottom: 24px;
     }
 
+    /* PROGRAMS */
+
     .programs {
       padding: 110px 8%;
       background: #111;
@@ -185,7 +197,7 @@
 
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
     }
 
@@ -222,260 +234,3 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: bold;
-      margin-top: auto;
-    }
-
-    .cta {
-      padding: 120px 8%;
-      background: white;
-      color: black;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(48px, 8vw, 100px);
-      text-transform: uppercase;
-      line-height: .9;
-      letter-spacing: -4px;
-      margin-bottom: 30px;
-    }
-
-    .cta p {
-      color: #555;
-      font-size: 18px;
-      margin-bottom: 35px;
-    }
-
-    .cta .btn-primary {
-      background: black;
-      color: white;
-    }
-
-    footer {
-      padding: 45px 8%;
-      background: #080808;
-      display: flex;
-      justify-content: space-between;
-      color: #777;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 800px) {
-      nav {
-        padding: 22px 5%;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding: 120px 6% 70px;
-      }
-
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      .intro {
-        grid-template-columns: 1fr;
-        padding: 80px 6%;
-        gap: 35px;
-      }
-
-      .programs {
-        padding: 80px 6%;
-      }
-
-      .program-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta {
-        padding: 90px 6%;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav>
-    <div class="logo">Luth Wrestling Academy</div>
-
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#programs">Training</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        Middletown, Connecticut
-      </div>
-
-      <h1>
-        Train<br>
-        With Purpose.
-      </h1>
-
-      <p>
-        Individualized instruction with proven results.
-      </p>
-
-      <div class="buttons">
-        <a href="#programs" class="btn btn-primary">
-          Practice Availability
-        </a>
-
-        <a href="#events" class="btn btn-secondary">
-          Upcoming Events
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="intro" id="about">
-
-    <div>
-      <div class="section-label">
-        Luth Wrestling Academy
-      </div>
-
-      <h2>
-        Better Training.<br>
-        Better Wrestling.
-      </h2>
-    </div>
-
-    <div class="intro-text">
-
-      <p>
-        The Luth Wrestling Academy specializes in providing focused,
-        individualized training in small group sessions, private lessons,
-        and film review. We also provide open mat opportunities for larger
-        group training, along with specific technique clinic opportunities
-        every month.
-      </p>
-
-      <p>
-        See below for our rates, availability, and ways to train.
-      </p>
-
-    </div>
-
-  </section>
-
-  <section class="programs" id="programs">
-
-    <div class="section-label">
-      Training
-    </div>
-
-    <h2>
-      Ways To Train
-    </h2>
-
-    <div class="program-grid">
-
-      <div class="program">
-        <div class="program-number">01</div>
-
-        <h3>Small Group Lessons</h3>
-
-        <p>
-          A weekly session capped at 14 wrestlers to allow for more focused,
-          individualized lessons. Includes free admission to our open mat
-          sessions, clinics, and discounted rates for private lessons and
-          multi-day camps.
-        </p>
-
-        <a href="#">Learn More →</a>
-      </div>
-
-      <div class="program">
-        <div class="program-number">02</div>
-
-        <h3>Private Lessons</h3>
-
-        <p>
-          Schedule private / small group lessons with one of our coaches.
-        </p>
-
-        <a href="#">Learn More →</a>
-      </div>
-
-      <div class="program" id="events">
-        <div class="program-number">03</div>
-
-        <h3>Upcoming Clinics</h3>
-
-        <p>
-          Check for any upcoming clinics.
-        </p>
-
-        <a href="#">View Clinics →</a>
-      </div>
-
-      <div class="program">
-        <div class="program-number">04</div>
-
-        <h3>Open Mat Sessions</h3>
-
-        <p>
-          Our open mat sessions are for any wrestlers ages 13 &amp; up who
-          are seeking an additional night to train with high-level coaching.
-        </p>
-
-        <a href="#">View Availability →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="cta" id="contact">
-
-    <div class="section-label">
-      Get Started
-    </div>
-
-    <h2>
-      Ready To<br>
-      Get Better?
-    </h2>
-
-    <p>
-      Learn more about training opportunities and upcoming sessions.
-    </p>
-
-    <a href="#" class="btn btn-primary">
-      Contact Us
-    </a>
-
-  </section>
-
-  <footer>
-    <div>
-      © 2026 Luth Wrestling Academy
-    </div>
-
-    <div>
-      Middletown, Connecticut
-    </div>
-  </footer>
-
-</body>
-</html>
