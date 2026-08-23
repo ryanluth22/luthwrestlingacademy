@@ -66,6 +66,7 @@
       align-items: center;
       padding: 120px 8%;
       position: relative;
+
       background:
         linear-gradient(
           90deg,
@@ -80,7 +81,7 @@
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 950px;
     }
 
     .eyebrow {
@@ -92,12 +93,12 @@
     }
 
     h1 {
-      font-size: clamp(58px, 9vw, 125px);
+      font-size: clamp(54px, 8.5vw, 118px);
       line-height: .86;
       text-transform: uppercase;
       font-weight: 900;
       letter-spacing: -5px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .hero p {
@@ -182,7 +183,7 @@
       margin-bottom: 24px;
     }
 
-    /* PROGRAMS */
+    /* TRAINING */
 
     .programs {
       padding: 110px 8%;
@@ -196,22 +197,36 @@
     .program-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
+      gap: 3px;
     }
 
-    .program {
+    .program-card {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
       background: #1b1b1b;
       padding: 48px 38px;
       min-height: 330px;
-      display: flex;
-      flex-direction: column;
+      transition:
+        background .2s ease,
+        transform .2s ease;
+    }
+
+    .program-card:hover {
+      background: #262626;
+      transform: translateY(-2px);
     }
 
     .program-featured {
       grid-column: 1 / -1;
-      min-height: 420px;
+      min-height: 430px;
       background: #222;
       padding: 64px 48px;
+    }
+
+    .program-featured:hover {
+      background: #2c2c2c;
     }
 
     .program-number {
@@ -222,25 +237,25 @@
 
     .program-featured .program-number {
       font-size: 18px;
-      margin-bottom: 95px;
+      margin-bottom: 100px;
     }
 
-    .program h3 {
+    .program-card h3 {
       font-size: 30px;
       text-transform: uppercase;
       margin-bottom: 15px;
     }
 
     .program-featured h3 {
-      font-size: clamp(42px, 5vw, 64px);
+      font-size: clamp(42px, 5vw, 66px);
       letter-spacing: -2px;
     }
 
-    .program p {
+    .program-card p {
       color: #aaa;
       line-height: 1.6;
       margin-bottom: 25px;
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .program-featured p {
@@ -248,9 +263,8 @@
       line-height: 1.7;
     }
 
-    .program a {
+    .program-link {
       color: white;
-      text-decoration: none;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -258,8 +272,13 @@
       margin-top: auto;
     }
 
-    .program a:hover {
-      opacity: .7;
+    .arrow {
+      display: inline-block;
+      transition: transform .2s ease;
+    }
+
+    .program-card:hover .arrow {
+      transform: translateX(5px);
     }
 
     /* COACHES */
@@ -276,22 +295,18 @@
 
     .coach-profile {
       display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) 1.6fr;
+      grid-template-columns: minmax(280px, .8fr) 1.6fr;
       gap: 60px;
       align-items: start;
     }
 
     .coach-photo {
-      background: #d8d2c7;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: bold;
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background: #ddd;
     }
 
     .coach-name {
@@ -308,7 +323,34 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #666;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .highlight {
+      background: #dfdfdf;
+      color: #111;
+      padding: 11px 16px;
+      min-width: 120px;
+    }
+
+    .highlight strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 3px;
+    }
+
+    .highlight span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #666;
     }
 
     .coach-bio p {
@@ -316,32 +358,6 @@
       line-height: 1.75;
       color: #444;
       margin-bottom: 22px;
-    }
-
-    .highlights {
-      margin-top: 35px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-
-    .highlight {
-      background: #111;
-      color: white;
-      padding: 24px;
-    }
-
-    .highlight strong {
-      display: block;
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .highlight span {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #aaa;
     }
 
     /* CTA */
@@ -354,17 +370,18 @@
     }
 
     .cta h2 {
-      font-size: clamp(48px, 8vw, 100px);
+      font-size: clamp(58px, 9vw, 110px);
       text-transform: uppercase;
       line-height: .9;
       letter-spacing: -4px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    .cta p {
-      color: #555;
-      font-size: 18px;
-      margin-bottom: 35px;
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .cta .btn-primary {
@@ -374,6 +391,16 @@
 
     .cta .btn-primary:hover {
       background: #333;
+    }
+
+    .cta .btn-secondary {
+      border: 1px solid #222;
+      color: black;
+    }
+
+    .cta .btn-secondary:hover {
+      background: black;
+      color: white;
     }
 
     /* FOOTER */
@@ -442,11 +469,7 @@
       }
 
       .coach-photo {
-        min-height: 420px;
-      }
-
-      .highlights {
-        grid-template-columns: 1fr;
+        height: 480px;
       }
 
       .cta {
@@ -479,10 +502,10 @@
     </div>
   </nav>
 
-
   <!-- HERO -->
 
   <section class="hero">
+
     <div class="hero-content">
 
       <div class="eyebrow">
@@ -490,8 +513,9 @@
       </div>
 
       <h1>
-        Train<br>
-        With Purpose.
+        Luth<br>
+        Wrestling<br>
+        Academy
       </h1>
 
       <p>
@@ -499,6 +523,7 @@
       </p>
 
       <div class="buttons">
+
         <a href="#programs" class="btn btn-primary">
           Practice Availability
         </a>
@@ -506,17 +531,19 @@
         <a href="#events" class="btn btn-secondary">
           Upcoming Events
         </a>
+
       </div>
 
     </div>
-  </section>
 
+  </section>
 
   <!-- ABOUT -->
 
   <section class="intro" id="about">
 
     <div>
+
       <div class="section-label">
         Luth Wrestling Academy
       </div>
@@ -525,6 +552,7 @@
         Better Training.<br>
         Better Wrestling.
       </h2>
+
     </div>
 
     <div class="intro-text">
@@ -545,7 +573,6 @@
 
   </section>
 
-
   <!-- TRAINING -->
 
   <section class="programs" id="programs">
@@ -562,7 +589,7 @@
 
       <!-- PRIVATE LESSONS -->
 
-      <div class="program program-featured">
+      <a href="#" class="program-card program-featured">
 
         <div class="program-number">
           01
@@ -578,16 +605,16 @@
           Click to see rates &amp; availability.
         </p>
 
-        <a href="#">
-          Rates &amp; Availability →
-        </a>
+        <div class="program-link">
+          Rates &amp; Availability
+          <span class="arrow">→</span>
+        </div>
 
-      </div>
-
+      </a>
 
       <!-- UPCOMING CLINICS -->
 
-      <div class="program" id="events">
+      <a href="#" class="program-card" id="events">
 
         <div class="program-number">
           02
@@ -603,16 +630,16 @@
           and read more.
         </p>
 
-        <a href="#">
-          View Clinics →
-        </a>
+        <div class="program-link">
+          View Clinics
+          <span class="arrow">→</span>
+        </div>
 
-      </div>
-
+      </a>
 
       <!-- OPEN MAT -->
 
-      <div class="program">
+      <a href="#" class="program-card">
 
         <div class="program-number">
           03
@@ -624,20 +651,20 @@
 
         <p>
           Our open mat sessions happen once a week and are available to anyone
-          13 &amp; up seeking additional wrestling training.
-          Any skill level welcome! Click to see open mat times.
+          13 &amp; up seeking additional wrestling training. Any skill level
+          welcome! Click to see open mat times.
         </p>
 
-        <a href="#">
-          Open Mat Times →
-        </a>
+        <div class="program-link">
+          Open Mat Times
+          <span class="arrow">→</span>
+        </div>
 
-      </div>
+      </a>
 
     </div>
 
   </section>
-
 
   <!-- COACHES -->
 
@@ -653,9 +680,11 @@
 
     <div class="coach-profile">
 
-      <div class="coach-photo">
-        Coach Photo
-      </div>
+      <img
+        src="ryan-luth.jpg"
+        alt="Ryan Luth"
+        class="coach-photo"
+      >
 
       <div class="coach-bio">
 
@@ -665,6 +694,25 @@
 
         <div class="coach-role">
           Associate Head Coach · Wesleyan University
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlight">
+            <strong>3×</strong>
+            <span>All-American</span>
+          </div>
+
+          <div class="highlight">
+            <strong>101–11</strong>
+            <span>Collegiate Record</span>
+          </div>
+
+          <div class="highlight">
+            <strong>220–19</strong>
+            <span>High School Record</span>
+          </div>
+
         </div>
 
         <p>
@@ -700,31 +748,11 @@
           earned Scholar All-American honors in all four years of high school.
         </p>
 
-        <div class="highlights">
-
-          <div class="highlight">
-            <strong>3×</strong>
-            <span>All-American</span>
-          </div>
-
-          <div class="highlight">
-            <strong>101–11</strong>
-            <span>Collegiate Record</span>
-          </div>
-
-          <div class="highlight">
-            <strong>220–19</strong>
-            <span>High School Record</span>
-          </div>
-
-        </div>
-
       </div>
 
     </div>
 
   </section>
-
 
   <!-- CONTACT -->
 
@@ -735,20 +763,22 @@
     </div>
 
     <h2>
-      Ready To<br>
-      Get Better?
+      Let's Work
     </h2>
 
-    <p>
-      Learn more about training opportunities and upcoming sessions.
-    </p>
+    <div class="cta-buttons">
 
-    <a href="#" class="btn btn-primary">
-      Contact Us
-    </a>
+      <a href="#" class="btn btn-primary">
+        Book a Session
+      </a>
+
+      <a href="#" class="btn btn-secondary">
+        Questions? Contact Us Here
+      </a>
+
+    </div>
 
   </section>
-
 
   <!-- FOOTER -->
 
