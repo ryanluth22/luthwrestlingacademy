@@ -23,6 +23,8 @@
       color: white;
     }
 
+    /* NAVIGATION */
+
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -58,8 +60,10 @@
       text-transform: uppercase;
     }
 
+    /* HERO */
+
     .hero {
-      padding: 110px 8% 90px;
+      padding: 95px 8% 85px;
       background: #111;
     }
 
@@ -73,26 +77,22 @@
     }
 
     h1 {
-      font-size: clamp(58px, 9vw, 118px);
-      line-height: .88;
+      font-size: clamp(44px, 6.5vw, 82px);
+      line-height: .92;
       text-transform: uppercase;
-      letter-spacing: -5px;
+      letter-spacing: -4px;
       max-width: 900px;
       margin-bottom: 30px;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 760px;
       font-size: 20px;
       line-height: 1.65;
       color: #cfcfcf;
     }
 
-    .rates {
-      background: #f4f1ea;
-      color: #111;
-      padding: 110px 8%;
-    }
+    /* SHARED SECTION STYLES */
 
     .section-label {
       font-size: 12px;
@@ -100,6 +100,14 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 18px;
+    }
+
+    /* RATES */
+
+    .rates {
+      background: #f4f1ea;
+      color: #111;
+      padding: 110px 8%;
     }
 
     .rates h2,
@@ -168,6 +176,8 @@
       line-height: 1.6;
     }
 
+    /* PACKAGES */
+
     .packages {
       background: #111;
       padding: 110px 8%;
@@ -219,6 +229,8 @@
       line-height: 1.6;
     }
 
+    /* BOOKING */
+
     .booking {
       background: white;
       color: #111;
@@ -233,6 +245,8 @@
       font-size: 18px;
       line-height: 1.7;
     }
+
+    /* BUTTONS */
 
     .btn {
       display: inline-block;
@@ -265,6 +279,8 @@
       font-weight: 800;
     }
 
+    /* FOOTER */
+
     footer {
       padding: 45px 8%;
       background: #080808;
@@ -276,6 +292,8 @@
       letter-spacing: 1px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 800px) {
       nav {
         padding: 22px 5%;
@@ -286,11 +304,16 @@
       }
 
       .hero {
-        padding: 80px 6% 70px;
+        padding: 70px 6% 65px;
       }
 
       h1 {
+        font-size: clamp(42px, 13vw, 62px);
         letter-spacing: -3px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       .rates,
@@ -314,9 +337,14 @@
 
 <body>
 
+  <!-- NAVIGATION -->
+
   <nav>
+
     <div class="logo">
-      <a href="index.html">Luth Wrestling Academy</a>
+      <a href="index.html">
+        Luth Wrestling Academy
+      </a>
     </div>
 
     <div class="nav-links">
@@ -325,9 +353,13 @@
       <a href="#packages">Packages</a>
       <a href="#book">Book</a>
     </div>
+
   </nav>
 
+  <!-- HERO -->
+
   <section class="hero">
+
     <div class="eyebrow">
       Private Training
     </div>
@@ -339,11 +371,14 @@
 
     <p>
       Private and small-group lessons are designed around the specific needs
-      of each wrestler. Sessions can focus on technique, position-specific
+      of each wrestler. Sessions can focus on specific technique, positional
       development, live wrestling, film review, or a combination of areas
-      based on the wrestler's goals.
+      based on the wrestlers' goals.
     </p>
+
   </section>
+
+  <!-- RATES -->
 
   <section class="rates" id="rates">
 
@@ -357,7 +392,10 @@
 
     <div class="rate-grid">
 
+      <!-- INDIVIDUAL -->
+
       <div class="rate-card">
+
         <div class="rate-name">
           Individual
         </div>
@@ -367,17 +405,20 @@
         </div>
 
         <p>
-          One wrestler and one coach. Dedicated one-on-one instruction with
-          the opportunity for direct live training and highly individualized
-          feedback.
+          Dedicated one on one instruction and wrestling.
+          Not suited for wrestlers under 125 lbs.
         </p>
 
         <div class="rate-note">
           1 Wrestler
         </div>
+
       </div>
 
+      <!-- PARTNER -->
+
       <div class="rate-card">
+
         <div class="rate-name">
           Partner
         </div>
@@ -387,17 +428,21 @@
         </div>
 
         <p>
-          Two wrestlers and one coach. A strong option for training partners
-          who want individualized instruction while being able to drill and
-          wrestle with one another.
+          Our most popular option designed around two wrestling partners
+          and one coach. Highly individualized coaching at a cost effective
+          rate per wrestler.
         </p>
 
         <div class="rate-note">
           2 Wrestlers · $60 Each
         </div>
+
       </div>
 
+      <!-- GROUP -->
+
       <div class="rate-card">
+
         <div class="rate-name">
           Group
         </div>
@@ -407,24 +452,27 @@
         </div>
 
         <p>
-          Group training for up to four wrestlers. Designed for teammates and
-          training partners who want high-level coaching at the best per-person
-          value.
+          Small group training for up to four wrestlers. Designed for
+          teammates / training partners who want individual coaching at
+          the best per-person value.
         </p>
 
         <div class="rate-note">
           Up To 4 Wrestlers · $25 Each With 4
         </div>
+
       </div>
 
     </div>
 
     <div class="additional">
-      <strong>Additional wrestlers:</strong> For groups larger than four,
-      each additional wrestler is $25.
+      <strong>Additional wrestlers:</strong>
+      For groups larger than four, each additional wrestler is $25.
     </div>
 
   </section>
+
+  <!-- PACKAGES -->
 
   <section class="packages" id="packages">
 
@@ -443,7 +491,10 @@
 
     <div class="package-grid">
 
+      <!-- INDIVIDUAL PACKAGE -->
+
       <div class="package-card">
+
         <h3>
           4 Individual Sessions
         </h3>
@@ -455,9 +506,13 @@
         <p>
           Four one-on-one training sessions.
         </p>
+
       </div>
 
+      <!-- PARTNER PACKAGE -->
+
       <div class="package-card">
+
         <h3>
           4 Partner Sessions
         </h3>
@@ -469,9 +524,13 @@
         <p>
           Four sessions for two wrestlers training together.
         </p>
+
       </div>
 
+      <!-- GROUP PACKAGE -->
+
       <div class="package-card">
+
         <h3>
           4 Group Sessions
         </h3>
@@ -483,6 +542,7 @@
         <p>
           Four group sessions for up to four wrestlers.
         </p>
+
       </div>
 
     </div>
@@ -493,6 +553,8 @@
     </p>
 
   </section>
+
+  <!-- BOOKING -->
 
   <section class="booking" id="book">
 
@@ -505,8 +567,9 @@
     </h2>
 
     <p>
-      View available lesson times and reserve a session using our online booking
-      calendar. Payment and waiver requirements will be confirmed separately.
+      View available lesson times and reserve a session using our online
+      booking calendar. Payment and waiver requirements will be confirmed
+      separately.
     </p>
 
     <a
@@ -515,7 +578,7 @@
       target="_blank"
       rel="noopener"
     >
-      View Availability & Book
+      View Availability &amp; Book
     </a>
 
     <br>
@@ -526,7 +589,10 @@
 
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
+
     <div>
       © 2026 Luth Wrestling Academy
     </div>
@@ -534,6 +600,7 @@
     <div>
       Middletown, Connecticut
     </div>
+
   </footer>
 
 </body>
