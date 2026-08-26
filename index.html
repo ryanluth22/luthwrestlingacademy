@@ -26,15 +26,12 @@
     /* NAVIGATION */
 
     nav {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       padding: 28px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+      background: #0b0b0b;
     }
 
     .logo {
@@ -66,23 +63,8 @@
     /* HERO */
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 120px 8%;
-      position: relative;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0, 0, 0, .92) 0%,
-          rgba(0, 0, 0, .72) 50%,
-          rgba(0, 0, 0, .45) 100%
-        ),
-        url("hero.jpg");
-
-      background-size: cover;
-      background-position: center;
+      padding: 95px 8% 85px;
+      background: #111;
     }
 
     .hero-content {
@@ -95,9 +77,8 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 18px;
+      color: #aaa;
     }
-
-    /* UPDATED SMALLER HOMEPAGE HEADER */
 
     h1 {
       font-size: clamp(44px, 6.5vw, 82px);
@@ -224,8 +205,6 @@
       background: #262626;
       transform: translateY(-2px);
     }
-
-    /* FEATURED PRIVATE LESSONS BOX */
 
     .program-featured {
       grid-column: 1 / -1;
@@ -369,6 +348,17 @@
       margin-bottom: 22px;
     }
 
+    .additional-coach {
+      margin-top: 55px;
+      padding: 24px 28px;
+      background: #dfdfdf;
+      color: #333;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
     /* CTA */
 
     .cta {
@@ -438,12 +428,16 @@
       }
 
       .hero {
-        padding: 120px 6% 70px;
+        padding: 70px 6% 65px;
       }
 
       h1 {
         font-size: clamp(42px, 13vw, 62px);
         letter-spacing: -3px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       .intro {
@@ -481,6 +475,10 @@
 
       .coach-photo {
         height: 480px;
+      }
+
+      .additional-coach {
+        margin-top: 40px;
       }
 
       .cta {
@@ -564,8 +562,8 @@
       </div>
 
       <h2>
-        Better Training.<br>
-        Better Wrestling.
+        Refine And<br>
+        Expand Your Game.
       </h2>
 
     </div>
@@ -573,15 +571,16 @@
     <div class="intro-text">
 
       <p>
-        The Luth Wrestling Academy specializes in providing focused,
-        individualized training in small group sessions, private lessons,
-        and film review. We also provide open mat opportunities for larger
-        group training, along with specific technique clinic opportunities
-        every month.
+        We specialize in providing focused, individualized, supplemental
+        training in private lessons, small group sessions, and film review.
+        Additionally, we offer one night of open-mat practice a week for
+        wrestlers of all skill levels to have access to high-level coaching,
+        and will begin running clinics on specific techniques and skill sets
+        beginning in the Fall of 2026.
       </p>
 
       <p>
-        See below for our rates, availability, and ways to train.
+        See below for our rates, availability, and additional information.
       </p>
 
     </div>
@@ -775,6 +774,10 @@
 
       </div>
 
+    </div>
+
+    <div class="additional-coach">
+      Additional Coach Schedule and Info Coming Soon
     </div>
 
   </section>
