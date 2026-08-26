@@ -23,7 +23,9 @@
       color: white;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       width: 100%;
@@ -60,7 +62,9 @@
       text-transform: uppercase;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       padding: 95px 8% 85px;
@@ -92,32 +96,46 @@
       color: #cfcfcf;
     }
 
-    /* SHARED SECTION STYLES */
+    /* =========================
+       SHARED
+    ========================= */
 
-    .section-label {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    /* RATES */
-
-    .rates {
-      background: #f4f1ea;
-      color: #111;
-      padding: 110px 8%;
-    }
-
-    .rates h2,
-    .packages h2,
-    .booking h2 {
+    h2 {
       font-size: clamp(42px, 6vw, 76px);
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -3px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 18px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #111;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+    /* =========================
+       SINGLE SESSION RATES
+    ========================= */
+
+    .rates {
+      background: #f4f1ea;
+      color: #111;
+      padding: 100px 8%;
     }
 
     .rate-grid {
@@ -176,19 +194,27 @@
       line-height: 1.6;
     }
 
-    /* PACKAGES */
+    .rate-booking {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    /* =========================
+       MULTI SESSION RATES
+    ========================= */
 
     .packages {
-      background: #111;
-      padding: 110px 8%;
+      background: #e6e6e6;
+      color: #111;
+      padding: 100px 8%;
     }
 
     .package-intro {
       max-width: 760px;
-      color: #bbb;
+      color: #555;
       font-size: 18px;
       line-height: 1.7;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
     .package-grid {
@@ -198,9 +224,9 @@
     }
 
     .package-card {
-      background: #1b1b1b;
+      background: #f7f7f7;
       padding: 36px;
-      min-height: 280px;
+      min-height: 260px;
       display: flex;
       flex-direction: column;
     }
@@ -218,23 +244,25 @@
     }
 
     .package-card p {
-      color: #aaa;
+      color: #555;
       line-height: 1.7;
     }
 
     .package-note {
-      margin-top: 30px;
-      color: #888;
+      margin-top: 28px;
+      color: #666;
       font-size: 14px;
       line-height: 1.6;
     }
 
-    /* BOOKING */
+    /* =========================
+       BOOKING
+    ========================= */
 
     .booking {
       background: white;
       color: #111;
-      padding: 110px 8%;
+      padding: 100px 8%;
       text-align: center;
     }
 
@@ -244,28 +272,6 @@
       color: #555;
       font-size: 18px;
       line-height: 1.7;
-    }
-
-    /* BUTTONS */
-
-    .btn {
-      display: inline-block;
-      padding: 18px 30px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
-      font-weight: 900;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: #111;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #333;
     }
 
     .back-link {
@@ -279,7 +285,9 @@
       font-weight: 800;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 45px 8%;
@@ -292,9 +300,12 @@
       letter-spacing: 1px;
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 800px) {
+
       nav {
         padding: 22px 5%;
       }
@@ -319,12 +330,17 @@
       .rates,
       .packages,
       .booking {
-        padding: 80px 6%;
+        padding: 75px 6%;
       }
 
       .rate-grid,
       .package-grid {
         grid-template-columns: 1fr;
+      }
+
+      .rate-card,
+      .package-card {
+        min-height: auto;
       }
 
       footer {
@@ -337,7 +353,9 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
   <nav>
 
@@ -356,7 +374,9 @@
 
   </nav>
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================== -->
 
   <section class="hero">
 
@@ -378,16 +398,14 @@
 
   </section>
 
-  <!-- RATES -->
+  <!-- =========================
+       SINGLE SESSION RATES
+  ========================== -->
 
   <section class="rates" id="rates">
 
-    <div class="section-label">
-      Lesson Rates
-    </div>
-
     <h2>
-      Choose Your Session
+      Single Session Rates
     </h2>
 
     <div class="rate-grid">
@@ -470,18 +488,29 @@
       For groups larger than four, each additional wrestler is $25.
     </div>
 
+    <div class="rate-booking">
+
+      <a
+        href="https://calendar.app.google/5jAc58bQSpH9duoe8"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
+        View Availability &amp; Book
+      </a>
+
+    </div>
+
   </section>
 
-  <!-- PACKAGES -->
+  <!-- =========================
+       MULTI SESSION RATES
+  ========================== -->
 
   <section class="packages" id="packages">
 
-    <div class="section-label">
-      Multi-Session Pricing
-    </div>
-
     <h2>
-      Train More. Save More.
+      Multi-Session Rates
     </h2>
 
     <p class="package-intro">
@@ -554,13 +583,11 @@
 
   </section>
 
-  <!-- BOOKING -->
+  <!-- =========================
+       BOOKING
+  ========================== -->
 
   <section class="booking" id="book">
-
-    <div class="section-label">
-      Scheduling
-    </div>
 
     <h2>
       Book a Session
@@ -589,7 +616,9 @@
 
   </section>
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
