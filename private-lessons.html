@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Luth Wrestling Academy</title>
+  <title>Private Lessons | Luth Wrestling Academy</title>
 
   <style>
     * {
@@ -84,11 +84,10 @@
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 800px;
       font-size: 20px;
       line-height: 1.65;
       color: #cfcfcf;
-      margin-bottom: 38px;
     }
 
     h2 {
@@ -96,244 +95,151 @@
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -3px;
+      margin-bottom: 40px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 18px 30px;
-      margin-right: 10px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
-      font-weight: 900;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: white;
-      color: #111;
-    }
-
-    .btn-secondary {
-      border: 1px solid #555;
-      color: white;
-    }
-
-    .btn:hover {
-      opacity: .8;
-    }
-
-    .intro {
-      background: white;
-      color: #111;
+    .rates,
+    .packages,
+    .booking {
       padding: 90px 8%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: start;
     }
 
-    .intro p {
+    .rates {
+      background: white;
+      color: #111;
+    }
+
+    .rate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+
+    .rate-card {
+      background: #f1f1f1;
+      padding: 35px;
+    }
+
+    .rate-card h3 {
+      font-size: 25px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .rate-card p {
       color: #555;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .rate-note {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .additional {
+      margin-top: 25px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .packages {
+      background: #e6e6e6;
+      color: #111;
+    }
+
+    .packages > p {
+      color: #555;
+      max-width: 800px;
       font-size: 18px;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-
-    .programs {
-      padding: 50px 8%;
-      background: #111;
-    }
-
-    .programs h2 {
-      margin-bottom: 24px;
-    }
-
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
-    }
-
-    .program-card {
-      text-decoration: none;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      background: #1b1b1b;
-      padding: 18px 28px 24px;
-      min-height: 175px;
-      transition: background .2s ease, transform .2s ease;
-    }
-
-    .program-card:hover {
-      background: #262626;
-      transform: translateY(-2px);
-    }
-
-    .program-featured {
-      grid-column: 1 / -1;
-      min-height: 185px;
-      background: #222;
-      padding: 20px 30px 26px;
-    }
-
-    .program-featured:hover {
-      background: #2c2c2c;
-    }
-
-    .program-number {
-      color: #777;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    .program-featured .program-number {
-      font-size: 14px;
-    }
-
-    .program-card h3 {
-      font-size: 27px;
-      text-transform: uppercase;
-      margin-bottom: 9px;
-    }
-
-    .program-featured h3 {
-      font-size: clamp(34px, 4vw, 48px);
-      letter-spacing: -2px;
-    }
-
-    .program-card p {
-      color: #aaa;
-      line-height: 1.5;
-      margin-bottom: 14px;
-      max-width: 760px;
-      font-size: 15px;
-    }
-
-    .program-featured p {
-      font-size: 16px;
-    }
-
-    .program-link {
-      color: white;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-      margin-top: auto;
-    }
-
-    .coaches {
-      padding: 90px 8%;
-      background: #f4f1ea;
-      color: #111;
-    }
-
-    .coaches h2 {
-      margin-bottom: 50px;
-    }
-
-    .coach-profile {
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 55px;
-      align-items: start;
-    }
-
-    .coach-profile img {
-      width: 100%;
-      display: block;
-    }
-
-    .coach-info h3 {
-      font-size: 38px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-
-    .coach-role {
-      color: #666;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .coach-highlights {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 28px;
-    }
-
-    .highlight {
-      background: #dfdfdf;
-      padding: 13px 18px;
-      min-width: 115px;
-    }
-
-    .highlight strong {
-      display: block;
-      font-size: 17px;
-      margin-bottom: 3px;
-    }
-
-    .highlight span {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-
-    .coach-info p {
-      color: #555;
       line-height: 1.7;
-      margin-bottom: 17px;
-      max-width: 900px;
+      margin-bottom: 35px;
     }
 
-    .more-coaches {
-      margin-top: 45px;
-      padding-top: 25px;
-      border-top: 1px solid #ccc;
-      font-weight: 900;
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 25px;
+    }
+
+    .package-card {
+      background: #f7f7f7;
+      padding: 35px;
+    }
+
+    .package-card h3 {
+      font-size: 22px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      margin-bottom: 15px;
     }
 
-    .cta {
-      padding: 90px 8%;
+    .package-note {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .booking {
       background: white;
       color: #111;
       text-align: center;
     }
 
-    .cta .section-label {
-      color: #777;
+    .booking p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #555;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
-    .cta h2 {
-      margin-bottom: 30px;
-    }
-
-    .cta .btn-primary {
+    .btn {
+      display: inline-block;
+      padding: 18px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 900;
       background: #111;
       color: white;
+      transition: .2s;
     }
 
-    .cta .btn-secondary {
-      border: 1px solid #bbb;
-      color: #111;
+    .btn:hover {
+      background: #333;
     }
 
-    .contact-email {
-      margin-top: 25px;
-      color: #666;
-      font-size: 14px;
+    .section-button {
+      margin-top: 30px;
     }
 
-    .contact-email a {
-      color: #111;
-      font-weight: bold;
+    .contact-link {
+      display: block;
+      margin-top: 22px;
+      color: #555;
       text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #555;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: 800;
     }
 
     footer {
@@ -370,41 +276,15 @@
         letter-spacing: -3px;
       }
 
-      .intro {
-        grid-template-columns: 1fr;
+      .rates,
+      .packages,
+      .booking {
         padding: 70px 6%;
-        gap: 30px;
       }
 
-      .programs,
-      .coaches,
-      .cta {
-        padding-left: 6%;
-        padding-right: 6%;
-      }
-
-      .program-grid {
+      .rate-grid,
+      .package-grid {
         grid-template-columns: 1fr;
-      }
-
-      .program-featured {
-        grid-column: auto;
-      }
-
-      .coach-profile {
-        grid-template-columns: 1fr;
-      }
-
-      .coach-profile img {
-        max-width: 400px;
-      }
-
-      .coach-highlights {
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        margin: 5px;
       }
 
       footer {
@@ -423,210 +303,167 @@
     </div>
 
     <div class="nav-links">
-      <a href="#programs">Training</a>
-      <a href="#coaches">Coaches</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="#rates">Rates</a>
+      <a href="#packages">Packages</a>
+      <a href="#booking">Book</a>
     </div>
   </nav>
 
   <section class="hero">
-    <div class="eyebrow">Middletown, Connecticut</div>
+    <div class="eyebrow">Private Lessons</div>
 
     <h1>
-      Luth<br>
-      Wrestling<br>
-      Academy
+      Focused Training<br>
+      Built Around You
     </h1>
 
     <p>
-      Individualized instruction with proven results.
+      Private and small-group lessons are designed around the specific needs
+      of each wrestler. Sessions can focus on specific technique, positional
+      development, live wrestling, film review, or a combination of areas
+      based on the wrestlers' goals.
     </p>
-
-    <a href="#programs" class="btn btn-primary">
-      Practice Availability
-    </a>
-
-    <a href="clinics.html" class="btn btn-secondary">
-      Upcoming Events
-    </a>
   </section>
 
-  <section class="intro">
-    <div>
-      <h2>Refine And Expand Your Game.</h2>
-    </div>
+  <section class="rates" id="rates">
+    <h2>Single Session Rates</h2>
 
-    <div>
-      <p>
-        We specialize in providing focused, individualized, supplemental
-        training in private lessons, small group sessions, and film review.
-        Additionally, we offer one night of open-mat practice a week for
-        wrestlers of all skill levels to have access to high-level coaching,
-        and we will also begin running clinics on specific techniques and
-        skill sets beginning in the Fall of 2026.
-      </p>
+    <div class="rate-grid">
 
-      <p>
-        See below for our rates, availability, and additional information.
-      </p>
-    </div>
-  </section>
-
-  <section class="programs" id="programs">
-    <h2>Ways To Train</h2>
-
-    <div class="program-grid">
-
-      <a href="private-lessons.html" class="program-card program-featured">
-        <div class="program-number">01</div>
-
-        <h3>Private Lessons</h3>
+      <div class="rate-card">
+        <h3>Individual</h3>
+        <div class="price">$150 / hour</div>
 
         <p>
-          We specialize in focused, individual development with our wrestlers.
-          Schedule private individual / small group lessons here. Click to see
-          rates &amp; availability.
+          Dedicated one on one instruction and wrestling. Not suited for
+          wrestlers under 125 lbs.
         </p>
 
-        <div class="program-link">
-          View Private Lessons →
+        <div class="rate-note">1 Wrestler</div>
+      </div>
+
+      <div class="rate-card">
+        <h3>Partner</h3>
+        <div class="price">$120 / hour total</div>
+
+        <p>
+          Our most popular option designed around two wrestling partners and
+          one coach. Highly individualized coaching at a cost effective rate
+          per wrestler.
+        </p>
+
+        <div class="rate-note">
+          2 Wrestlers · $60 Each
         </div>
-      </a>
+      </div>
 
-      <a href="clinics.html" class="program-card" id="events">
-        <div class="program-number">02</div>
-
-        <h3>Upcoming Clinics</h3>
+      <div class="rate-card">
+        <h3>Group</h3>
+        <div class="price">$100 / hour total</div>
 
         <p>
-          Click here to see information on any upcoming clinics, pricing, and
-          how to register. Clinics are a great way to hone in on a specific
-          skill, learn new tricks from different clinicians, and work with new
-          wrestlers!
+          Small group training for up to four wrestlers. Designed for
+          teammates / training partners who want individual coaching at the
+          best per-person value.
         </p>
 
-        <div class="program-link">
-          View Upcoming Clinics →
+        <div class="rate-note">
+          Up To 4 Wrestlers · $25 Each With 4
         </div>
-      </a>
-
-      <a href="open-mat.html" class="program-card">
-        <div class="program-number">03</div>
-
-        <h3>Open Mat Mondays</h3>
-
-        <p>
-          Weekly open mat sessions offering guided instruction, additional mat
-          time, and a low-stakes environment to wrestle. All skill levels are
-          welcome. Must be 13 years or older. Adults welcome.
-        </p>
-
-        <div class="program-link">
-          View Open Mat →
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <section class="coaches" id="coaches">
-    <div class="section-label">Coaching</div>
-
-    <h2>Our Coaches</h2>
-
-    <div class="coach-profile">
-
-      <img src="ryan-luth.jpg" alt="Coach Ryan Luth">
-
-      <div class="coach-info">
-        <h3>Ryan Luth</h3>
-
-        <div class="coach-role">
-          Associate Head Coach · Wesleyan University
-        </div>
-
-        <div class="coach-highlights">
-          <div class="highlight">
-            <strong>3X</strong>
-            <span>All-American</span>
-          </div>
-
-          <div class="highlight">
-            <strong>101–11</strong>
-            <span>Collegiate Record</span>
-          </div>
-
-          <div class="highlight">
-            <strong>220–19</strong>
-            <span>High School Record</span>
-          </div>
-        </div>
-
-        <p>
-          Ryan Luth is the Associate Head Coach at Wesleyan University. Prior
-          to arriving at Wesleyan, he spent one season as an assistant coach
-          at Washington and Lee University, his alma mater. Across three
-          seasons of collegiate coaching, Coach Luth has helped develop four
-          NCAA Division III national qualifiers, two All-Americans, and more
-          than 10 regional placewinners. He has also worked privately with
-          multiple Connecticut state champions, New England placewinners, and
-          high school All-Americans.
-        </p>
-
-        <p>
-          As a collegiate wrestler at Washington and Lee, Luth was a
-          three-time All-American at 157 pounds, placing fifth nationally in
-          2023, fourth in 2022, and earning First-Team All-America honors in
-          2020. He was also a two-time regional champion and three-time
-          conference champion. Luth finished his collegiate career with a
-          101–11 record and was named Washington and Lee's Athlete of the Year
-          in both 2022 and 2023. He also received the Pres Brown Most Valuable
-          Senior Male Athlete Award and was a three-time NWCA Academic
-          All-American.
-        </p>
-
-        <p>
-          A 2018 graduate of Joseph A. Foran High School, Luth finished his
-          high school career with a 220–19 record, setting the Connecticut
-          high school record for career wins. He was a three-time NHSCA
-          All-American, two-time New England Champion, two-time State Open
-          Champion, two-time Class M Champion, and four-time Southern
-          Connecticut Conference Champion. He was named the State Open Most
-          Outstanding Wrestler in 2017 and Class M Most Outstanding Wrestler
-          in 2018 and earned Scholar All-American honors in all four years of
-          high school.
-        </p>
       </div>
 
     </div>
 
-    <div class="more-coaches">
-      Additional Coach Schedule and Info Coming Soon
+    <p class="additional">
+      Each additional wrestler beyond four adds $25 to the total session rate.
+    </p>
+
+    <div class="section-button">
+      <a
+        href="https://calendar.app.google/5jAc58bQSpH9duoe8"
+        class="btn"
+        target="_blank"
+        rel="noopener"
+      >
+        View Availability &amp; Book
+      </a>
     </div>
   </section>
 
-  <section class="cta" id="contact">
+  <section class="packages" id="packages">
+    <h2>Multi-Session Rates</h2>
+
+    <p>
+      Athletes who want consistent training can purchase four sessions at a
+      discounted rate. All four sessions must be used within 90 days of
+      purchase.
+    </p>
+
+    <div class="package-grid">
+
+      <div class="package-card">
+        <h3>4 Individual Sessions</h3>
+        <div class="price">$510</div>
+      </div>
+
+      <div class="package-card">
+        <h3>4 Partner Sessions</h3>
+        <div class="price">$410</div>
+      </div>
+
+      <div class="package-card">
+        <h3>4 Group Sessions</h3>
+        <div class="price">$340</div>
+      </div>
+
+    </div>
+
+    <p class="package-note">
+      Package sessions are non-transferable and must be completed within
+      90 days of purchase.
+    </p>
+
+    <a
+      href="https://calendar.app.google/5jAc58bQSpH9duoe8"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >
+      View Availability &amp; Book
+    </a>
+  </section>
+
+  <section class="booking" id="booking">
     <div class="section-label">Get Started</div>
 
-    <h2>Let's Work</h2>
+    <h2>Book a Session</h2>
 
-    <a href="private-lessons.html" class="btn btn-primary">
-      Book a Session
+    <p>
+      View available lesson times and reserve a session using our online
+      booking calendar. Payment and waiver requirements will be confirmed
+      separately.
+    </p>
+
+    <a
+      href="https://calendar.app.google/5jAc58bQSpH9duoe8"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >
+      View Availability &amp; Book
     </a>
 
     <a
-      href="mailto:luthwrestling@gmail.com?subject=Luth%20Wrestling%20Academy%20Inquiry"
-      class="btn btn-secondary"
+      href="mailto:luthwrestling@gmail.com?subject=Private%20Lesson%20Question"
+      class="contact-link"
     >
-      Questions? Contact Us Here
+      Questions? Email luthwrestling@gmail.com
     </a>
 
-    <div class="contact-email">
-      Email:
-      <a href="mailto:luthwrestling@gmail.com">
-        luthwrestling@gmail.com
-      </a>
-    </div>
+    <a href="index.html" class="back-link">
+      ← Back to Home
+    </a>
   </section>
 
   <footer>
@@ -637,9 +474,7 @@
       </a>
     </div>
 
-    <div>
-      Middletown, Connecticut
-    </div>
+    <div>Middletown, Connecticut</div>
   </footer>
 
 </body>
