@@ -23,10 +23,6 @@
       color: white;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
-
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -62,16 +58,13 @@
       text-transform: uppercase;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       padding: 95px 8% 85px;
       background: #111;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .section-label {
       font-size: 13px;
       font-weight: 900;
       letter-spacing: 3px;
@@ -97,31 +90,18 @@
       color: #cfcfcf;
     }
 
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro {
-      background: #f4f1ea;
-      color: #111;
-      padding: 90px 8%;
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .intro h2,
-    .upcoming h2 {
+    h2 {
       font-size: clamp(42px, 6vw, 76px);
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -3px;
       margin-bottom: 35px;
+    }
+
+    .intro {
+      background: #f4f1ea;
+      color: #111;
+      padding: 90px 8%;
     }
 
     .intro p {
@@ -131,10 +111,6 @@
       line-height: 1.75;
       margin-bottom: 22px;
     }
-
-    /* =========================
-       UPCOMING CLINICS
-    ========================= */
 
     .upcoming {
       background: white;
@@ -200,10 +176,6 @@
       color: #555;
     }
 
-    /* =========================
-       CTA
-    ========================= */
-
     .cta {
       background: #111;
       color: white;
@@ -212,10 +184,6 @@
     }
 
     .cta h2 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: .95;
-      text-transform: uppercase;
-      letter-spacing: -3px;
       margin-bottom: 28px;
     }
 
@@ -235,32 +203,24 @@
       font-size: 13px;
       letter-spacing: 1px;
       font-weight: 900;
-      transition: .2s;
-    }
-
-    .btn-primary {
       background: white;
       color: #111;
     }
 
-    .btn-primary:hover {
-      background: #ddd;
+    .contact-link,
+    .back-link {
+      display: block;
+      margin-top: 22px;
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 22px;
-      color: #aaa;
-      font-size: 13px;
       text-transform: uppercase;
+      font-size: 12px;
       letter-spacing: 1px;
-      text-decoration: none;
-      font-weight: 800;
     }
-
-    /* =========================
-       FOOTER
-    ========================= */
 
     footer {
       padding: 45px 8%;
@@ -273,12 +233,12 @@
       letter-spacing: 1px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
 
     @media (max-width: 800px) {
-
       nav {
         padding: 22px 5%;
       }
@@ -296,10 +256,6 @@
         letter-spacing: -3px;
       }
 
-      .hero p {
-        font-size: 18px;
-      }
-
       .intro,
       .upcoming,
       .cta {
@@ -308,10 +264,6 @@
 
       .clinic-card {
         padding: 28px;
-      }
-
-      .clinic-card h3 {
-        font-size: 28px;
       }
 
       footer {
@@ -324,39 +276,23 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
-
   <nav>
-
     <div class="logo">
-      <a href="index.html">
-        Luth Wrestling Academy
-      </a>
+      <a href="index.html">Luth Wrestling Academy</a>
     </div>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#about">About Clinics</a>
       <a href="#upcoming">Upcoming</a>
+      <a href="#contact">Contact</a>
     </div>
-
   </nav>
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
   <section class="hero">
+    <div class="eyebrow">Specialized Training</div>
 
-    <div class="eyebrow">
-      Specialized Training
-    </div>
-
-    <h1>
-      Wrestling Clinics
-    </h1>
+    <h1>Wrestling Clinics</h1>
 
     <p>
       We aim to provide many specialized clinics throughout the year. These
@@ -364,22 +300,12 @@
       the small details our clinicians have developed over years of wrestling
       and coaching, and practice with new wrestlers.
     </p>
-
   </section>
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
-
   <section class="intro" id="about">
+    <div class="section-label">Clinic Information</div>
 
-    <div class="section-label">
-      Clinic Information
-    </div>
-
-    <h2>
-      Learn. Refine. Add To Your Game.
-    </h2>
+    <h2>Learn. Refine. Add To Your Game.</h2>
 
     <p>
       Our clinics are designed to focus closely on specific positions,
@@ -392,36 +318,21 @@
       Clinic rates vary based on length and the number of sessions provided.
       All upcoming clinics are listed below.
     </p>
-
   </section>
 
-  <!-- =========================
-       UPCOMING CLINICS
-  ========================== -->
-
   <section class="upcoming" id="upcoming">
+    <div class="section-label">Schedule</div>
 
-    <div class="section-label">
-      Schedule
-    </div>
-
-    <h2>
-      Upcoming Clinics
-    </h2>
+    <h2>Upcoming Clinics</h2>
 
     <div class="clinic-list">
 
-      <!-- LEG RIDING CLINIC -->
-
       <div class="clinic-card">
-
         <div class="clinic-date">
           October / November 2026 · Date TBD
         </div>
 
-        <h3>
-          Leg Riding Clinic #1
-        </h3>
+        <h3>Leg Riding Clinic #1</h3>
 
         <div class="clinic-coaches">
           With Coach Luth
@@ -441,24 +352,18 @@
           </span>
 
           <span>
-            Half price for anyone who has booked a private lesson within
-            the past 90 days.
+            Half price for anyone who has booked a private lesson within the
+            past 90 days.
           </span>
         </div>
-
       </div>
 
-      <!-- CHRISTMAS CLINIC -->
-
       <div class="clinic-card">
-
         <div class="clinic-date">
           Christmas Clinic · Date TBD
         </div>
 
-        <h3>
-          Neutral Attacks
-        </h3>
+        <h3>Neutral Attacks</h3>
 
         <div class="clinic-coaches">
           With Coach Luth &amp; Coach Shea
@@ -477,58 +382,51 @@
           </span>
 
           <span>
-            Half price for anyone who has booked a private lesson within
-            the past 90 days.
+            Half price for anyone who has booked a private lesson within the
+            past 90 days.
           </span>
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- =========================
-       CTA
-  ========================== -->
-
-  <section class="cta">
-
-    <h2>
-      More Clinics Coming Soon
-    </h2>
+  <section class="cta" id="contact">
+    <h2>More Clinics Coming Soon</h2>
 
     <p>
       Dates, registration information, and additional clinic details will be
       updated here as new sessions are announced.
     </p>
 
-    <a href="index.html" class="btn btn-primary">
-      Back to Home
+    <a
+      href="mailto:luthwrestling@gmail.com?subject=Luth%20Wrestling%20Academy%20Clinic%20Inquiry"
+      class="btn"
+    >
+      Questions? Contact Us
     </a>
 
-    <br>
-
-    <a href="index.html#programs" class="back-link">
-      ← View All Training Options
+    <a
+      href="mailto:luthwrestling@gmail.com"
+      class="contact-link"
+    >
+      luthwrestling@gmail.com
     </a>
 
+    <a href="index.html" class="back-link">
+      ← Back to Home
+    </a>
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-
     <div>
-      © 2026 Luth Wrestling Academy
+      © 2026 Luth Wrestling Academy ·
+      <a href="mailto:luthwrestling@gmail.com">
+        luthwrestling@gmail.com
+      </a>
     </div>
 
-    <div>
-      Middletown, Connecticut
-    </div>
-
+    <div>Middletown, Connecticut</div>
   </footer>
 
 </body>
