@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Open Mat | Luth Wrestling Academy</title>
+  <title>Open Mat Mondays | Luth Wrestling Academy</title>
 
   <style>
     * {
@@ -22,10 +22,6 @@
       background: #0b0b0b;
       color: white;
     }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
 
     nav {
       width: 100%;
@@ -62,16 +58,13 @@
       text-transform: uppercase;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       padding: 95px 8% 85px;
       background: #111;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .section-label {
       font-size: 13px;
       font-weight: 900;
       letter-spacing: 3px;
@@ -97,18 +90,6 @@
       color: #cfcfcf;
     }
 
-    /* =========================
-       SHARED
-    ========================= */
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
     h2 {
       font-size: clamp(42px, 6vw, 76px);
       line-height: .95;
@@ -117,37 +98,14 @@
       margin-bottom: 40px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 18px 30px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
-      font-weight: 900;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: #111;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #333;
-    }
-
-    /* =========================
-       SESSION INFO
-    ========================= */
-
     .session-info {
       background: #f4f1ea;
       color: #111;
       padding: 90px 8%;
     }
 
-    .info-grid {
+    .info-grid,
+    .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
@@ -158,7 +116,8 @@
       padding: 35px;
     }
 
-    .info-card h3 {
+    .info-card h3,
+    .price-card h3 {
       font-size: 22px;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -169,10 +128,6 @@
       font-size: 17px;
       line-height: 1.6;
     }
-
-    /* =========================
-       HOW IT WORKS
-    ========================= */
 
     .how-it-works {
       background: white;
@@ -198,20 +153,10 @@
       margin-top: 35px;
     }
 
-    /* =========================
-       PRICING
-    ========================= */
-
     .pricing {
       background: #e6e6e6;
       color: #111;
       padding: 90px 8%;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
     }
 
     .price-card {
@@ -220,12 +165,6 @@
       min-height: 245px;
       display: flex;
       flex-direction: column;
-    }
-
-    .price-card h3 {
-      font-size: 23px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
     }
 
     .price {
@@ -238,10 +177,6 @@
       color: #555;
       line-height: 1.65;
     }
-
-    /* =========================
-       WAIVER / CTA
-    ========================= */
 
     .waiver {
       background: white;
@@ -258,20 +193,32 @@
       line-height: 1.7;
     }
 
-    .back-link {
+    .btn {
       display: inline-block;
-      margin-top: 24px;
-      color: #555;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      padding: 18px 30px;
       text-decoration: none;
-      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 900;
+      background: #111;
+      color: white;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    .contact-link,
+    .back-link {
+      display: block;
+      margin-top: 22px;
+      color: #555;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back-link {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
 
     footer {
       padding: 45px 8%;
@@ -284,12 +231,12 @@
       letter-spacing: 1px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
 
     @media (max-width: 800px) {
-
       nav {
         padding: 22px 5%;
       }
@@ -305,10 +252,6 @@
       h1 {
         font-size: clamp(42px, 13vw, 62px);
         letter-spacing: -3px;
-      }
-
-      .hero p {
-        font-size: 18px;
       }
 
       .session-info,
@@ -337,16 +280,9 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
-
   <nav>
-
     <div class="logo">
-      <a href="index.html">
-        Luth Wrestling Academy
-      </a>
+      <a href="index.html">Luth Wrestling Academy</a>
     </div>
 
     <div class="nav-links">
@@ -356,18 +292,10 @@
       <a href="#pricing">Pricing</a>
       <a href="#waiver">Waiver</a>
     </div>
-
   </nav>
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
   <section class="hero">
-
-    <div class="eyebrow">
-      Weekly Training
-    </div>
+    <div class="eyebrow">Weekly Training</div>
 
     <h1>
       Open Mat<br>
@@ -376,203 +304,127 @@
 
     <p>
       An opportunity for those seeking additional mat time, looking for guided
-      instruction, and wanting a low-stakes environment to wrestle in. All skill
-      levels are welcome. Must be 13 years or older. Adults welcome.
+      instruction, and wanting a low-stakes environment to wrestle in. All
+      skill levels are welcome. Must be 13 years or older. Adults welcome.
     </p>
-
   </section>
 
-  <!-- =========================
-       SESSION DETAILS
-  ========================== -->
-
   <section class="session-info" id="details">
+    <div class="section-label">Weekly Open Mat</div>
 
-    <div class="section-label">
-      Weekly Open Mat
-    </div>
-
-    <h2>
-      Session Details
-    </h2>
+    <h2>Session Details</h2>
 
     <div class="info-grid">
 
       <div class="info-card">
-
-        <h3>
-          When
-        </h3>
+        <h3>When</h3>
 
         <p>
           Monday Nights<br>
           7:15 PM – 8:30 PM
         </p>
-
       </div>
 
       <div class="info-card">
-
-        <h3>
-          Where
-        </h3>
+        <h3>Where</h3>
 
         <p>
           Biddiscombe Wrestling Room<br>
           Wesleyan University<br>
           Middletown, Connecticut
         </p>
-
       </div>
 
       <div class="info-card">
-
-        <h3>
-          Who
-        </h3>
+        <h3>Who</h3>
 
         <p>
           Wrestlers of all experience levels are welcome to come train.
           New wrestlers welcome!
         </p>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- =========================
-       HOW IT WORKS
-  ========================== -->
-
   <section class="how-it-works" id="how">
-
     <div class="how-content">
 
-      <div class="section-label">
-        Open Mat Format
-      </div>
+      <div class="section-label">Open Mat Format</div>
 
-      <h2>
-        How It Works
-      </h2>
+      <h2>How It Works</h2>
 
       <p>
         Open Mat sessions give wrestlers the freedom to wrestle with their
-        partners based on what they need most. One mat will be dedicated to
-        a guided practice, with another mat open for free drilling and
-        wrestling. A coach will be available throughout the session for
-        feedback and instruction. Guided practice will vary depending on
-        the needs of the group.
+        partners based on what they need most. One mat will be dedicated to a
+        guided practice, with another mat open for free drilling and wrestling.
+        A coach will be available throughout the session for feedback and
+        instruction. Guided practice will vary depending on the needs of the
+        group.
       </p>
 
       <p>
-        There is no advance registration required. Simply complete the
-        online waiver before your first session.
+        There is no advance registration required. Simply complete the online
+        waiver before your first session.
       </p>
 
       <p class="session-note">
         *These sessions are not designed to replace weekly training with a
-        wrestler's team, but rather to provide an opportunity for wrestlers
-        to get extra work in, or for anyone interested in learning more
-        about the sport.
+        wrestler's team, but rather to provide an opportunity for wrestlers to
+        get extra work in, or for anyone interested in learning more about the
+        sport.
       </p>
 
     </div>
-
   </section>
 
-  <!-- =========================
-       PRICING
-  ========================== -->
-
   <section class="pricing" id="pricing">
+    <div class="section-label">Open Mat Rates</div>
 
-    <div class="section-label">
-      Open Mat Rates
-    </div>
-
-    <h2>
-      Pricing
-    </h2>
+    <h2>Pricing</h2>
 
     <div class="pricing-grid">
 
-      <!-- DROP IN -->
-
       <div class="price-card">
+        <h3>Single Session</h3>
 
-        <h3>
-          Single Session
-        </h3>
-
-        <div class="price">
-          $20
-        </div>
+        <div class="price">$20</div>
 
         <p>
-          Drop in for any individual Open Mat session.
-          No advance registration required.
+          Drop in for any individual Open Mat session. No advance registration
+          required.
         </p>
-
       </div>
 
-      <!-- FOUR SESSION PASS -->
-
       <div class="price-card">
+        <h3>4-Session Pass</h3>
 
-        <h3>
-          4-Session Pass
-        </h3>
-
-        <div class="price">
-          $65
-        </div>
+        <div class="price">$65</div>
 
         <p>
-          Four Open Mat sessions for $65, bringing the cost down
-          to $16.25 per session.
+          Four Open Mat sessions for $65, bringing the cost down to $16.25 per
+          session.
         </p>
-
       </div>
 
-      <!-- PRIVATE LESSON BENEFIT -->
-
       <div class="price-card">
+        <h3>Private Lesson Benefit</h3>
 
-        <h3>
-          Private Lesson Benefit
-        </h3>
-
-        <div class="price">
-          Free
-        </div>
+        <div class="price">Free</div>
 
         <p>
-          Open Mat is free for anyone who has booked a private lesson
-          within the past month.
+          Open Mat is free for anyone who has booked a private lesson within
+          the past month.
         </p>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- =========================
-       WAIVER
-  ========================== -->
-
   <section class="waiver" id="waiver">
+    <div class="section-label">Before You Arrive</div>
 
-    <div class="section-label">
-      Before You Arrive
-    </div>
-
-    <h2>
-      Complete Your Waiver
-    </h2>
+    <h2>Complete Your Waiver</h2>
 
     <p>
       There is no advance registration required for Open Mat. All wrestlers
@@ -580,32 +432,31 @@
       time.
     </p>
 
-    <a href="#" class="btn btn-primary">
+    <a href="#" class="btn">
       Complete Online Waiver
     </a>
 
-    <br>
+    <a
+      href="mailto:luthwrestling@gmail.com?subject=Open%20Mat%20Question"
+      class="contact-link"
+    >
+      Questions? Email luthwrestling@gmail.com
+    </a>
 
     <a href="index.html" class="back-link">
       ← Back to Home
     </a>
-
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-
     <div>
-      © 2026 Luth Wrestling Academy
+      © 2026 Luth Wrestling Academy ·
+      <a href="mailto:luthwrestling@gmail.com">
+        luthwrestling@gmail.com
+      </a>
     </div>
 
-    <div>
-      Middletown, Connecticut
-    </div>
-
+    <div>Middletown, Connecticut</div>
   </footer>
 
 </body>
