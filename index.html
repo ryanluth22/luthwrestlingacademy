@@ -23,6 +23,10 @@
       color: white;
     }
 
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -58,9 +62,35 @@
       text-transform: uppercase;
     }
 
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
+      min-height: 650px;
       padding: 95px 8% 85px;
-      background: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.88) 0%,
+          rgba(0, 0, 0, 0.68) 38%,
+          rgba(0, 0, 0, 0.25) 68%,
+          rgba(0, 0, 0, 0.10) 100%
+        ),
+        url("homepage-hero.jpg");
+
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 2;
     }
 
     .eyebrow,
@@ -84,12 +114,16 @@
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 620px;
       font-size: 20px;
       line-height: 1.65;
-      color: #cfcfcf;
+      color: #d8d8d8;
       margin-bottom: 38px;
     }
+
+    /* =========================
+       SHARED
+    ========================= */
 
     h2 {
       font-size: clamp(42px, 6vw, 76px);
@@ -116,13 +150,17 @@
     }
 
     .btn-secondary {
-      border: 1px solid #555;
+      border: 1px solid #777;
       color: white;
     }
 
     .btn:hover {
-      opacity: .8;
+      opacity: .82;
     }
+
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
       background: white;
@@ -140,6 +178,10 @@
       line-height: 1.75;
       margin-bottom: 20px;
     }
+
+    /* =========================
+       PROGRAMS
+    ========================= */
 
     .programs {
       padding: 50px 8%;
@@ -225,6 +267,10 @@
       margin-top: auto;
     }
 
+    /* =========================
+       COACHES
+    ========================= */
+
     .coaches {
       padding: 90px 8%;
       background: #f4f1ea;
@@ -299,6 +345,10 @@
       letter-spacing: 1px;
     }
 
+    /* =========================
+       CONTACT / CTA
+    ========================= */
+
     .cta {
       padding: 90px 8%;
       background: white;
@@ -336,6 +386,10 @@
       text-decoration: none;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       padding: 45px 8%;
       background: #080808;
@@ -352,7 +406,12 @@
       text-decoration: none;
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 800px) {
+
       nav {
         padding: 22px 5%;
       }
@@ -362,12 +421,27 @@
       }
 
       .hero {
+        min-height: 580px;
         padding: 70px 6% 65px;
+
+        background:
+          linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.72)
+          ),
+          url("homepage-hero.jpg");
+
+        background-size: cover;
+        background-position: 58% center;
       }
 
       h1 {
         font-size: clamp(42px, 13vw, 62px);
         letter-spacing: -3px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       .intro {
@@ -417,9 +491,16 @@
 
 <body>
 
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
   <nav>
+
     <div class="logo">
-      <a href="index.html">Luth Wrestling Academy</a>
+      <a href="index.html">
+        Luth Wrestling Academy
+      </a>
     </div>
 
     <div class="nav-links">
@@ -427,10 +508,18 @@
       <a href="#coaches">Coaches</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
+  <!-- =========================
+       HERO
+  ========================== -->
+
   <section class="hero">
-    <div class="eyebrow">Middletown, Connecticut</div>
+
+    <div class="eyebrow">
+      Middletown, Connecticut
+    </div>
 
     <h1>
       Luth<br>
@@ -442,21 +531,32 @@
       Individualized instruction with proven results.
     </p>
 
-    <a href="#programs" class="btn btn-primary">
-      Practice Availability
-    </a>
+    <div>
+      <a href="#programs" class="btn btn-primary">
+        Practice Availability
+      </a>
 
-    <a href="clinics.html" class="btn btn-secondary">
-      Upcoming Events
-    </a>
+      <a href="clinics.html" class="btn btn-secondary">
+        Upcoming Events
+      </a>
+    </div>
+
   </section>
 
+  <!-- =========================
+       INTRO
+  ========================== -->
+
   <section class="intro">
+
     <div>
-      <h2>Refine And Expand Your Game.</h2>
+      <h2>
+        Refine And Expand Your Game.
+      </h2>
     </div>
 
     <div>
+
       <p>
         We specialize in providing focused, individualized, supplemental
         training in private lessons, small group sessions, and film review.
@@ -469,18 +569,37 @@
       <p>
         See below for our rates, availability, and additional information.
       </p>
+
     </div>
+
   </section>
 
+  <!-- =========================
+       PROGRAMS
+  ========================== -->
+
   <section class="programs" id="programs">
-    <h2>Ways To Train</h2>
+
+    <h2>
+      Ways To Train
+    </h2>
 
     <div class="program-grid">
 
-      <a href="private-lessons.html" class="program-card program-featured">
-        <div class="program-number">01</div>
+      <!-- PRIVATE LESSONS -->
 
-        <h3>Private Lessons</h3>
+      <a
+        href="private-lessons.html"
+        class="program-card program-featured"
+      >
+
+        <div class="program-number">
+          01
+        </div>
+
+        <h3>
+          Private Lessons
+        </h3>
 
         <p>
           We specialize in focused, individual development with our wrestlers.
@@ -491,12 +610,24 @@
         <div class="program-link">
           View Private Lessons →
         </div>
+
       </a>
 
-      <a href="clinics.html" class="program-card" id="events">
-        <div class="program-number">02</div>
+      <!-- CLINICS -->
 
-        <h3>Upcoming Clinics</h3>
+      <a
+        href="clinics.html"
+        class="program-card"
+        id="events"
+      >
+
+        <div class="program-number">
+          02
+        </div>
+
+        <h3>
+          Upcoming Clinics
+        </h3>
 
         <p>
           Click here to see information on any upcoming clinics, pricing, and
@@ -508,12 +639,23 @@
         <div class="program-link">
           View Upcoming Clinics →
         </div>
+
       </a>
 
-      <a href="open-mat.html" class="program-card">
-        <div class="program-number">03</div>
+      <!-- OPEN MAT -->
 
-        <h3>Open Mat Mondays</h3>
+      <a
+        href="open-mat.html"
+        class="program-card"
+      >
+
+        <div class="program-number">
+          03
+        </div>
+
+        <h3>
+          Open Mat Mondays
+        </h3>
 
         <p>
           Weekly open mat sessions offering guided instruction, additional mat
@@ -524,28 +666,46 @@
         <div class="program-link">
           View Open Mat →
         </div>
+
       </a>
 
     </div>
+
   </section>
 
-  <section class="coaches" id="coaches">
-    <div class="section-label">Coaching</div>
+  <!-- =========================
+       COACHES
+  ========================== -->
 
-    <h2>Our Coaches</h2>
+  <section class="coaches" id="coaches">
+
+    <div class="section-label">
+      Coaching
+    </div>
+
+    <h2>
+      Our Coaches
+    </h2>
 
     <div class="coach-profile">
 
-      <img src="ryan-luth.jpg" alt="Coach Ryan Luth">
+      <img
+        src="ryan-luth.jpg"
+        alt="Coach Ryan Luth"
+      >
 
       <div class="coach-info">
-        <h3>Ryan Luth</h3>
+
+        <h3>
+          Ryan Luth
+        </h3>
 
         <div class="coach-role">
           Associate Head Coach · Wesleyan University
         </div>
 
         <div class="coach-highlights">
+
           <div class="highlight">
             <strong>3X</strong>
             <span>All-American</span>
@@ -560,6 +720,7 @@
             <strong>220–19</strong>
             <span>High School Record</span>
           </div>
+
         </div>
 
         <p>
@@ -596,6 +757,7 @@
           in 2018 and earned Scholar All-American honors in all four years of
           high school.
         </p>
+
       </div>
 
     </div>
@@ -603,14 +765,27 @@
     <div class="more-coaches">
       Additional Coach Schedule and Info Coming Soon
     </div>
+
   </section>
 
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
   <section class="cta" id="contact">
-    <div class="section-label">Get Started</div>
 
-    <h2>Let's Work</h2>
+    <div class="section-label">
+      Get Started
+    </div>
 
-    <a href="private-lessons.html" class="btn btn-primary">
+    <h2>
+      Let's Work
+    </h2>
+
+    <a
+      href="private-lessons.html"
+      class="btn btn-primary"
+    >
       Book a Session
     </a>
 
@@ -627,9 +802,15 @@
         luthwrestling@gmail.com
       </a>
     </div>
+
   </section>
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
+
     <div>
       © 2026 Luth Wrestling Academy ·
       <a href="mailto:luthwrestling@gmail.com">
@@ -640,6 +821,7 @@
     <div>
       Middletown, Connecticut
     </div>
+
   </footer>
 
 </body>
