@@ -202,20 +202,13 @@
 
     /* CIAC NOTE */
 
-    .ciac-note-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
-      margin-bottom: 25px;
-    }
-
     .ciac-note {
-      grid-column: 1;
+      max-width: 1000px;
+      margin-bottom: 25px;
       font-size: 13px;
       line-height: 1.55;
       color: #777;
       font-style: italic;
-      padding: 0 5px;
     }
 
     .additional {
@@ -411,14 +404,6 @@
         grid-template-columns: 1fr;
       }
 
-      .ciac-note-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ciac-note {
-        grid-column: 1;
-      }
-
       footer {
         flex-direction: column;
         gap: 10px;
@@ -559,14 +544,12 @@
 
     <!-- CIAC IN-SEASON NOTE -->
 
-    <div class="ciac-note-grid">
-      <p class="ciac-note">
-        *Under CIAC guidelines, wrestlers in their high school season ARE
-        permitted to receive supplemental, one-on-one instruction outside of
-        their high-school practice, provided the instruction is not given by a
-        member of their high-school coaching staff.
-      </p>
-    </div>
+    <p class="ciac-note">
+      *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
+      instruction at private clubs during their high school season, provided
+      the instruction is in addition to their high school team practices and
+      is not provided by a member of their high school coaching staff.
+    </p>
 
     <p class="additional">
       Each additional wrestler beyond four adds $25 to the total session rate.
