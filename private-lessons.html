@@ -128,11 +128,13 @@
       opacity: .82;
     }
 
+    /* Slightly larger waiver / USAW requirement note */
+
     .booking-requirement {
-      margin-top: 14px;
-      font-size: 13px;
+      margin-top: 16px;
+      font-size: 15px;
       line-height: 1.6;
-      color: #777;
+      color: #666;
       font-style: italic;
     }
 
@@ -207,17 +209,22 @@
     }
 
     /* =========================
-       PACKAGES
+       MULTI-SESSION RATES
     ========================= */
 
     .packages {
-      background: #111;
+      background: #e8e5df;
+      color: #111;
       padding: 85px 8%;
+    }
+
+    .packages .section-label {
+      color: #777;
     }
 
     .packages-intro {
       max-width: 760px;
-      color: #bbb;
+      color: #666;
       font-size: 17px;
       line-height: 1.7;
       margin-bottom: 35px;
@@ -231,7 +238,8 @@
     }
 
     .package-card {
-      background: #1b1b1b;
+      background: #f7f5f1;
+      color: #111;
       padding: 32px;
       min-height: 220px;
       display: flex;
@@ -251,12 +259,12 @@
     }
 
     .package-card p {
-      color: #aaa;
+      color: #666;
       line-height: 1.6;
     }
 
     .package-note {
-      color: #888;
+      color: #666;
       font-size: 14px;
       font-style: italic;
       line-height: 1.6;
@@ -264,12 +272,12 @@
     }
 
     .packages .btn {
-      background: white;
-      color: #111;
+      background: #111;
+      color: white;
     }
 
     .packages .booking-requirement {
-      color: #999;
+      color: #666;
     }
 
     /* =========================
@@ -293,6 +301,25 @@
       color: #666;
       font-size: 17px;
       line-height: 1.7;
+    }
+
+    /*
+      Overrides the general .booking p styling so
+      the waiver note keeps its intended size/spacing.
+    */
+
+    .booking .booking-requirement {
+      margin: 16px auto 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #666;
+      font-style: italic;
+    }
+
+    .booking .booking-requirement a {
+      color: #111;
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     .contact-link {
@@ -383,9 +410,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -404,9 +429,7 @@
 
   </nav>
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -428,9 +451,7 @@
 
   </section>
 
-  <!-- =========================
-       SINGLE SESSION RATES
-  ========================== -->
+  <!-- SINGLE SESSION RATES -->
 
   <section class="rates">
 
@@ -443,8 +464,6 @@
     </h2>
 
     <div class="rate-grid">
-
-      <!-- INDIVIDUAL -->
 
       <div class="rate-card">
 
@@ -467,8 +486,6 @@
 
       </div>
 
-      <!-- PARTNER -->
-
       <div class="rate-card">
 
         <h3>
@@ -490,8 +507,6 @@
         </div>
 
       </div>
-
-      <!-- GROUP -->
 
       <div class="rate-card">
 
@@ -542,9 +557,7 @@
 
   </section>
 
-  <!-- =========================
-       MULTI-SESSION RATES
-  ========================== -->
+  <!-- MULTI-SESSION RATES -->
 
   <section class="packages">
 
@@ -564,8 +577,6 @@
 
     <div class="package-grid">
 
-      <!-- INDIVIDUAL PACKAGE -->
-
       <div class="package-card">
 
         <h3>
@@ -582,8 +593,6 @@
 
       </div>
 
-      <!-- PARTNER PACKAGE -->
-
       <div class="package-card">
 
         <h3>
@@ -599,8 +608,6 @@
         </p>
 
       </div>
-
-      <!-- GROUP PACKAGE -->
 
       <div class="package-card">
 
@@ -646,9 +653,7 @@
 
   </section>
 
-  <!-- =========================
-       BOOKING
-  ========================== -->
+  <!-- BOOKING -->
 
   <section class="booking">
 
@@ -700,9 +705,7 @@
 
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
