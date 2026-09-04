@@ -23,6 +23,10 @@
       color: white;
     }
 
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -58,6 +62,10 @@
       text-transform: uppercase;
     }
 
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       padding: 95px 8% 85px;
       background: #111;
@@ -84,143 +92,180 @@
     }
 
     .hero p {
-      max-width: 820px;
+      max-width: 800px;
       font-size: 20px;
       line-height: 1.65;
       color: #cfcfcf;
     }
 
+    /* =========================
+       SHARED
+    ========================= */
+
     h2 {
-      font-size: clamp(42px, 6vw, 76px);
+      font-size: clamp(38px, 5vw, 64px);
       line-height: .95;
       text-transform: uppercase;
-      letter-spacing: -3px;
+      letter-spacing: -2px;
       margin-bottom: 35px;
     }
 
+    /* =========================
+       INTRO
+    ========================= */
+
     .intro {
-      background: #f4f1ea;
+      background: white;
       color: #111;
-      padding: 90px 8%;
+      padding: 85px 8%;
+    }
+
+    .intro .section-label {
+      color: #777;
     }
 
     .intro p {
-      max-width: 860px;
-      color: #555;
+      max-width: 850px;
+      color: #666;
       font-size: 18px;
       line-height: 1.75;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
+
+    /* =========================
+       UPCOMING CLINICS
+    ========================= */
 
     .upcoming {
-      background: white;
+      background: #f4f1ea;
       color: #111;
-      padding: 95px 8%;
+      padding: 85px 8%;
     }
 
-    .clinic-list {
+    .upcoming .section-label {
+      color: #777;
+    }
+
+    .clinic-grid {
       display: grid;
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
     }
 
     .clinic-card {
-      background: #f1f1f1;
-      padding: 38px;
+      background: white;
+      padding: 35px;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
     }
 
     .clinic-date {
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
       color: #777;
-      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
     }
 
     .clinic-card h3 {
-      font-size: 34px;
+      font-size: 30px;
+      line-height: 1;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
 
-    .clinic-coaches {
+    .clinician {
+      color: #777;
       font-size: 14px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-bottom: 22px;
+      font-weight: bold;
+      margin-bottom: 24px;
     }
 
-    .clinic-card p {
-      color: #555;
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      max-width: 900px;
+    .clinic-description {
+      color: #666;
+      line-height: 1.65;
+      margin-bottom: 25px;
     }
 
     .clinic-price {
-      margin-top: 24px;
-      padding: 20px 22px;
-      background: #e3e3e3;
-      font-size: 15px;
-      line-height: 1.65;
-      font-weight: 700;
+      font-size: 24px;
+      font-weight: 900;
+      margin-top: auto;
+      margin-bottom: 15px;
     }
 
-    .clinic-price span {
-      display: block;
-      margin-top: 6px;
-      font-weight: 400;
-      color: #555;
+    .discount {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 5px;
     }
 
-    .cta {
+    /* =========================
+       PARTICIPATION REQUIREMENT
+    ========================= */
+
+    .participation-requirement {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid #ccc;
+      color: #777;
+      font-size: 13px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .participation-requirement a {
+      color: #111;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
       background: #111;
-      color: white;
-      padding: 90px 8%;
+      padding: 85px 8%;
       text-align: center;
     }
 
-    .cta h2 {
-      margin-bottom: 28px;
+    .contact h2 {
+      margin-bottom: 25px;
     }
 
-    .cta p {
+    .contact p {
       max-width: 700px;
-      margin: 0 auto 30px;
-      color: #bbb;
-      font-size: 18px;
+      margin: 0 auto 25px;
+      color: #aaa;
+      font-size: 17px;
       line-height: 1.7;
     }
 
-    .btn {
+    .contact-link {
       display: inline-block;
-      padding: 18px 30px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
-      font-weight: 900;
-      background: white;
-      color: #111;
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
     }
 
-    .contact-link,
     .back-link {
       display: block;
-      margin-top: 22px;
-      color: #aaa;
+      margin-top: 25px;
+      color: #777;
+      font-size: 13px;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 700;
-    }
-
-    .back-link {
       text-transform: uppercase;
-      font-size: 12px;
       letter-spacing: 1px;
     }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 45px 8%;
@@ -238,7 +283,12 @@
       text-decoration: none;
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 800px) {
+
       nav {
         padding: 22px 5%;
       }
@@ -256,14 +306,19 @@
         letter-spacing: -3px;
       }
 
-      .intro,
-      .upcoming,
-      .cta {
-        padding: 70px 6%;
+      .hero p {
+        font-size: 18px;
       }
 
-      .clinic-card {
-        padding: 28px;
+      .intro,
+      .upcoming,
+      .contact {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .clinic-grid {
+        grid-template-columns: 1fr;
       }
 
       footer {
@@ -276,36 +331,65 @@
 
 <body>
 
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
   <nav>
+
     <div class="logo">
-      <a href="index.html">Luth Wrestling Academy</a>
+      <a href="index.html">
+        Luth Wrestling Academy
+      </a>
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#about">About Clinics</a>
-      <a href="#upcoming">Upcoming</a>
-      <a href="#contact">Contact</a>
+      <a href="private-lessons.html">Private Lessons</a>
+      <a href="open-mat.html">Open Mat</a>
+      <a href="index.html#coaches">Coaches</a>
+      <a href="index.html#contact">Contact</a>
     </div>
+
   </nav>
 
-  <section class="hero">
-    <div class="eyebrow">Specialized Training</div>
+  <!-- =========================
+       HERO
+  ========================== -->
 
-    <h1>Wrestling Clinics</h1>
+  <section class="hero">
+
+    <div class="eyebrow">
+      Specialized Training
+    </div>
+
+    <h1>
+      Wrestling<br>
+      Clinics
+    </h1>
 
     <p>
-      We aim to provide many specialized clinics throughout the year. These
-      clinics are a great opportunity to enhance specific skill sets, focus on
-      the small details our clinicians have developed over years of wrestling
-      and coaching, and practice with new wrestlers.
+      We aim to provide many specialized clinics throughout the year.
+      These clinics are a great opportunity to enhance specific skill sets,
+      focus on the small details our clinicians have developed over years of
+      wrestling and coaching, and practice with new wrestlers.
     </p>
+
   </section>
 
-  <section class="intro" id="about">
-    <div class="section-label">Clinic Information</div>
+  <!-- =========================
+       INTRO
+  ========================== -->
 
-    <h2>Learn. Refine. Add To Your Game.</h2>
+  <section class="intro">
+
+    <div class="section-label">
+      Clinic Information
+    </div>
+
+    <h2>
+      Learn. Refine.<br>
+      Add To Your Game.
+    </h2>
 
     <p>
       Our clinics are designed to focus closely on specific positions,
@@ -318,27 +402,42 @@
       Clinic rates vary based on length and the number of sessions provided.
       All upcoming clinics are listed below.
     </p>
+
   </section>
 
-  <section class="upcoming" id="upcoming">
-    <div class="section-label">Schedule</div>
+  <!-- =========================
+       UPCOMING CLINICS
+  ========================== -->
 
-    <h2>Upcoming Clinics</h2>
+  <section class="upcoming">
 
-    <div class="clinic-list">
+    <div class="section-label">
+      Upcoming
+    </div>
+
+    <h2>
+      Upcoming Clinics
+    </h2>
+
+    <div class="clinic-grid">
+
+      <!-- LEG RIDING CLINIC -->
 
       <div class="clinic-card">
+
         <div class="clinic-date">
           October / November 2026 · Date TBD
         </div>
 
-        <h3>Leg Riding Clinic #1</h3>
+        <h3>
+          Leg Riding Clinic #1
+        </h3>
 
-        <div class="clinic-coaches">
+        <div class="clinician">
           With Coach Luth
         </div>
 
-        <p>
+        <p class="clinic-description">
           Elevate your game by learning the ins and outs of leg riding
           positioning and the tricks that helped Coach Luth become a
           three-time All-American.
@@ -346,79 +445,112 @@
 
         <div class="clinic-price">
           $50 Registration
-
-          <span>
-            Half price if you bring a friend.
-          </span>
-
-          <span>
-            Half price for anyone who has booked a private lesson within the
-            past 90 days.
-          </span>
         </div>
+
+        <p class="discount">
+          Half price if you bring a friend.
+        </p>
+
+        <p class="discount">
+          Half price for anyone who has booked a private lesson within the
+          past 90 days.
+        </p>
+
       </div>
 
+      <!-- CHRISTMAS CLINIC -->
+
       <div class="clinic-card">
+
         <div class="clinic-date">
           Christmas Clinic · Date TBD
         </div>
 
-        <h3>Neutral Attacks</h3>
+        <h3>
+          Neutral Attacks
+        </h3>
 
-        <div class="clinic-coaches">
+        <div class="clinician">
           With Coach Luth &amp; Coach Shea
         </div>
 
-        <p>
+        <p class="clinic-description">
           Coach Shea and Coach Luth show the attacks from neutral that helped
           them reach the next level.
         </p>
 
         <div class="clinic-price">
           $50 Registration
-
-          <span>
-            Half price if you bring a friend.
-          </span>
-
-          <span>
-            Half price for anyone who has booked a private lesson within the
-            past 90 days.
-          </span>
         </div>
+
+        <p class="discount">
+          Half price if you bring a friend.
+        </p>
+
+        <p class="discount">
+          Half price for anyone who has booked a private lesson within the
+          past 90 days.
+        </p>
+
       </div>
 
     </div>
+
+    <!-- USA WRESTLING REQUIREMENT -->
+
+    <p class="participation-requirement">
+      A valid USA Wrestling membership and completed waiver are required
+      before participation. View and print the waiver
+      <a
+        href="USA-Wrestling-Waiver.pdf"
+        target="_blank"
+        rel="noopener"
+      >here</a>.
+    </p>
+
   </section>
 
-  <section class="cta" id="contact">
-    <h2>More Clinics Coming Soon</h2>
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact">
+
+    <div class="section-label">
+      Clinic Registration
+    </div>
+
+    <h2>
+      More Information Coming Soon
+    </h2>
 
     <p>
-      Dates, registration information, and additional clinic details will be
-      updated here as new sessions are announced.
+      Registration information and additional details will be posted as
+      clinic dates are finalized.
     </p>
 
     <a
-      href="mailto:luthwrestling@gmail.com?subject=Luth%20Wrestling%20Academy%20Clinic%20Inquiry"
-      class="btn"
+      href="mailto:luthwrestling@gmail.com?subject=Wrestling%20Clinic%20Question"
+      class="contact-link"
     >
-      Questions? Contact Us
+      Questions? Email luthwrestling@gmail.com
     </a>
 
     <a
-      href="mailto:luthwrestling@gmail.com"
-      class="contact-link"
+      href="index.html"
+      class="back-link"
     >
-      luthwrestling@gmail.com
-    </a>
-
-    <a href="index.html" class="back-link">
       ← Back to Home
     </a>
+
   </section>
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
+
     <div>
       © 2026 Luth Wrestling Academy ·
       <a href="mailto:luthwrestling@gmail.com">
@@ -426,7 +558,10 @@
       </a>
     </div>
 
-    <div>Middletown, Connecticut</div>
+    <div>
+      Middletown, Connecticut
+    </div>
+
   </footer>
 
 </body>
