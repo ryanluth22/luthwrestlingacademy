@@ -92,11 +92,10 @@
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 800px;
       font-size: 20px;
       line-height: 1.65;
       color: #cfcfcf;
-      margin-bottom: 38px;
     }
 
     /* =========================
@@ -129,7 +128,7 @@
     }
 
     /* =========================
-       DETAILS
+       SESSION DETAILS
     ========================= */
 
     .details {
@@ -142,7 +141,7 @@
       color: #777;
     }
 
-    .details-grid {
+    .detail-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
@@ -151,52 +150,71 @@
     .detail-card {
       background: #f1f1f1;
       padding: 32px;
-      min-height: 180px;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
     }
 
     .detail-card h3 {
       text-transform: uppercase;
-      font-size: 15px;
-      letter-spacing: 1px;
+      font-size: 20px;
       margin-bottom: 16px;
     }
 
-    .detail-card strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 7px;
+    .detail-main {
+      font-size: 27px;
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 18px;
     }
 
     .detail-card p {
       color: #666;
       line-height: 1.6;
+      margin-top: auto;
     }
 
     /* =========================
-       FORMAT
+       HOW IT WORKS
     ========================= */
 
-    .format {
-      background: #111;
+    .how-it-works {
+      background: #e8e5df;
+      color: #111;
       padding: 85px 8%;
     }
 
-    .format-content {
-      max-width: 900px;
+    .how-it-works .section-label {
+      color: #777;
     }
 
-    .format p {
-      color: #bbb;
-      font-size: 18px;
+    .how-it-works p {
+      max-width: 900px;
+      color: #666;
+      font-size: 17px;
       line-height: 1.75;
       margin-bottom: 20px;
     }
 
-    .format .note {
-      color: #888;
+    .how-it-works .practice-note {
       font-size: 15px;
+      line-height: 1.6;
+      color: #777;
       font-style: italic;
-      margin-top: 30px;
+      margin-top: 25px;
+    }
+
+    /* CIAC NOTE */
+
+    .ciac-note {
+      max-width: 1000px;
+      margin-top: 25px;
+      padding-top: 22px;
+      border-top: 1px solid #ccc;
+      font-size: 13px !important;
+      line-height: 1.55 !important;
+      color: #777 !important;
+      font-style: italic;
     }
 
     /* =========================
@@ -204,44 +222,41 @@
     ========================= */
 
     .pricing {
-      background: #f4f1ea;
-      color: #111;
+      background: #111;
+      color: white;
       padding: 85px 8%;
     }
 
-    .pricing .section-label {
-      color: #777;
-    }
-
-    .pricing-grid {
+    .price-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
     }
 
     .price-card {
-      background: white;
+      background: #1b1b1b;
       padding: 32px;
-      min-height: 220px;
+      min-height: 250px;
       display: flex;
       flex-direction: column;
     }
 
     .price-card h3 {
-      text-transform: uppercase;
       font-size: 20px;
-      margin-bottom: 16px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     .price {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 900;
       margin-bottom: 18px;
     }
 
     .price-card p {
-      color: #666;
+      color: #aaa;
       line-height: 1.6;
+      margin-top: auto;
     }
 
     /* =========================
@@ -249,7 +264,7 @@
     ========================= */
 
     .waiver {
-      background: white;
+      background: #f4f1ea;
       color: #111;
       padding: 85px 8%;
       text-align: center;
@@ -257,10 +272,6 @@
 
     .waiver .section-label {
       color: #777;
-    }
-
-    .waiver h2 {
-      margin-bottom: 25px;
     }
 
     .waiver p {
@@ -272,10 +283,11 @@
     }
 
     .requirement-note {
-      max-width: 760px;
-      margin: 25px auto 0;
-      font-size: 14px;
-      color: #777;
+      margin-top: 18px !important;
+      margin-bottom: 0 !important;
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      color: #666 !important;
       font-style: italic;
     }
 
@@ -346,15 +358,15 @@
       }
 
       .details,
-      .format,
+      .how-it-works,
       .pricing,
       .waiver {
         padding-left: 6%;
         padding-right: 6%;
       }
 
-      .details-grid,
-      .pricing-grid {
+      .detail-grid,
+      .price-grid {
         grid-template-columns: 1fr;
       }
 
@@ -381,6 +393,7 @@
     <div class="nav-links">
       <a href="private-lessons.html">Private Lessons</a>
       <a href="clinics.html">Clinics</a>
+      <a href="index.html#coaches">Coaches</a>
       <a href="index.html#contact">Contact</a>
     </div>
 
@@ -400,9 +413,9 @@
     </h1>
 
     <p>
-      An opportunity for those seeking additional mat time, looking for guided
-      instruction, and wanting a low-stakes environment to wrestle in. All
-      skill levels are welcome. Must be 6th grade or older. Adults welcome.
+      An opportunity for those seeking additional mat time, looking for
+      guided instruction, and wanting a low-stakes environment to wrestle in.
+      All skill levels are welcome. Must be 6th grade or older. Adults welcome.
     </p>
 
   </section>
@@ -412,37 +425,72 @@
   <section class="details">
 
     <div class="section-label">
-      Weekly Open Mat
+      Session Details
     </div>
 
     <h2>
-      Session Details
+      Monday Nights
     </h2>
 
-    <div class="details-grid">
+    <div class="detail-grid">
+
+      <!-- TIME -->
 
       <div class="detail-card">
-        <h3>When</h3>
-        <strong>Monday Nights</strong>
-        <p>7:15 PM – 8:30 PM</p>
+
+        <h3>
+          Time
+        </h3>
+
+        <div class="detail-main">
+          7:15 PM<br>
+          – 8:30 PM
+        </div>
+
+        <p>
+          Weekly on Monday nights.
+        </p>
+
       </div>
 
+      <!-- LOCATION -->
+
       <div class="detail-card">
-        <h3>Where</h3>
-        <strong>Biddiscombe Wrestling Room</strong>
+
+        <h3>
+          Location
+        </h3>
+
+        <div class="detail-main">
+          Biddiscombe<br>
+          Wrestling Room
+        </div>
+
         <p>
           Wesleyan University<br>
           Middletown, Connecticut
         </p>
+
       </div>
 
+      <!-- WHO -->
+
       <div class="detail-card">
-        <h3>Who</h3>
-        <strong>6th Grade &amp; Older</strong>
+
+        <h3>
+          Who
+        </h3>
+
+        <div class="detail-main">
+          6th Grade<br>
+          &amp; Older
+        </div>
+
         <p>
           Wrestlers of all experience levels are welcome to come train.
           New wrestlers welcome! Adults welcome.
         </p>
+
       </div>
 
     </div>
@@ -451,40 +499,45 @@
 
   <!-- HOW IT WORKS -->
 
-  <section class="format">
+  <section class="how-it-works">
 
-    <div class="format-content">
-
-      <div class="section-label">
-        Open Mat Format
-      </div>
-
-      <h2>
-        How It Works
-      </h2>
-
-      <p>
-        Open Mat sessions give wrestlers the freedom to wrestle with their
-        partners based on what they need most. One mat will be dedicated to a
-        guided practice, with another mat open for free drilling and wrestling.
-        A coach will be available throughout the session for feedback and
-        instruction. Guided practice will vary depending on the needs of the
-        group.
-      </p>
-
-      <p>
-        There is no advance registration required. Simply complete the
-        required waiver before your first session.
-      </p>
-
-      <p class="note">
-        *These sessions are not designed to replace weekly training with a
-        wrestler's team, but rather to provide an opportunity for wrestlers to
-        get extra work in, or for anyone interested in learning more about the
-        sport.
-      </p>
-
+    <div class="section-label">
+      The Format
     </div>
+
+    <h2>
+      How It Works
+    </h2>
+
+    <p>
+      Open Mat sessions give wrestlers the freedom to wrestle with their
+      partners based on what they need most. One mat will be dedicated to a
+      guided practice, with another mat open for free drilling and wrestling.
+      A coach will be available throughout the session for feedback and
+      instruction. Guided practice will vary depending on the needs of the
+      group.
+    </p>
+
+    <p>
+      There is no advance registration required. Simply complete the required
+      waiver before your first session.
+    </p>
+
+    <p class="practice-note">
+      *These sessions are not designed to replace weekly training with a
+      wrestler's team, but rather to provide an opportunity for wrestlers to
+      get extra work in, or for anyone interested in learning more about the
+      sport.
+    </p>
+
+    <!-- CIAC IN-SEASON NOTE -->
+
+    <p class="ciac-note">
+      *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
+      instruction at private clubs during their high school season, provided
+      the instruction is in addition to their high school team practices and
+      is not provided by a member of their high school coaching staff.
+    </p>
 
   </section>
 
@@ -497,10 +550,12 @@
     </div>
 
     <h2>
-      Pricing
+      Simple Options
     </h2>
 
-    <div class="pricing-grid">
+    <div class="price-grid">
+
+      <!-- SINGLE SESSION -->
 
       <div class="price-card">
 
@@ -513,11 +568,12 @@
         </div>
 
         <p>
-          Drop in for any individual Open Mat session. No advance registration
-          required.
+          Drop in for any Monday Open Mat session.
         </p>
 
       </div>
+
+      <!-- 4 SESSION PASS -->
 
       <div class="price-card">
 
@@ -530,11 +586,12 @@
         </div>
 
         <p>
-          Four Open Mat sessions for $65, bringing the cost down to $16.25 per
-          session.
+          Four Open Mat sessions for $16.25 per session.
         </p>
 
       </div>
+
+      <!-- PRIVATE LESSON BENEFIT -->
 
       <div class="price-card">
 
@@ -547,8 +604,8 @@
         </div>
 
         <p>
-          Open Mat is free for anyone who has booked a private lesson within
-          the past month.
+          Open Mat is free if you have booked a private lesson within the
+          past month.
         </p>
 
       </div>
@@ -585,9 +642,9 @@
       View &amp; Print Waiver
     </a>
 
-    <div class="requirement-note">
+    <p class="requirement-note">
       A valid USA Wrestling membership is required for all participants.
-    </div>
+    </p>
 
     <a
       href="mailto:luthwrestling@gmail.com?subject=Open%20Mat%20Question"
