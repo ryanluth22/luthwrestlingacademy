@@ -148,14 +148,15 @@
 
     .clinic-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      max-width: 1000px;
     }
 
     .clinic-card {
       background: white;
-      padding: 35px;
-      min-height: 390px;
+      padding: 38px;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
     }
@@ -170,7 +171,7 @@
     }
 
     .clinic-card h3 {
-      font-size: 30px;
+      font-size: 32px;
       line-height: 1;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -187,6 +188,7 @@
       color: #666;
       line-height: 1.65;
       margin-bottom: 25px;
+      max-width: 800px;
     }
 
     .clinic-price {
@@ -208,11 +210,12 @@
     ========================= */
 
     .participation-requirement {
+      max-width: 1000px;
       margin-top: 30px;
       padding-top: 25px;
       border-top: 1px solid #ccc;
-      color: #777;
-      font-size: 13px;
+      color: #666;
+      font-size: 15px;
       line-height: 1.6;
       font-style: italic;
     }
@@ -224,25 +227,20 @@
     }
 
     /* =========================
-       CONTACT
+       ADDITIONAL CLINICS
     ========================= */
 
-    .contact {
+    .additional-clinics {
       background: #111;
-      padding: 85px 8%;
+      padding: 65px 8%;
       text-align: center;
     }
 
-    .contact h2 {
-      margin-bottom: 25px;
-    }
-
-    .contact p {
-      max-width: 700px;
-      margin: 0 auto 25px;
-      color: #aaa;
-      font-size: 17px;
+    .additional-clinics p {
+      color: #ccc;
+      font-size: 18px;
       line-height: 1.7;
+      margin-bottom: 22px;
     }
 
     .contact-link {
@@ -312,13 +310,14 @@
 
       .intro,
       .upcoming,
-      .contact {
+      .additional-clinics {
         padding-left: 6%;
         padding-right: 6%;
       }
 
-      .clinic-grid {
-        grid-template-columns: 1fr;
+      .clinic-card {
+        padding: 28px;
+        min-height: auto;
       }
 
       footer {
@@ -331,9 +330,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -352,9 +349,7 @@
 
   </nav>
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -376,9 +371,7 @@
 
   </section>
 
-  <!-- =========================
-       INTRO
-  ========================== -->
+  <!-- INTRO -->
 
   <section class="intro">
 
@@ -405,9 +398,7 @@
 
   </section>
 
-  <!-- =========================
-       UPCOMING CLINICS
-  ========================== -->
+  <!-- UPCOMING CLINICS -->
 
   <section class="upcoming">
 
@@ -510,23 +501,12 @@
 
   </section>
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
+  <!-- ADDITIONAL CLINICS -->
 
-  <section class="contact">
-
-    <div class="section-label">
-      Clinic Registration
-    </div>
-
-    <h2>
-      More Information Coming Soon
-    </h2>
+  <section class="additional-clinics">
 
     <p>
-      Registration information and additional details will be posted as
-      clinic dates are finalized.
+      Additional clinics to be added in the future.
     </p>
 
     <a
@@ -545,9 +525,7 @@
 
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
