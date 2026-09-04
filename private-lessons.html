@@ -128,8 +128,6 @@
       opacity: .82;
     }
 
-    /* Slightly larger waiver / USAW requirement note */
-
     .booking-requirement {
       margin-top: 16px;
       font-size: 15px;
@@ -162,7 +160,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
     }
 
     .rate-card {
@@ -200,6 +198,24 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+
+    /* CIAC NOTE */
+
+    .ciac-note-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 25px;
+    }
+
+    .ciac-note {
+      grid-column: 1;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #777;
+      font-style: italic;
+      padding: 0 5px;
     }
 
     .additional {
@@ -303,11 +319,6 @@
       line-height: 1.7;
     }
 
-    /*
-      Overrides the general .booking p styling so
-      the waiver note keeps its intended size/spacing.
-    */
-
     .booking .booking-requirement {
       margin: 16px auto 0;
       font-size: 15px;
@@ -400,6 +411,14 @@
         grid-template-columns: 1fr;
       }
 
+      .ciac-note-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ciac-note {
+        grid-column: 1;
+      }
+
       footer {
         flex-direction: column;
         gap: 10px;
@@ -465,6 +484,8 @@
 
     <div class="rate-grid">
 
+      <!-- INDIVIDUAL -->
+
       <div class="rate-card">
 
         <h3>
@@ -485,6 +506,8 @@
         </div>
 
       </div>
+
+      <!-- PARTNER -->
 
       <div class="rate-card">
 
@@ -508,6 +531,8 @@
 
       </div>
 
+      <!-- GROUP -->
+
       <div class="rate-card">
 
         <h3>
@@ -530,6 +555,17 @@
 
       </div>
 
+    </div>
+
+    <!-- CIAC IN-SEASON NOTE -->
+
+    <div class="ciac-note-grid">
+      <p class="ciac-note">
+        *Under CIAC guidelines, wrestlers in their high school season ARE
+        permitted to receive supplemental, one-on-one instruction outside of
+        their high-school practice, provided the instruction is not given by a
+        member of their high-school coaching staff.
+      </p>
     </div>
 
     <p class="additional">
