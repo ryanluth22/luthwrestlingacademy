@@ -23,10 +23,6 @@
       color: white;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
-
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -62,10 +58,6 @@
       text-transform: uppercase;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       padding: 95px 8% 85px;
       background: #111;
@@ -99,10 +91,6 @@
       margin-bottom: 38px;
     }
 
-    /* =========================
-       SHARED
-    ========================= */
-
     h2 {
       font-size: clamp(38px, 5vw, 64px);
       line-height: .95;
@@ -129,11 +117,12 @@
     }
 
     .booking-requirement {
-      margin-top: 16px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #666;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #555;
       font-style: italic;
+      max-width: 900px;
     }
 
     .booking-requirement a {
@@ -141,10 +130,6 @@
       font-weight: bold;
       text-decoration: underline;
     }
-
-    /* =========================
-       SINGLE SESSION RATES
-    ========================= */
 
     .rates {
       background: white;
@@ -200,8 +185,6 @@
       letter-spacing: 1px;
     }
 
-    /* CIAC NOTE */
-
     .ciac-note {
       max-width: 1000px;
       margin-bottom: 25px;
@@ -216,10 +199,6 @@
       line-height: 1.6;
       margin-bottom: 30px;
     }
-
-    /* =========================
-       MULTI-SESSION RATES
-    ========================= */
 
     .packages {
       background: #e8e5df;
@@ -280,18 +259,9 @@
       margin-bottom: 30px;
     }
 
-    .packages .btn {
-      background: #111;
-      color: white;
-    }
-
     .packages .booking-requirement {
-      color: #666;
+      color: #555;
     }
-
-    /* =========================
-       BOOKING
-    ========================= */
 
     .booking {
       background: #f4f1ea;
@@ -313,10 +283,10 @@
     }
 
     .booking .booking-requirement {
-      margin: 16px auto 0;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #666;
+      margin: 20px auto 0;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #555;
       font-style: italic;
     }
 
@@ -345,10 +315,6 @@
       letter-spacing: 1px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
       padding: 45px 8%;
       background: #080808;
@@ -365,12 +331,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
     @media (max-width: 800px) {
-
       nav {
         padding: 22px 5%;
       }
@@ -414,14 +375,9 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
-
     <div class="logo">
-      <a href="index.html">
-        Luth Wrestling Academy
-      </a>
+      <a href="index.html">Luth Wrestling Academy</a>
     </div>
 
     <div class="nav-links">
@@ -430,16 +386,10 @@
       <a href="open-mat.html">Open Mat</a>
       <a href="index.html#contact">Contact</a>
     </div>
-
   </nav>
 
-  <!-- HERO -->
-
   <section class="hero">
-
-    <div class="eyebrow">
-      Private Lessons
-    </div>
+    <div class="eyebrow">Private Lessons</div>
 
     <h1>
       Focused Training<br>
@@ -452,33 +402,20 @@
       development, live wrestling, film review, or a combination of areas
       based on the wrestlers' goals.
     </p>
-
   </section>
 
-  <!-- SINGLE SESSION RATES -->
-
   <section class="rates">
+    <div class="section-label">Private Training</div>
 
-    <div class="section-label">
-      Private Training
-    </div>
-
-    <h2>
-      Single Session Rates
-    </h2>
+    <h2>Single Session Rates</h2>
 
     <div class="rate-grid">
 
-      <!-- INDIVIDUAL -->
-
       <div class="rate-card">
-
-        <h3>
-          Individual
-        </h3>
+        <h3>Individual</h3>
 
         <div class="price">
-          $150 / hour
+          $125 / hour
         </div>
 
         <p>
@@ -489,19 +426,13 @@
         <div class="rate-detail">
           1 Wrestler
         </div>
-
       </div>
 
-      <!-- PARTNER -->
-
       <div class="rate-card">
-
-        <h3>
-          Partner
-        </h3>
+        <h3>Partner</h3>
 
         <div class="price">
-          $120 / hour total
+          $110 / hour total
         </div>
 
         <p>
@@ -511,38 +442,29 @@
         </p>
 
         <div class="rate-detail">
-          2 Wrestlers · $60 Each
+          2 Wrestlers · $55 Each
         </div>
-
       </div>
 
-      <!-- GROUP -->
-
       <div class="rate-card">
-
-        <h3>
-          Group
-        </h3>
+        <h3>Group</h3>
 
         <div class="price">
           $100 / hour total
         </div>
 
         <p>
-          Small group training for up to four wrestlers. Designed for
+          Small group training for three to four wrestlers. Designed for
           teammates / training partners who want individual coaching at the
           best per-person value.
         </p>
 
         <div class="rate-detail">
-          Up To 4 Wrestlers · $25 Each With 4
+          3–4 Wrestlers · $25 Each With 4
         </div>
-
       </div>
 
     </div>
-
-    <!-- CIAC IN-SEASON NOTE -->
 
     <p class="ciac-note">
       *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
@@ -576,17 +498,10 @@
 
   </section>
 
-  <!-- MULTI-SESSION RATES -->
-
   <section class="packages">
+    <div class="section-label">Consistent Training</div>
 
-    <div class="section-label">
-      Consistent Training
-    </div>
-
-    <h2>
-      Multi-Session Rates
-    </h2>
+    <h2>Multi-Session Rates</h2>
 
     <p class="packages-intro">
       Athletes who want consistent training can purchase four sessions at a
@@ -597,51 +512,39 @@
     <div class="package-grid">
 
       <div class="package-card">
-
-        <h3>
-          4 Individual Sessions
-        </h3>
+        <h3>4 Individual Sessions</h3>
 
         <div class="package-price">
-          $510
+          $425
         </div>
 
         <p>
           Four one-on-one private training sessions.
         </p>
-
       </div>
 
       <div class="package-card">
-
-        <h3>
-          4 Partner Sessions
-        </h3>
+        <h3>4 Partner Sessions</h3>
 
         <div class="package-price">
-          $410
+          $375
         </div>
 
         <p>
           Four private training sessions for two wrestling partners.
         </p>
-
       </div>
 
       <div class="package-card">
-
-        <h3>
-          4 Group Sessions
-        </h3>
+        <h3>4 Group Sessions</h3>
 
         <div class="package-price">
           $340
         </div>
 
         <p>
-          Four small-group training sessions for up to four wrestlers.
+          Four small-group training sessions for three to four wrestlers.
         </p>
-
       </div>
 
     </div>
@@ -672,17 +575,10 @@
 
   </section>
 
-  <!-- BOOKING -->
-
   <section class="booking">
+    <div class="section-label">Get Started</div>
 
-    <div class="section-label">
-      Get Started
-    </div>
-
-    <h2>
-      Book a Session
-    </h2>
+    <h2>Book a Session</h2>
 
     <p>
       View available lesson times and reserve a session using our online
@@ -715,19 +611,12 @@
       Questions? Email luthwrestling@gmail.com
     </a>
 
-    <a
-      href="index.html"
-      class="back-link"
-    >
+    <a href="index.html" class="back-link">
       ← Back to Home
     </a>
-
   </section>
 
-  <!-- FOOTER -->
-
   <footer>
-
     <div>
       © 2026 Luth Wrestling Academy ·
       <a href="mailto:luthwrestling@gmail.com">
@@ -738,7 +627,6 @@
     <div>
       Middletown, Connecticut
     </div>
-
   </footer>
 
 </body>
