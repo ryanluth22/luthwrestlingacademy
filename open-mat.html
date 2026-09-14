@@ -23,10 +23,6 @@
       color: white;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
-
     nav {
       width: 100%;
       padding: 28px 6%;
@@ -62,10 +58,6 @@
       text-transform: uppercase;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       padding: 95px 8% 85px;
       background: #111;
@@ -91,23 +83,19 @@
       margin-bottom: 30px;
     }
 
-    .hero p {
-      max-width: 800px;
-      font-size: 20px;
-      line-height: 1.65;
-      color: #cfcfcf;
-    }
-
-    /* =========================
-       SHARED
-    ========================= */
-
     h2 {
       font-size: clamp(38px, 5vw, 64px);
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -2px;
       margin-bottom: 35px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.65;
+      color: #cfcfcf;
     }
 
     .btn {
@@ -127,10 +115,6 @@
       opacity: .82;
     }
 
-    /* =========================
-       SESSION DETAILS
-    ========================= */
-
     .details {
       background: white;
       color: #111;
@@ -145,66 +129,43 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
+      margin-bottom: 45px;
     }
 
     .detail-card {
       background: #f1f1f1;
-      padding: 32px;
-      min-height: 230px;
-      display: flex;
-      flex-direction: column;
+      padding: 30px;
+      min-height: 180px;
     }
 
     .detail-card h3 {
       text-transform: uppercase;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .detail-main {
-      font-size: 27px;
-      line-height: 1.1;
-      font-weight: 900;
-      margin-bottom: 18px;
+      font-size: 18px;
+      margin-bottom: 14px;
     }
 
     .detail-card p {
       color: #666;
-      line-height: 1.6;
-      margin-top: auto;
+      line-height: 1.65;
     }
-
-    /* =========================
-       HOW IT WORKS
-    ========================= */
 
     .how-it-works {
-      background: #e8e5df;
-      color: #111;
-      padding: 85px 8%;
-    }
-
-    .how-it-works .section-label {
-      color: #777;
+      max-width: 1000px;
     }
 
     .how-it-works p {
-      max-width: 900px;
       color: #666;
       font-size: 17px;
       line-height: 1.75;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .how-it-works .practice-note {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #777;
-      font-style: italic;
+    .practice-note {
       margin-top: 25px;
+      font-size: 14px !important;
+      color: #777 !important;
+      font-style: italic;
     }
-
-    /* CIAC NOTE */
 
     .ciac-note {
       max-width: 1000px;
@@ -217,57 +178,51 @@
       font-style: italic;
     }
 
-    /* =========================
-       PRICING
-    ========================= */
-
     .pricing {
-      background: #111;
-      color: white;
+      background: #e8e5df;
+      color: #111;
       padding: 85px 8%;
     }
 
-    .price-grid {
+    .pricing .section-label {
+      color: #777;
+    }
+
+    .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
     }
 
-    .price-card {
-      background: #1b1b1b;
+    .pricing-card {
+      background: #f7f5f1;
       padding: 32px;
-      min-height: 250px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
     }
 
-    .price-card h3 {
-      font-size: 20px;
+    .pricing-card h3 {
       text-transform: uppercase;
-      margin-bottom: 18px;
+      font-size: 20px;
+      margin-bottom: 16px;
     }
 
     .price {
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 900;
       margin-bottom: 18px;
     }
 
-    .price-card p {
-      color: #aaa;
+    .pricing-card p {
+      color: #666;
       line-height: 1.6;
-      margin-top: auto;
     }
-
-    /* =========================
-       WAIVER
-    ========================= */
 
     .waiver {
       background: #f4f1ea;
       color: #111;
       padding: 85px 8%;
-      text-align: center;
     }
 
     .waiver .section-label {
@@ -275,20 +230,38 @@
     }
 
     .waiver p {
-      max-width: 760px;
-      margin: 0 auto 30px;
+      max-width: 850px;
       color: #666;
       font-size: 17px;
       line-height: 1.7;
+      margin-bottom: 22px;
     }
 
-    .requirement-note {
-      margin-top: 18px !important;
-      margin-bottom: 0 !important;
-      font-size: 15px !important;
-      line-height: 1.6 !important;
-      color: #666 !important;
+    .membership-box {
+      max-width: 900px;
+      margin-top: 32px;
+      padding-top: 25px;
+      border-top: 1px solid #ccc;
+    }
+
+    .membership-box h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .membership-box p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: #555;
       font-style: italic;
+      margin-bottom: 7px;
+    }
+
+    .membership-box a {
+      color: #111;
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     .contact-link {
@@ -301,7 +274,7 @@
 
     .back-link {
       display: inline-block;
-      margin-top: 22px;
+      margin-top: 25px;
       color: #777;
       font-size: 13px;
       font-weight: bold;
@@ -309,10 +282,6 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    /* =========================
-       FOOTER
-    ========================= */
 
     footer {
       padding: 45px 8%;
@@ -330,12 +299,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
     @media (max-width: 800px) {
-
       nav {
         padding: 22px 5%;
       }
@@ -358,7 +322,6 @@
       }
 
       .details,
-      .how-it-works,
       .pricing,
       .waiver {
         padding-left: 6%;
@@ -366,7 +329,7 @@
       }
 
       .detail-grid,
-      .price-grid {
+      .pricing-grid {
         grid-template-columns: 1fr;
       }
 
@@ -380,8 +343,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
 
     <div class="logo">
@@ -391,15 +352,13 @@
     </div>
 
     <div class="nav-links">
+      <a href="index.html#programs">Training</a>
       <a href="private-lessons.html">Private Lessons</a>
       <a href="clinics.html">Clinics</a>
-      <a href="index.html#coaches">Coaches</a>
       <a href="index.html#contact">Contact</a>
     </div>
 
   </nav>
-
-  <!-- HERO -->
 
   <section class="hero">
 
@@ -413,14 +372,12 @@
     </h1>
 
     <p>
-      An opportunity for those seeking additional mat time, looking for
-      guided instruction, and wanting a low-stakes environment to wrestle in.
+      An opportunity for those seeking additional mat time, looking for guided
+      instruction, and wanting a low-stakes environment to wrestle in.
       All skill levels are welcome. Must be 6th grade or older. Adults welcome.
     </p>
 
   </section>
-
-  <!-- SESSION DETAILS -->
 
   <section class="details">
 
@@ -429,192 +386,112 @@
     </div>
 
     <h2>
-      Monday Nights
+      Come Get Extra Work
     </h2>
 
     <div class="detail-grid">
 
-      <!-- TIME -->
-
       <div class="detail-card">
-
-        <h3>
-          Time
-        </h3>
-
-        <div class="detail-main">
-          7:15 PM<br>
-          – 8:30 PM
-        </div>
-
+        <h3>Monday Nights</h3>
         <p>
-          Weekly on Monday nights.
+          7:15 PM–8:30 PM
         </p>
-
       </div>
 
-      <!-- LOCATION -->
-
       <div class="detail-card">
-
-        <h3>
-          Location
-        </h3>
-
-        <div class="detail-main">
-          Biddiscombe<br>
-          Wrestling Room
-        </div>
-
+        <h3>Location</h3>
         <p>
+          Biddiscombe Wrestling Room<br>
           Wesleyan University<br>
           Middletown, Connecticut
         </p>
-
       </div>
-
-      <!-- WHO -->
 
       <div class="detail-card">
-
-        <h3>
-          Who
-        </h3>
-
-        <div class="detail-main">
-          6th Grade<br>
-          &amp; Older
-        </div>
-
+        <h3>Who Can Attend</h3>
         <p>
-          Wrestlers of all experience levels are welcome to come train.
-          New wrestlers welcome! Adults welcome.
+          6th grade and older. Wrestlers of all experience levels are welcome
+          to come train. New wrestlers welcome. Adults welcome.
         </p>
-
       </div>
 
     </div>
 
-  </section>
+    <div class="how-it-works">
 
-  <!-- HOW IT WORKS -->
+      <div class="section-label">
+        How It Works
+      </div>
 
-  <section class="how-it-works">
+      <p>
+        Open Mat sessions give wrestlers the freedom to wrestle with their
+        partners based on what they need most. One mat will be dedicated to a
+        guided practice, with another mat open for free drilling and wrestling.
+        A coach will be available throughout the session for feedback and
+        instruction. Guided practice will vary depending on the needs of the group.
+      </p>
 
-    <div class="section-label">
-      The Format
+      <p>
+        There is no advance registration required. Simply complete the required
+        waiver before your first session.
+      </p>
+
+      <p class="practice-note">
+        *These sessions are not designed to replace weekly training with a
+        wrestler's team, but rather to provide an opportunity for wrestlers to
+        get extra work in, or for anyone interested in learning more about the sport.
+      </p>
+
+      <p class="ciac-note">
+        *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
+        instruction at private clubs during their high school season, provided
+        the instruction is in addition to their high school team practices and
+        is not provided by a member of their high school coaching staff.
+      </p>
+
     </div>
 
-    <h2>
-      How It Works
-    </h2>
-
-    <p>
-      Open Mat sessions give wrestlers the freedom to wrestle with their
-      partners based on what they need most. One mat will be dedicated to a
-      guided practice, with another mat open for free drilling and wrestling.
-      A coach will be available throughout the session for feedback and
-      instruction. Guided practice will vary depending on the needs of the
-      group.
-    </p>
-
-    <p>
-      There is no advance registration required. Simply complete the required
-      waiver before your first session.
-    </p>
-
-    <p class="practice-note">
-      *These sessions are not designed to replace weekly training with a
-      wrestler's team, but rather to provide an opportunity for wrestlers to
-      get extra work in, or for anyone interested in learning more about the
-      sport.
-    </p>
-
-    <!-- CIAC IN-SEASON NOTE -->
-
-    <p class="ciac-note">
-      *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
-      instruction at private clubs during their high school season, provided
-      the instruction is in addition to their high school team practices and
-      is not provided by a member of their high school coaching staff.
-    </p>
-
   </section>
-
-  <!-- PRICING -->
 
   <section class="pricing">
 
     <div class="section-label">
-      Open Mat Pricing
+      Pricing
     </div>
 
     <h2>
-      Simple Options
+      Open Mat Rates
     </h2>
 
-    <div class="price-grid">
+    <div class="pricing-grid">
 
-      <!-- SINGLE SESSION -->
-
-      <div class="price-card">
-
-        <h3>
-          Single Session
-        </h3>
-
-        <div class="price">
-          $20
-        </div>
-
+      <div class="pricing-card">
+        <h3>Single Session</h3>
+        <div class="price">$20</div>
         <p>
           Drop in for any Monday Open Mat session.
         </p>
-
       </div>
 
-      <!-- 4 SESSION PASS -->
-
-      <div class="price-card">
-
-        <h3>
-          4-Session Pass
-        </h3>
-
-        <div class="price">
-          $65
-        </div>
-
+      <div class="pricing-card">
+        <h3>4-Session Pass</h3>
+        <div class="price">$65</div>
         <p>
           Four Open Mat sessions for $16.25 per session.
         </p>
-
       </div>
 
-      <!-- PRIVATE LESSON BENEFIT -->
-
-      <div class="price-card">
-
-        <h3>
-          Private Lesson Benefit
-        </h3>
-
-        <div class="price">
-          Free
-        </div>
-
+      <div class="pricing-card">
+        <h3>Private Lesson Benefit</h3>
+        <div class="price">Free</div>
         <p>
-          Open Mat is free if you have booked a private lesson within the
-          past month.
+          Open Mat is free if you have booked a private lesson within the past month.
         </p>
-
       </div>
 
     </div>
 
   </section>
-
-  <!-- WAIVER -->
 
   <section class="waiver">
 
@@ -629,8 +506,8 @@
     <p>
       There is no advance registration required for Open Mat. All wrestlers
       must have a completed waiver on file before participating for the first
-      time. You may print and complete the waiver ahead of time or complete a
-      copy in person before your first session.
+      time. You may print and complete the waiver ahead of time or complete
+      a copy in person before your first session.
     </p>
 
     <a
@@ -642,9 +519,40 @@
       View &amp; Print Waiver
     </a>
 
-    <p class="requirement-note">
-      A valid USA Wrestling membership is required for all participants.
-    </p>
+    <div class="membership-box">
+
+      <h3>
+        USA Wrestling Membership &amp; Waiver Required
+      </h3>
+
+      <p>
+        A valid USA Wrestling membership and completed waiver are required
+        before participation.
+      </p>
+
+      <p>
+        Don't have a USA Wrestling membership?
+        <a
+          href="https://www.usawmembership.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Get one here.
+        </a>
+      </p>
+
+      <p>
+        View and print the required waiver
+        <a
+          href="USA-Wrestling-Waiver.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          here.
+        </a>
+      </p>
+
+    </div>
 
     <a
       href="mailto:luthwrestling@gmail.com?subject=Open%20Mat%20Question"
@@ -662,14 +570,16 @@
 
   </section>
 
-  <!-- FOOTER -->
-
   <footer>
 
     <div>
       © 2026 Luth Wrestling Academy ·
       <a href="mailto:luthwrestling@gmail.com">
         luthwrestling@gmail.com
+      </a>
+      ·
+      <a href="tel:2038156699">
+        203-815-6699
       </a>
     </div>
 
