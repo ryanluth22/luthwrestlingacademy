@@ -204,55 +204,6 @@
     .additional {
       color: #666;
       line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    /* =========================
-       AVAILABILITY
-    ========================= */
-
-    .availability {
-      background: #111;
-      color: white;
-      padding: 85px 8%;
-    }
-
-    .availability-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
-      max-width: 1000px;
-      margin-bottom: 30px;
-    }
-
-    .availability-card {
-      background: #1b1b1b;
-      padding: 24px 28px;
-    }
-
-    .availability-card h3 {
-      text-transform: uppercase;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .availability-card p {
-      color: #bbb;
-      line-height: 1.6;
-    }
-
-    .availability-note {
-      max-width: 900px;
-      color: #bbb;
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .open-mat-line {
-      margin-top: 6px;
-      color: #888 !important;
-      font-style: italic;
-      font-size: 14px;
     }
 
     /* =========================
@@ -315,11 +266,10 @@
       font-size: 14px;
       font-style: italic;
       line-height: 1.6;
-      margin-bottom: 30px;
     }
 
     /* =========================
-       BOOKING
+       BOOKING / AVAILABILITY
     ========================= */
 
     .booking {
@@ -344,7 +294,58 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .contact-info {
+      max-width: 900px;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 38px;
+    }
+
+    .contact-info a {
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .availability-compact {
+      max-width: 900px;
       margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .availability-compact h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .availability-list p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    .availability-list strong {
+      color: #111;
+    }
+
+    .availability-list span {
+      color: #777;
+      font-style: italic;
+    }
+
+    .availability-note {
+      margin-top: 14px;
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+      font-style: italic;
     }
 
     .policy-box {
@@ -462,7 +463,6 @@
       }
 
       .rates,
-      .availability,
       .packages,
       .booking {
         padding-left: 6%;
@@ -470,7 +470,6 @@
       }
 
       .rate-grid,
-      .availability-grid,
       .package-grid {
         grid-template-columns: 1fr;
       }
@@ -625,73 +624,6 @@
 
   </section>
 
-  <!-- WEEKLY AVAILABILITY -->
-
-  <section class="availability">
-
-    <div class="section-label">
-      Scheduling
-    </div>
-
-    <h2>
-      Weekly Availability
-    </h2>
-
-    <div class="availability-grid">
-
-      <div class="availability-card">
-        <h3>Monday</h3>
-        <p>2:00–4:15 PM</p>
-        <p class="open-mat-line">
-          Open Mat: 7:15–8:30 PM
-        </p>
-      </div>
-
-      <div class="availability-card">
-        <h3>Tuesday</h3>
-        <p>
-          2:00–4:15 PM<br>
-          7:00–9:00 PM
-        </p>
-      </div>
-
-      <div class="availability-card">
-        <h3>Wednesday</h3>
-        <p>
-          2:00–4:15 PM<br>
-          7:00–9:00 PM
-        </p>
-      </div>
-
-      <div class="availability-card">
-        <h3>Thursday</h3>
-        <p>2:00–4:15 PM</p>
-      </div>
-
-      <div class="availability-card">
-        <h3>Friday</h3>
-        <p>
-          2:00–4:15 PM<br>
-          7:00–9:00 PM · Limited Availability
-        </p>
-      </div>
-
-      <div class="availability-card">
-        <h3>Sunday</h3>
-        <p>
-          Available by appointment
-        </p>
-      </div>
-
-    </div>
-
-    <p class="availability-note">
-      Additional lesson times may be available outside of those listed.
-      Contact us with your availability and we will do our best to accommodate you.
-    </p>
-
-  </section>
-
   <!-- MULTI-SESSION RATES -->
 
   <section class="packages">
@@ -768,7 +700,7 @@
 
   </section>
 
-  <!-- BOOKING -->
+  <!-- SCHEDULING / BOOKING -->
 
   <section class="booking">
 
@@ -782,9 +714,7 @@
 
     <p class="booking-intro">
       Contact us by email, phone, or text to inquire about a lesson.
-      Let us know the wrestler's name, age and weight, preferred type of
-      session, and a few times that work for you. We will confirm availability
-      and arrange your session.
+      We will confirm availability and arrange your session.
     </p>
 
     <div class="contact-buttons">
@@ -793,7 +723,7 @@
         href="tel:2038156699"
         class="btn"
       >
-        Call 203-815-6699
+        Call Us
       </a>
 
       <a
@@ -811,6 +741,67 @@
       </a>
 
     </div>
+
+    <p class="contact-info">
+      <strong>Phone:</strong>
+      <a href="tel:2038156699">203-815-6699</a>
+      <br>
+      <strong>Email:</strong>
+      <a href="mailto:luthwrestling@gmail.com">luthwrestling@gmail.com</a>
+    </p>
+
+    <!-- WEEKLY AVAILABILITY -->
+
+    <div class="availability-compact">
+
+      <h3>
+        Weekly Availability
+      </h3>
+
+      <div class="availability-list">
+
+        <p>
+          <strong>Monday:</strong>
+          2:00–4:15 PM
+          <span>· Open Mat 7:15–8:30 PM</span>
+        </p>
+
+        <p>
+          <strong>Tuesday:</strong>
+          2:00–4:15 PM · 7:00–9:00 PM
+        </p>
+
+        <p>
+          <strong>Wednesday:</strong>
+          2:00–4:15 PM · 7:00–9:00 PM
+        </p>
+
+        <p>
+          <strong>Thursday:</strong>
+          2:00–4:15 PM
+        </p>
+
+        <p>
+          <strong>Friday:</strong>
+          2:00–4:15 PM · 7:00–9:00 PM
+          <span>· Limited availability</span>
+        </p>
+
+        <p>
+          <strong>Sunday:</strong>
+          Available by appointment
+        </p>
+
+      </div>
+
+      <p class="availability-note">
+        Additional lesson times may be available outside of those listed.
+        Contact us with your availability and we will do our best to accommodate you.
+      </p>
+
+    </div>
+
+    <!-- BOOKING POLICY -->
 
     <div class="policy-box">
 
@@ -836,9 +827,13 @@
     </div>
 
     <p class="payment-note">
-      <strong>Payment:</strong> Venmo, Zelle, or PayPal.
-      Payment information will be provided when your lesson time is confirmed.
+      <strong>Payment:</strong>
+      Deposit can be made with Venmo, Zelle, or PayPal.
+      Payment information will be provided once your lesson time is confirmed.
+      The remaining balance may be paid at the time of the lesson.
     </p>
+
+    <!-- USA WRESTLING -->
 
     <div class="membership-box">
 
