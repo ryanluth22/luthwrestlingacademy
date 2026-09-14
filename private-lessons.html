@@ -83,20 +83,19 @@
       margin-bottom: 30px;
     }
 
-    .hero p {
-      max-width: 760px;
-      font-size: 20px;
-      line-height: 1.65;
-      color: #cfcfcf;
-      margin-bottom: 38px;
-    }
-
     h2 {
       font-size: clamp(38px, 5vw, 64px);
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -2px;
       margin-bottom: 35px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.65;
+      color: #cfcfcf;
     }
 
     .btn {
@@ -116,23 +115,27 @@
       opacity: .82;
     }
 
-    .booking-requirement {
-      margin-top: 20px;
-      font-size: 17px;
-      line-height: 1.65;
-      color: #555;
-      font-style: italic;
-      max-width: 900px;
+    .secondary-btn {
+      display: inline-block;
+      padding: 18px 30px;
+      background: transparent;
+      color: #111;
+      border: 2px solid #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 900;
+      transition: .2s;
     }
 
-    .booking-requirement a {
-      color: inherit;
-      font-weight: bold;
-      text-decoration: underline;
+    .secondary-btn:hover {
+      background: #111;
+      color: white;
     }
 
     /* =========================
-       SINGLE SESSION RATES
+       RATES
     ========================= */
 
     .rates {
@@ -205,7 +208,55 @@
     }
 
     /* =========================
-       MULTI-SESSION RATES
+       AVAILABILITY
+    ========================= */
+
+    .availability {
+      background: #111;
+      color: white;
+      padding: 85px 8%;
+    }
+
+    .availability-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      max-width: 1000px;
+      margin-bottom: 30px;
+    }
+
+    .availability-card {
+      background: #1b1b1b;
+      padding: 24px 28px;
+    }
+
+    .availability-card h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .availability-card p {
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .availability-note {
+      max-width: 900px;
+      color: #bbb;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .open-mat-line {
+      margin-top: 6px;
+      color: #888 !important;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    /* =========================
+       PACKAGES
     ========================= */
 
     .packages {
@@ -267,10 +318,6 @@
       margin-bottom: 30px;
     }
 
-    .packages .booking-requirement {
-      color: #555;
-    }
-
     /* =========================
        BOOKING
     ========================= */
@@ -279,38 +326,79 @@
       background: #f4f1ea;
       color: #111;
       padding: 85px 8%;
-      text-align: center;
     }
 
     .booking .section-label {
       color: #777;
     }
 
-    .booking p {
-      max-width: 760px;
-      margin: 0 auto 30px;
+    .booking-intro {
+      max-width: 820px;
       color: #666;
       font-size: 17px;
       line-height: 1.7;
+      margin-bottom: 30px;
     }
 
-    .booking .booking-requirement {
-      margin: 20px auto 0;
+    .contact-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .policy-box {
+      max-width: 900px;
+      background: white;
+      padding: 30px;
+      margin-bottom: 28px;
+    }
+
+    .policy-box h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .policy-box p {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .policy-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .payment-note {
+      max-width: 900px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .membership-box {
+      max-width: 900px;
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #ccc;
+    }
+
+    .membership-box h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .membership-box p {
       font-size: 17px;
       line-height: 1.65;
       color: #555;
       font-style: italic;
+      margin-bottom: 6px;
     }
 
-    .booking .booking-requirement a {
-      color: #111;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .contact-link {
-      display: block;
-      margin-top: 25px;
+    .membership-box a {
       color: #111;
       font-weight: bold;
       text-decoration: underline;
@@ -318,7 +406,7 @@
 
     .back-link {
       display: inline-block;
-      margin-top: 22px;
+      margin-top: 30px;
       color: #777;
       font-size: 13px;
       font-weight: bold;
@@ -374,6 +462,7 @@
       }
 
       .rates,
+      .availability,
       .packages,
       .booking {
         padding-left: 6%;
@@ -381,8 +470,14 @@
       }
 
       .rate-grid,
+      .availability-grid,
       .package-grid {
         grid-template-columns: 1fr;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       footer {
@@ -450,8 +545,6 @@
 
     <div class="rate-grid">
 
-      <!-- INDIVIDUAL -->
-
       <div class="rate-card">
 
         <h3>
@@ -463,7 +556,7 @@
         </div>
 
         <p>
-          Dedicated one on one instruction and wrestling. Not suited for
+          Dedicated one-on-one instruction and wrestling. Not suited for
           wrestlers under 125 lbs.
         </p>
 
@@ -472,8 +565,6 @@
         </div>
 
       </div>
-
-      <!-- PARTNER -->
 
       <div class="rate-card">
 
@@ -487,7 +578,7 @@
 
         <p>
           Our most popular option designed around two wrestling partners and
-          one coach. Highly individualized coaching at a cost effective rate
+          one coach. Highly individualized coaching at a cost-effective rate
           per wrestler.
         </p>
 
@@ -496,8 +587,6 @@
         </div>
 
       </div>
-
-      <!-- GROUP -->
 
       <div class="rate-card">
 
@@ -511,7 +600,7 @@
 
         <p>
           Small group training for three to four wrestlers. Designed for
-          teammates / training partners who want individual coaching at the
+          teammates and training partners who want individual coaching at the
           best per-person value.
         </p>
 
@@ -522,8 +611,6 @@
       </div>
 
     </div>
-
-    <!-- CIAC IN-SEASON NOTE -->
 
     <p class="ciac-note">
       *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
@@ -536,25 +623,71 @@
       Each additional wrestler beyond four adds $25 to the total session rate.
     </p>
 
-    <a
-      href="https://calendar.app.google/5jAc58bQSpH9duoe8"
-      class="btn"
-      target="_blank"
-      rel="noopener"
-    >
-      View Availability &amp; Book
-    </a>
+  </section>
 
-    <p class="booking-requirement">
-      A valid USA Wrestling membership and completed waiver are required
-      before participation.
-      <br>
-      View and print the waiver
-      <a
-        href="USA-Wrestling-Waiver.pdf"
-        target="_blank"
-        rel="noopener"
-      >here</a>.
+  <!-- WEEKLY AVAILABILITY -->
+
+  <section class="availability">
+
+    <div class="section-label">
+      Scheduling
+    </div>
+
+    <h2>
+      Weekly Availability
+    </h2>
+
+    <div class="availability-grid">
+
+      <div class="availability-card">
+        <h3>Monday</h3>
+        <p>2:00–4:15 PM</p>
+        <p class="open-mat-line">
+          Open Mat: 7:15–8:30 PM
+        </p>
+      </div>
+
+      <div class="availability-card">
+        <h3>Tuesday</h3>
+        <p>
+          2:00–4:15 PM<br>
+          7:00–9:00 PM
+        </p>
+      </div>
+
+      <div class="availability-card">
+        <h3>Wednesday</h3>
+        <p>
+          2:00–4:15 PM<br>
+          7:00–9:00 PM
+        </p>
+      </div>
+
+      <div class="availability-card">
+        <h3>Thursday</h3>
+        <p>2:00–4:15 PM</p>
+      </div>
+
+      <div class="availability-card">
+        <h3>Friday</h3>
+        <p>
+          2:00–4:15 PM<br>
+          7:00–9:00 PM · Limited Availability
+        </p>
+      </div>
+
+      <div class="availability-card">
+        <h3>Sunday</h3>
+        <p>
+          Available by appointment
+        </p>
+      </div>
+
+    </div>
+
+    <p class="availability-note">
+      Additional lesson times may be available outside of those listed.
+      Contact us with your availability and we will do our best to accommodate you.
     </p>
 
   </section>
@@ -573,13 +706,10 @@
 
     <p class="packages-intro">
       Athletes who want consistent training can purchase four sessions at a
-      discounted rate. All four sessions must be used within 90 days of
-      purchase.
+      discounted rate. All four sessions must be used within 90 days of purchase.
     </p>
 
     <div class="package-grid">
-
-      <!-- INDIVIDUAL PACKAGE -->
 
       <div class="package-card">
 
@@ -597,8 +727,6 @@
 
       </div>
 
-      <!-- PARTNER PACKAGE -->
-
       <div class="package-card">
 
         <h3>
@@ -614,8 +742,6 @@
         </p>
 
       </div>
-
-      <!-- GROUP PACKAGE -->
 
       <div class="package-card">
 
@@ -640,27 +766,6 @@
       90 days of purchase.
     </p>
 
-    <a
-      href="https://calendar.app.google/5jAc58bQSpH9duoe8"
-      class="btn"
-      target="_blank"
-      rel="noopener"
-    >
-      View Availability &amp; Book
-    </a>
-
-    <p class="booking-requirement">
-      A valid USA Wrestling membership and completed waiver are required
-      before participation.
-      <br>
-      View and print the waiver
-      <a
-        href="USA-Wrestling-Waiver.pdf"
-        target="_blank"
-        rel="noopener"
-      >here</a>.
-    </p>
-
   </section>
 
   <!-- BOOKING -->
@@ -672,41 +777,103 @@
     </div>
 
     <h2>
-      Book a Session
+      Schedule a Lesson
     </h2>
 
-    <p>
-      View available lesson times and reserve a session using our online
-      booking calendar. Payment will be confirmed separately.
+    <p class="booking-intro">
+      Contact us by email, phone, or text to inquire about a lesson.
+      Let us know the wrestler's name, age and weight, preferred type of
+      session, and a few times that work for you. We will confirm availability
+      and arrange your session.
     </p>
 
-    <a
-      href="https://calendar.app.google/5jAc58bQSpH9duoe8"
-      class="btn"
-      target="_blank"
-      rel="noopener"
-    >
-      View Availability &amp; Book
-    </a>
+    <div class="contact-buttons">
 
-    <p class="booking-requirement">
-      A valid USA Wrestling membership and completed waiver are required
-      before participation.
-      <br>
-      View and print the waiver
       <a
-        href="USA-Wrestling-Waiver.pdf"
-        target="_blank"
-        rel="noopener"
-      >here</a>.
+        href="tel:2038156699"
+        class="btn"
+      >
+        Call 203-815-6699
+      </a>
+
+      <a
+        href="sms:2038156699"
+        class="secondary-btn"
+      >
+        Text Us
+      </a>
+
+      <a
+        href="mailto:luthwrestling@gmail.com?subject=Private%20Lesson%20Inquiry"
+        class="secondary-btn"
+      >
+        Email Us
+      </a>
+
+    </div>
+
+    <div class="policy-box">
+
+      <h3>
+        Booking &amp; Cancellation Policy
+      </h3>
+
+      <p>
+        A 50% deposit is required to confirm your reservation.
+        The remaining balance is due at the time of the lesson.
+      </p>
+
+      <p>
+        Cancellations made at least 24 hours before the scheduled lesson
+        will receive a full refund of the deposit.
+      </p>
+
+      <p>
+        Cancellations made less than 24 hours before the scheduled lesson,
+        as well as no-shows, will forfeit the deposit.
+      </p>
+
+    </div>
+
+    <p class="payment-note">
+      <strong>Payment:</strong> Venmo, Zelle, or PayPal.
+      Payment information will be provided when your lesson time is confirmed.
     </p>
 
-    <a
-      href="mailto:luthwrestling@gmail.com?subject=Private%20Lesson%20Question"
-      class="contact-link"
-    >
-      Questions? Email luthwrestling@gmail.com
-    </a>
+    <div class="membership-box">
+
+      <h3>
+        USA Wrestling Membership &amp; Waiver Required
+      </h3>
+
+      <p>
+        A valid USA Wrestling membership and completed waiver are required
+        before participation.
+      </p>
+
+      <p>
+        Don't have a USA Wrestling membership?
+        <a
+          href="https://www.usawmembership.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Get one here.
+        </a>
+      </p>
+
+      <p>
+        View and print the required waiver
+        <a
+          href="USA-Wrestling-Waiver.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          here.
+        </a>
+      </p>
+
+    </div>
 
     <a
       href="index.html"
@@ -725,6 +892,10 @@
       © 2026 Luth Wrestling Academy ·
       <a href="mailto:luthwrestling@gmail.com">
         luthwrestling@gmail.com
+      </a>
+      ·
+      <a href="tel:2038156699">
+        203-815-6699
       </a>
     </div>
 
