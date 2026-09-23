@@ -393,10 +393,25 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
+      align-items: stretch;
     }
 
     .clinician-card {
       background: white;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .clinician-photo {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .clinician-content {
       padding: 32px;
     }
 
@@ -512,6 +527,10 @@
 
       .clinician-grid {
         grid-template-columns: 1fr;
+      }
+
+      .clinician-photo {
+        height: 440px;
       }
 
       footer {
@@ -670,6 +689,7 @@
 
       <div class="coach-info">
         <h3>Ryan Luth</h3>
+
         <div class="coach-role">
           Associate Head Coach · Wesleyan University
         </div>
@@ -738,48 +758,64 @@
       <div class="clinician-grid">
 
         <div class="clinician-card">
-          <h3>C.J. Luth</h3>
+          <img
+            src="cj-luth.jpg"
+            alt="C.J. Luth"
+            class="clinician-photo"
+          >
 
-          <p>
-            C.J. Luth is a Doctor of Physical Therapy specializing in
-            orthopedic and sports medicine in private practice. He wrestled
-            collegiately at the University of Southern Maine, where he
-            compiled 117 career wins. He was a two-time Northeast Region
-            placewinner, finishing fifth on two occasions, and was a
-            four-time NWCA Scholar All-American.
-          </p>
+          <div class="clinician-content">
+            <h3>C.J. Luth</h3>
 
-          <p>
-            In high school, Luth was a Connecticut State Open Champion,
-            two-time Class M State Champion, and placed fourth at the
-            New England High School Championships.
-          </p>
+            <p>
+              C.J. Luth is a Doctor of Physical Therapy specializing in
+              orthopedic and sports medicine in private practice. He wrestled
+              collegiately at the University of Southern Maine, where he
+              compiled 117 career wins. He was a two-time Northeast Region
+              placewinner, finishing fifth on two occasions, and was a
+              four-time NWCA Scholar All-American.
+            </p>
+
+            <p>
+              In high school, Luth was a Connecticut State Open Champion,
+              two-time Class M State Champion, and placed fourth at the
+              New England High School Championships.
+            </p>
+          </div>
         </div>
 
         <div class="clinician-card">
-          <h3>C.J. Shea</h3>
+          <img
+            src="cj-shea.jpg"
+            alt="C.J. Shea"
+            class="clinician-photo"
+          >
 
-          <p>
-            C.J. Shea was a two-time captain at Wesleyan University and a
-            three-time NCAA Northeast Regional placewinner. He won the
-            Northeast Region championship, was voted the tournament's Most
-            Outstanding Wrestler, and went on to place seventh at the
-            NCAA Division III Championships in 2025, earning All-America
-            honors.
-          </p>
+          <div class="clinician-content">
+            <h3>C.J. Shea</h3>
 
-          <p>
-            Shea was also a three-time NWCA Academic All-American and received
-            Wesleyan University's Maynard Award, presented annually to the
-            school's top senior men's and women's athletes. Prior to Wesleyan,
-            Shea attended Greens Farms Academy, where he was a National Prep
-            All-American as a senior.
-          </p>
+            <p>
+              C.J. Shea was a two-time captain at Wesleyan University and a
+              three-time NCAA Northeast Regional placewinner. He won the
+              Northeast Region championship, was voted the tournament's Most
+              Outstanding Wrestler, and went on to place seventh at the
+              NCAA Division III Championships in 2025, earning All-America
+              honors.
+            </p>
 
-          <p>
-            Outside of wrestling, Shea owns and operates Sheascapes, a
-            sustainable landscaping business.
-          </p>
+            <p>
+              Shea was also a three-time NWCA Academic All-American and
+              received Wesleyan University's Maynard Award, presented annually
+              to the school's top senior men's and women's athletes. Prior to
+              Wesleyan, Shea attended Greens Farms Academy, where he was a
+              National Prep All-American as a senior.
+            </p>
+
+            <p>
+              Outside of wrestling, Shea owns and operates Sheascapes, a
+              sustainable landscaping business.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -795,7 +831,10 @@
     </p>
 
     <div class="button-row" style="justify-content:center;">
-      <a href="private-lessons.html" class="btn">Schedule a Lesson</a>
+      <a href="private-lessons.html" class="btn">
+        Schedule a Lesson
+      </a>
+
       <a
         href="mailto:luthwrestling@gmail.com"
         class="secondary-btn"
