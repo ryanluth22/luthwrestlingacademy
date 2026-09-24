@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luth Wrestling Academy</title>
+
+  <title>Luth Wrestling Academy | Middletown, CT</title>
 
   <style>
     * {
@@ -77,11 +78,6 @@
       background-position: center top;
     }
 
-    .hero > * {
-      position: relative;
-      z-index: 2;
-    }
-
     .eyebrow,
     .section-label {
       font-size: 13px;
@@ -92,217 +88,190 @@
       margin-bottom: 18px;
     }
 
-    h1 {
-      font-size: clamp(44px, 6.5vw, 82px);
-      line-height: .92;
+    .hero h1 {
+      font-size: clamp(52px, 8vw, 94px);
+      line-height: .9;
+      letter-spacing: -5px;
       text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -4px;
-      max-width: 900px;
-      margin-bottom: 30px;
+      max-width: 850px;
+      margin-bottom: 28px;
     }
 
-    h2 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: .95;
-      text-transform: uppercase;
-      letter-spacing: -2px;
-      margin-bottom: 30px;
-    }
-
-    .hero p {
-      max-width: 620px;
+    .hero-description {
+      max-width: 650px;
       font-size: 20px;
-      line-height: 1.65;
-      color: #d8d8d8;
-      margin-bottom: 38px;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 34px;
     }
 
-    .button-row {
+    .hero-buttons {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn,
+    .secondary-btn {
+      display: inline-block;
+      padding: 15px 23px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .btn {
-      display: inline-block;
-      padding: 16px 24px;
       background: white;
       color: #111;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      border: 2px solid white;
     }
 
     .secondary-btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border: 2px solid white;
+      background: transparent;
       color: white;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      border: 2px solid white;
     }
 
     .intro {
       background: #f4f1ea;
       color: #111;
-      padding: 90px 8%;
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 70px;
+      padding: 85px 8%;
     }
 
     .intro .section-label {
       color: #777;
     }
 
-    .intro p {
+    .intro h2,
+    .programs h2,
+    .coaches h2,
+    .cta h2 {
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: .98;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .intro-text {
+      max-width: 900px;
+    }
+
+    .intro-text p {
       color: #555;
       font-size: 18px;
       line-height: 1.75;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .location-block {
-      max-width: 850px;
-      margin-bottom: 28px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid #ccc;
+      margin-top: 38px;
+      padding-top: 28px;
+      border-top: 1px solid #ccc;
+      max-width: 900px;
     }
 
     .location-line {
-      color: #111 !important;
-      font-size: 17px !important;
       font-weight: 900;
-      margin-bottom: 8px !important;
+      color: #111 !important;
+      margin-bottom: 10px !important;
     }
 
     .location-disclaimer {
-      color: #777 !important;
       font-size: 13px !important;
-      line-height: 1.55 !important;
-      font-style: italic;
-      margin-bottom: 0 !important;
+      color: #777 !important;
+      line-height: 1.6 !important;
     }
 
-    .intro .waiver-note {
-      font-size: 17px;
-      line-height: 1.65;
-      color: #555;
-      margin-top: 25px;
-      font-style: italic;
+    .waiver-note {
+      margin-top: 26px;
+      font-size: 14px !important;
+      color: #555 !important;
+      line-height: 1.7 !important;
     }
 
-    .intro .waiver-note a {
+    .waiver-note a {
       color: #111;
       font-weight: bold;
-      text-decoration: underline;
     }
 
     .programs {
-      padding: 50px 8%;
-      background: #1c1c1c;
-      color: white;
+      background: #111;
+      padding: 85px 8%;
     }
 
-    .programs .section-label {
-      color: #999;
-    }
-
-    .programs h2 {
-      color: white;
-      margin-bottom: 24px;
+    .programs-header {
+      max-width: 800px;
+      margin-bottom: 42px;
     }
 
     .program-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
+      gap: 18px;
     }
 
     .program-card {
-      text-decoration: none;
+      background: #1c1c1c;
       color: white;
+      text-decoration: none;
+      padding: 38px;
+      min-height: 290px;
       display: flex;
       flex-direction: column;
-      background: #343434;
-      padding: 18px 28px 24px;
-      min-height: 175px;
-      transition: background .2s ease, transform .2s ease;
+      transition: transform .2s ease, background .2s ease;
     }
 
     .program-card:hover {
-      background: #404040;
-      transform: translateY(-2px);
+      transform: translateY(-4px);
+      background: #242424;
     }
 
-    .program-featured {
+    .program-card.featured {
       grid-column: 1 / -1;
-      min-height: 185px;
-      background: #3d3d3d;
-      padding: 20px 30px 26px;
-    }
-
-    .program-featured:hover {
-      background: #494949;
+      min-height: 330px;
     }
 
     .program-number {
-      color: #999;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    .program-featured .program-number {
-      font-size: 14px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
     }
 
     .program-card h3 {
-      color: white;
-      font-size: 27px;
+      font-size: 30px;
       text-transform: uppercase;
-      margin-bottom: 9px;
-    }
-
-    .program-featured h3 {
-      font-size: clamp(34px, 4vw, 48px);
-      letter-spacing: -2px;
+      margin-bottom: 18px;
     }
 
     .program-card p {
-      color: #c5c5c5;
-      line-height: 1.5;
-      margin-bottom: 14px;
-      max-width: 760px;
-      font-size: 15px;
-    }
-
-    .program-card p strong {
-      color: white;
-    }
-
-    .program-featured p {
+      color: #bbb;
       font-size: 16px;
+      line-height: 1.65;
+      max-width: 700px;
+    }
+
+    .program-card strong {
+      color: white;
     }
 
     .program-link {
-      color: white;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
       margin-top: auto;
+      padding-top: 30px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .coaches {
       background: #f4f1ea;
       color: #111;
-      padding: 90px 8%;
+      padding: 85px 8%;
     }
 
     .coaches .section-label {
@@ -310,83 +279,69 @@
     }
 
     .coach-subheading {
-      font-size: 20px;
+      font-size: 13px;
       font-weight: 900;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
+      color: #777;
+      margin: 45px 0 20px;
     }
 
-    .coach-main {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 55px;
-      align-items: start;
+    .coach-card {
+      background: white;
+      padding: 42px;
+      max-width: 1100px;
     }
 
-    .coach-main img {
-      width: 100%;
-      display: block;
-    }
-
-    .coach-info h3 {
-      font-size: 38px;
+    .coach-card h3 {
+      font-size: 34px;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
 
     .coach-role {
       color: #777;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
       letter-spacing: 1px;
-      margin-bottom: 28px;
-    }
-
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .highlight {
-      background: white;
-      padding: 20px;
-    }
-
-    .highlight strong {
-      display: block;
-      font-size: 26px;
-      margin-bottom: 5px;
-    }
-
-    .highlight span {
-      color: #666;
-      font-size: 12px;
       text-transform: uppercase;
-      font-weight: bold;
+      margin-bottom: 24px;
     }
 
-    .coach-info p,
-    .clinician-card p {
-      color: #666;
+    .coach-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .coach-highlight {
+      background: #f4f1ea;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .coach-card p {
+      color: #555;
+      font-size: 16px;
       line-height: 1.75;
       margin-bottom: 16px;
     }
 
     .additional-coach {
-      margin-top: 30px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
+      margin-top: 18px;
+      color: #777;
+      font-size: 14px;
+      font-style: italic;
     }
 
-    .clinician-section {
-      margin-top: 70px;
-      padding-top: 55px;
-      border-top: 1px solid #ccc;
+    .coach-divider {
+      height: 1px;
+      background: #ccc;
+      margin: 60px 0 0;
     }
 
     .clinician-grid {
@@ -411,41 +366,55 @@
       display: block;
     }
 
+    /* Keeps the top of C.J. Shea's photo visible */
+    .cj-shea-photo {
+      object-position: center top;
+    }
+
     .clinician-content {
       padding: 32px;
     }
 
-    .clinician-card h3 {
+    .clinician-content h3 {
       font-size: 28px;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
-    .clinician-card p:last-child {
-      margin-bottom: 0;
+    .clinician-content p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 15px;
     }
 
     .cta {
+      padding: 90px 8%;
       background: #111;
-      padding: 85px 8%;
-      text-align: center;
     }
 
-    .cta h2 {
-      margin-bottom: 20px;
+    .cta-content {
+      max-width: 850px;
     }
 
     .cta p {
-      color: #ccc;
+      color: #bbb;
       font-size: 18px;
       line-height: 1.7;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
     }
 
     .contact-details {
-      margin-top: 25px;
-      color: #aaa;
-      line-height: 1.8;
+      color: #888 !important;
+      font-size: 14px !important;
+      margin-bottom: 0 !important;
     }
 
     .contact-details a {
@@ -459,7 +428,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      color: #888;
+      color: #777;
       font-size: 13px;
     }
 
@@ -469,39 +438,22 @@
     }
 
     @media (max-width: 800px) {
-      nav {
-        padding: 22px 5%;
-      }
-
       .nav-links {
         display: none;
       }
 
       .hero {
-        min-height: 580px;
-        padding: 70px 6% 65px;
-        background:
-          linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
-          url("homepage-hero.jpg");
-        background-size: cover;
-        background-position: 58% top;
+        min-height: 560px;
+        padding-left: 6%;
+        padding-right: 6%;
+        background-position: center top;
       }
 
-      h1 {
-        font-size: clamp(42px, 13vw, 62px);
+      .hero h1 {
         letter-spacing: -3px;
       }
 
-      .hero p {
-        font-size: 18px;
-      }
-
-      .intro {
-        grid-template-columns: 1fr;
-        padding: 65px 6%;
-        gap: 25px;
-      }
-
+      .intro,
       .programs,
       .coaches,
       .cta {
@@ -509,28 +461,27 @@
         padding-right: 6%;
       }
 
-      .program-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .program-featured {
-        grid-column: auto;
-      }
-
-      .coach-main {
-        grid-template-columns: 1fr;
-      }
-
-      .highlights {
-        grid-template-columns: 1fr;
-      }
-
+      .program-grid,
       .clinician-grid {
         grid-template-columns: 1fr;
       }
 
+      .program-card.featured {
+        grid-column: auto;
+      }
+
+      .coach-card {
+        padding: 28px;
+      }
+
       .clinician-photo {
         height: 440px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       footer {
@@ -551,8 +502,6 @@
       <a href="private-lessons.html">Private Lessons</a>
       <a href="open-mat.html">Open Mat</a>
       <a href="clinics.html">Clinics</a>
-      <a href="#coaches">Coaches</a>
-      <a href="#contact">Contact</a>
     </div>
   </nav>
 
@@ -565,35 +514,30 @@
       Academy
     </h1>
 
-    <p>
+    <p class="hero-description">
       Individualized, focused instruction.
     </p>
 
-    <div class="button-row">
-      <a href="#programs" class="btn">Practice Availability</a>
-      <a href="clinics.html" class="secondary-btn">Upcoming Events</a>
+    <div class="hero-buttons">
+      <a href="#programs" class="btn">
+        Practice Availability
+      </a>
+
+      <a href="clinics.html" class="secondary-btn">
+        Upcoming Events
+      </a>
     </div>
   </section>
 
   <section class="intro">
-    <div>
-      <div class="section-label">Our Approach</div>
-      <h2>Refine And Expand Your Game.</h2>
-    </div>
+    <div class="section-label">Luth Wrestling Academy</div>
 
-    <div>
-      <div class="location-block">
-        <p class="location-line">
-          📍 Biddiscombe Wrestling Room · 161 Cross St, Middletown, CT
-        </p>
+    <h2>
+      Focused Training.<br>
+      Individual Development.
+    </h2>
 
-        <p class="location-disclaimer">
-          *Luth Wrestling Academy is independently operated and is not a
-          program of Wesleyan University or Wesleyan Wrestling. Training
-          sessions are held in the Biddiscombe Wrestling Room.
-        </p>
-      </div>
-
+    <div class="intro-text">
       <p>
         We specialize in providing focused, individualized, supplemental
         training in private lessons, small group sessions, and film review.
@@ -606,6 +550,18 @@
       <p>
         See below for our rates, availability, and additional information.
       </p>
+
+      <div class="location-block">
+        <p class="location-line">
+          📍 Biddiscombe Wrestling Room · 161 Cross St, Middletown, CT
+        </p>
+
+        <p class="location-disclaimer">
+          *Luth Wrestling Academy is independently operated and is not a
+          program of Wesleyan University or Wesleyan Wrestling. Training
+          sessions are held in the Biddiscombe Wrestling Room.
+        </p>
+      </div>
 
       <p class="waiver-note">
         All wrestlers are required to have a valid USA Wrestling membership
@@ -633,37 +589,51 @@
   </section>
 
   <section class="programs" id="programs">
-    <div class="section-label">Ways To Train</div>
-    <h2>Find What Works For You.</h2>
+    <div class="programs-header">
+      <div class="section-label">Ways To Train</div>
+      <h2>Find Your Training.</h2>
+    </div>
 
     <div class="program-grid">
 
-      <a href="private-lessons.html" class="program-card program-featured">
+      <a href="private-lessons.html" class="program-card featured">
         <div class="program-number">01</div>
+
         <h3>Private Lessons</h3>
+
         <p>
           We specialize in focused, individual development with our wrestlers.
           Schedule private individual / small group lessons here. Click to see
           rates &amp; availability.
         </p>
-        <div class="program-link">View Private Lessons →</div>
+
+        <div class="program-link">
+          View Private Lessons →
+        </div>
       </a>
 
       <a href="clinics.html" class="program-card">
         <div class="program-number">02</div>
+
         <h3>Upcoming Clinics</h3>
+
         <p>
           Click here to see information on any upcoming clinics, pricing, and
           how to register. Clinics are a great way to hone in on a specific
           skill, learn new tricks from different clinicians, and work with new
           wrestlers!
         </p>
-        <div class="program-link">View Clinics →</div>
+
+        <div class="program-link">
+          View Clinics →
+        </div>
       </a>
 
       <a href="open-mat.html" class="program-card">
         <div class="program-number">03</div>
+
         <h3>Open Mat Mondays</h3>
+
         <p>
           Our weekly open mat sessions will offer guided instruction,
           additional mat time, and a low-stakes practice environment. All
@@ -671,185 +641,190 @@
           welcome.
           <strong>Coming Soon — Check Back for Updates.</strong>
         </p>
-        <div class="program-link">View Open Mat →</div>
+
+        <div class="program-link">
+          View Open Mat →
+        </div>
       </a>
 
     </div>
   </section>
 
-  <section class="coaches" id="coaches">
+  <section class="coaches">
     <div class="section-label">Our Coaches</div>
-    <h2>Experienced Coaching.</h2>
 
-    <div class="coach-subheading">Private Lesson Coaches</div>
+    <h2>
+      Experienced<br>
+      Coaching.
+    </h2>
 
-    <div class="coach-main">
-      <div>
-        <img src="ryan-luth.jpg" alt="Ryan Luth">
-      </div>
-
-      <div class="coach-info">
-        <h3>Ryan Luth</h3>
-
-        <div class="coach-role">
-          Associate Head Coach · Wesleyan University
-        </div>
-
-        <div class="highlights">
-          <div class="highlight">
-            <strong>3X</strong>
-            <span>All-American</span>
-          </div>
-
-          <div class="highlight">
-            <strong>101–11</strong>
-            <span>Collegiate Record</span>
-          </div>
-
-          <div class="highlight">
-            <strong>220–19</strong>
-            <span>High School Record</span>
-          </div>
-        </div>
-
-        <p>
-          Ryan Luth is the Associate Head Coach at Wesleyan University. Prior
-          to arriving at Wesleyan, he spent one season as an assistant coach
-          at Washington and Lee University, his alma mater. Across three
-          seasons of collegiate coaching, Coach Luth has helped develop four
-          NCAA Division III national qualifiers, two All-Americans, and more
-          than 10 regional placewinners. He has also worked privately with
-          multiple Connecticut state champions, New England placewinners, and
-          high school All-Americans.
-        </p>
-
-        <p>
-          As a collegiate wrestler at Washington and Lee, Luth was a
-          three-time All-American at 157 pounds, placing fifth nationally in
-          2023, fourth in 2022, and earning First-Team All-America honors in
-          2020. He was also a two-time regional champion and three-time
-          conference champion. Luth finished his collegiate career with a
-          101–11 record and was named Washington and Lee's Athlete of the Year
-          in both 2022 and 2023. He also received the Pres Brown Most Valuable
-          Senior Male Athlete Award and was a three-time NWCA Academic
-          All-American.
-        </p>
-
-        <p>
-          A 2018 graduate of Joseph A. Foran High School, Luth finished his
-          high school career with a 220–19 record, setting the Connecticut
-          high school record for career wins. He was a three-time NHSCA
-          All-American, two-time New England Champion, two-time State Open
-          Champion, two-time Class M Champion, and four-time Southern
-          Connecticut Conference Champion. He was named the State Open Most
-          Outstanding Wrestler in 2017 and Class M Most Outstanding Wrestler
-          in 2018 and earned Scholar All-American honors in all four years of
-          high school.
-        </p>
-
-        <div class="additional-coach">
-          Additional Private Lesson Coach Schedule and Info Coming Soon
-        </div>
-      </div>
+    <div class="coach-subheading">
+      Private Lesson Coaches
     </div>
 
-    <div class="clinician-section">
-      <div class="coach-subheading">Clinician Coaches</div>
+    <div class="coach-card">
+      <h3>Ryan Luth</h3>
 
-      <div class="clinician-grid">
-
-        <div class="clinician-card">
-          <img
-            src="cj-luth.jpg"
-            alt="C.J. Luth"
-            class="clinician-photo"
-          >
-
-          <div class="clinician-content">
-            <h3>C.J. Luth</h3>
-
-            <p>
-              C.J. Luth is a Doctor of Physical Therapy specializing in
-              orthopedic and sports medicine in private practice. He wrestled
-              collegiately at the University of Southern Maine, where he
-              compiled 117 career wins. He was a two-time Northeast Region
-              placewinner, finishing fifth on two occasions, and was a
-              four-time NWCA Scholar All-American.
-            </p>
-
-            <p>
-              In high school, Luth was a Connecticut State Open Champion,
-              two-time Class M State Champion, and placed fourth at the
-              New England High School Championships.
-            </p>
-          </div>
-        </div>
-
-        <div class="clinician-card">
-          <img
-            src="cj-shea.jpg"
-            alt="C.J. Shea"
-            class="clinician-photo"
-          >
-
-          <div class="clinician-content">
-            <h3>C.J. Shea</h3>
-
-            <p>
-              C.J. Shea was a two-time captain at Wesleyan University and a
-              three-time NCAA Northeast Regional placewinner. He won the
-              Northeast Region championship, was voted the tournament's Most
-              Outstanding Wrestler, and went on to place seventh at the
-              NCAA Division III Championships in 2025, earning All-America
-              honors.
-            </p>
-
-            <p>
-              Shea was also a three-time NWCA Academic All-American and
-              received Wesleyan University's Maynard Award, presented annually
-              to the school's top senior men's and women's athletes. Prior to
-              Wesleyan, Shea attended Greens Farms Academy, where he was a
-              National Prep All-American as a senior.
-            </p>
-
-            <p>
-              Outside of wrestling, Shea owns and operates Sheascapes, a
-              sustainable landscaping business.
-            </p>
-          </div>
-        </div>
-
+      <div class="coach-role">
+        Associate Head Coach · Wesleyan University
       </div>
+
+      <div class="coach-highlights">
+        <div class="coach-highlight">
+          3X All-American
+        </div>
+
+        <div class="coach-highlight">
+          101–11 Collegiate Record
+        </div>
+
+        <div class="coach-highlight">
+          220–19 High School Record
+        </div>
+      </div>
+
+      <p>
+        Ryan Luth is the Associate Head Coach at Wesleyan University. Prior
+        to arriving at Wesleyan, he spent one season as an assistant coach
+        at Washington and Lee University, his alma mater. Across three
+        seasons of collegiate coaching, Coach Luth has helped develop four
+        NCAA Division III national qualifiers, two All-Americans, and more
+        than 10 regional placewinners. He has also worked privately with
+        multiple Connecticut state champions, New England placewinners, and
+        high school All-Americans.
+      </p>
+
+      <p>
+        As a collegiate wrestler at Washington and Lee, Luth was a
+        three-time All-American at 157 pounds, placing fifth nationally in
+        2023, fourth in 2022, and earning First-Team All-America honors in
+        2020. He was also a two-time regional champion and three-time
+        conference champion. Luth finished his collegiate career with a
+        101–11 record and was named Washington and Lee's Athlete of the Year
+        in both 2022 and 2023. He also received the Pres Brown Most Valuable
+        Senior Male Athlete Award and was a three-time NWCA Academic
+        All-American.
+      </p>
+
+      <p>
+        A 2018 graduate of Joseph A. Foran High School, Luth finished his
+        high school career with a 220–19 record, setting the Connecticut high
+        school record for career wins. He was a three-time NHSCA All-American,
+        two-time New England Champion, two-time State Open Champion, two-time
+        Class M Champion, and four-time Southern Connecticut Conference
+        Champion. He was named the State Open Most Outstanding Wrestler in
+        2017 and Class M Most Outstanding Wrestler in 2018 and earned Scholar
+        All-American honors in all four years of high school.
+      </p>
     </div>
-  </section>
 
-  <section class="cta" id="contact">
-    <div class="section-label">Get Started</div>
-    <h2>Let's Work.</h2>
-
-    <p>
-      Reach out to schedule a lesson or ask any questions about training.
+    <p class="additional-coach">
+      Additional Private Lesson Coach Schedule and Info Coming Soon
     </p>
 
-    <div class="button-row" style="justify-content:center;">
-      <a href="private-lessons.html" class="btn">
-        Schedule a Lesson
-      </a>
+    <div class="coach-divider"></div>
 
-      <a
-        href="mailto:luthwrestling@gmail.com"
-        class="secondary-btn"
-      >
-        Questions? Contact Us Here
-      </a>
+    <div class="coach-subheading">
+      Clinician Coaches
     </div>
 
-    <div class="contact-details">
-      <a href="tel:2038156699">203-815-6699</a>
-      <br>
-      <a href="mailto:luthwrestling@gmail.com">
-        luthwrestling@gmail.com
-      </a>
+    <div class="clinician-grid">
+
+      <div class="clinician-card">
+        <img
+          src="cj-luth.jpg"
+          alt="C.J. Luth"
+          class="clinician-photo"
+        >
+
+        <div class="clinician-content">
+          <h3>C.J. Luth</h3>
+
+          <p>
+            C.J. Luth is a Doctor of Physical Therapy specializing in
+            orthopedic and sports medicine in private practice. He wrestled
+            collegiately at the University of Southern Maine, where he
+            compiled 117 career wins. He was a two-time Northeast Region
+            placewinner, finishing fifth on two occasions, and was a
+            four-time NWCA Scholar All-American.
+          </p>
+
+          <p>
+            In high school, Luth compiled a 155–21 career record. He was a
+            Connecticut State Open Champion, two-time Class M State Champion,
+            and placed fourth at the New England High School Championships.
+          </p>
+        </div>
+      </div>
+
+      <div class="clinician-card">
+        <img
+          src="cj-shea.jpg"
+          alt="C.J. Shea"
+          class="clinician-photo cj-shea-photo"
+        >
+
+        <div class="clinician-content">
+          <h3>C.J. Shea</h3>
+
+          <p>
+            C.J. Shea was a two-time captain at Wesleyan University and a
+            three-time NCAA Northeast Regional placewinner. He won the
+            Northeast Region championship, was voted the tournament's Most
+            Outstanding Wrestler, and went on to place seventh at the NCAA
+            Division III Championships in 2025, earning All-America honors.
+          </p>
+
+          <p>
+            Shea was also a three-time NWCA Academic All-American and received
+            Wesleyan University's Maynard Award, presented annually to the
+            school's top senior men's and women's athletes. Prior to Wesleyan,
+            Shea attended Greens Farms Academy, where he was a National Prep
+            All-American as a senior.
+          </p>
+
+          <p>
+            Outside of wrestling, Shea owns and operates Sheascapes, a
+            sustainable landscaping business.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content">
+      <div class="section-label">Get Started</div>
+
+      <h2>Let's Work.</h2>
+
+      <p>
+        Reach out to schedule a lesson or ask any questions about training.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="private-lessons.html" class="btn">
+          Schedule A Lesson
+        </a>
+
+        <a
+          href="mailto:luthwrestling@gmail.com"
+          class="secondary-btn"
+        >
+          Questions? Contact Us Here
+        </a>
+      </div>
+
+      <p class="contact-details">
+        <a href="tel:2038156699">
+          203-815-6699
+        </a>
+        &nbsp;·&nbsp;
+        <a href="mailto:luthwrestling@gmail.com">
+          luthwrestling@gmail.com
+        </a>
+      </p>
     </div>
   </section>
 
@@ -865,7 +840,9 @@
       </a>
     </div>
 
-    <div>Middletown, Connecticut</div>
+    <div>
+      Middletown, Connecticut
+    </div>
   </footer>
 
 </body>
