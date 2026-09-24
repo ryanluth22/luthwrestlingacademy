@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Mat Mondays | Luth Wrestling Academy</title>
+
+  <title>Luth Wrestling Academy | Middletown, CT</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -19,6 +24,7 @@
     }
 
     nav {
+      width: 100%;
       padding: 28px 6%;
       display: flex;
       justify-content: space-between;
@@ -33,8 +39,7 @@
       text-transform: uppercase;
     }
 
-    .logo a,
-    .nav-links a {
+    .logo a {
       color: white;
       text-decoration: none;
     }
@@ -45,6 +50,8 @@
     }
 
     .nav-links a {
+      color: white;
+      text-decoration: none;
       font-size: 13px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -52,8 +59,23 @@
     }
 
     .hero {
-      padding: 90px 8%;
-      background: #111;
+      min-height: 650px;
+      padding: 95px 8% 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.88) 0%,
+          rgba(0,0,0,.68) 38%,
+          rgba(0,0,0,.25) 68%,
+          rgba(0,0,0,.10) 100%
+        ),
+        url("homepage-hero.jpg");
+      background-size: cover;
+      background-position: center top;
     }
 
     .eyebrow,
@@ -62,208 +84,340 @@
       font-weight: 900;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #999;
+      color: #aaa;
       margin-bottom: 18px;
     }
 
-    h1 {
-      font-size: clamp(48px, 7vw, 82px);
-      line-height: .93;
+    .hero h1 {
+      font-size: clamp(52px, 8vw, 94px);
+      line-height: .9;
+      letter-spacing: -5px;
       text-transform: uppercase;
-      letter-spacing: -4px;
+      max-width: 850px;
       margin-bottom: 28px;
     }
 
-    h2 {
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: .98;
-      text-transform: uppercase;
-      letter-spacing: -2px;
-      margin-bottom: 30px;
-    }
-
-    .hero p {
-      max-width: 800px;
-      color: #ccc;
-      font-size: 19px;
-      line-height: 1.7;
-    }
-
-    .coming-soon {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 13px 18px;
-      background: white;
-      color: #111;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .details {
-      background: #f4f1ea;
-      color: #111;
-      padding: 75px 8%;
-    }
-
-    .detail-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      max-width: 1200px;
-    }
-
-    .detail-card {
-      background: white;
-      padding: 30px;
-    }
-
-    .detail-label {
-      color: #777;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-    }
-
-    .detail-main {
-      font-size: 23px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .detail-sub {
-      color: #666;
+    .hero-description {
+      max-width: 650px;
+      font-size: 20px;
       line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 34px;
     }
 
-    .how-it-works {
-      background: #e8e5df;
-      color: #111;
-      padding: 80px 8%;
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .how-it-works p {
-      max-width: 1000px;
-      color: #555;
-      font-size: 17px;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-
-    .supplemental-note {
-      font-style: italic;
-      color: #777 !important;
-    }
-
-    .ciac-note {
-      max-width: 1000px;
-      margin-top: 25px;
-      padding-top: 22px;
-      border-top: 1px solid #ccc;
-      font-size: 13px !important;
-      line-height: 1.55 !important;
-      color: #777 !important;
-      font-style: italic;
-    }
-
-    .pricing {
-      background: #1c1c1c;
-      padding: 80px 8%;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      max-width: 1200px;
-    }
-
-    .price-card {
-      background: #343434;
-      padding: 32px;
-    }
-
-    .price-card h3 {
-      font-size: 22px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      font-size: 30px;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
-
-    .price-card p {
-      color: #ccc;
-      line-height: 1.65;
-    }
-
-    .waiver {
-      background: #f4f1ea;
-      color: #111;
-      padding: 80px 8%;
-    }
-
-    .waiver > p {
-      max-width: 900px;
-      color: #555;
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 25px;
-    }
-
-    .btn {
+    .btn,
+    .secondary-btn {
       display: inline-block;
       padding: 15px 23px;
-      background: #111;
-      color: white;
       text-decoration: none;
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 1px;
       text-transform: uppercase;
+    }
+
+    .btn {
+      background: white;
+      color: #111;
+      border: 2px solid white;
+    }
+
+    .secondary-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .intro {
+      background: #f4f1ea;
+      color: #111;
+      padding: 85px 8%;
+    }
+
+    .intro .section-label {
+      color: #777;
+    }
+
+    .intro h2,
+    .programs h2,
+    .coaches h2,
+    .cta h2 {
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: .98;
+      letter-spacing: -2px;
+      text-transform: uppercase;
       margin-bottom: 30px;
     }
 
-    .membership-box {
+    .intro-text {
       max-width: 900px;
-      margin-top: 15px;
-      padding-top: 25px;
-      border-top: 1px solid #ccc;
     }
 
-    .membership-box h3 {
-      text-transform: uppercase;
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-
-    .membership-box p {
-      font-size: 17px;
-      line-height: 1.65;
+    .intro-text p {
       color: #555;
+      font-size: 18px;
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .location-block {
+      margin-top: 38px;
+      padding-top: 28px;
+      border-top: 1px solid #ccc;
+      max-width: 900px;
+    }
+
+    .location-line {
+      font-weight: 900;
+      color: #111 !important;
+      margin-bottom: 10px !important;
+    }
+
+    .location-disclaimer {
+      font-size: 13px !important;
+      color: #777 !important;
+      line-height: 1.6 !important;
+    }
+
+    .waiver-note {
+      margin-top: 26px;
+      font-size: 14px !important;
+      color: #555 !important;
+      line-height: 1.7 !important;
+    }
+
+    .waiver-note a {
+      color: #111;
+      font-weight: bold;
+    }
+
+    .programs {
+      background: #111;
+      padding: 85px 8%;
+    }
+
+    .programs-header {
+      max-width: 800px;
+      margin-bottom: 42px;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .program-card {
+      background: #1c1c1c;
+      color: white;
+      text-decoration: none;
+      padding: 38px;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      background: #242424;
+    }
+
+    .program-card.featured {
+      grid-column: 1 / -1;
+      min-height: 330px;
+    }
+
+    .program-number {
+      color: #777;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+
+    .program-card h3 {
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .program-card p {
+      color: #bbb;
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 700px;
+    }
+
+    .program-card strong {
+      color: white;
+    }
+
+    .program-link {
+      margin-top: auto;
+      padding-top: 30px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .coaches {
+      background: #f4f1ea;
+      color: #111;
+      padding: 85px 8%;
+    }
+
+    .coaches .section-label {
+      color: #777;
+    }
+
+    .coach-subheading {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
+      margin: 45px 0 20px;
+    }
+
+    .coach-card {
+      background: white;
+      padding: 42px;
+      max-width: 1100px;
+    }
+
+    .coach-card h3 {
+      font-size: 34px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .coach-role {
+      color: #777;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .coach-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .coach-highlight {
+      background: #f4f1ea;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .coach-card p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .additional-coach {
+      margin-top: 18px;
+      color: #777;
+      font-size: 14px;
       font-style: italic;
-      margin-bottom: 7px;
     }
 
-    .membership-box a {
-      color: #111;
-      font-weight: bold;
-      text-decoration: underline;
+    .coach-divider {
+      height: 1px;
+      background: #ccc;
+      margin: 60px 0 0;
     }
 
-    .contact-link {
-      margin-top: 30px;
+    .clinician-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      align-items: stretch;
     }
 
-    .contact-link a {
-      color: #111;
-      font-weight: bold;
+    .clinician-card {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .clinician-photo {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .cj-shea-photo {
+      object-position: center top;
+    }
+
+    .clinician-content {
+      padding: 32px;
+    }
+
+    .clinician-content h3 {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .clinician-content p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      padding: 90px 8%;
+      background: #111;
+    }
+
+    .cta-content {
+      max-width: 850px;
+    }
+
+    .cta p {
+      color: #bbb;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .contact-details {
+      color: #888 !important;
+      font-size: 14px !important;
+      margin-bottom: 0 !important;
+    }
+
+    .contact-details a {
+      color: white;
       text-decoration: none;
     }
 
@@ -273,7 +427,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      color: #888;
+      color: #777;
       font-size: 13px;
     }
 
@@ -287,18 +441,46 @@
         display: none;
       }
 
-      .hero,
-      .details,
-      .how-it-works,
-      .pricing,
-      .waiver {
+      .hero {
+        min-height: 560px;
+        padding-left: 6%;
+        padding-right: 6%;
+        background-position: center top;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .intro,
+      .programs,
+      .coaches,
+      .cta {
         padding-left: 6%;
         padding-right: 6%;
       }
 
-      .detail-grid,
-      .pricing-grid {
+      .program-grid,
+      .clinician-grid {
         grid-template-columns: 1fr;
+      }
+
+      .program-card.featured {
+        grid-column: auto;
+      }
+
+      .coach-card {
+        padding: 28px;
+      }
+
+      .clinician-photo {
+        height: 440px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       footer {
@@ -316,162 +498,74 @@
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
       <a href="private-lessons.html">Private Lessons</a>
+      <a href="open-mat.html">Open Mat</a>
       <a href="clinics.html">Clinics</a>
     </div>
   </nav>
 
   <section class="hero">
-    <div class="eyebrow">Weekly Training</div>
+    <div class="eyebrow">Middletown, Connecticut</div>
 
     <h1>
-      Open Mat<br>
-      Mondays
+      Luth<br>
+      Wrestling<br>
+      Academy
     </h1>
 
-    <p>
-      An opportunity for those seeking additional mat time, looking for
-      guided instruction, and wanting a low-stakes environment to wrestle in.
-      All skill levels are welcome. Must be 6th grade or older. Adults
-      welcome.
+    <p class="hero-description">
+      Individualized, focused instruction.
     </p>
 
-    <div class="coming-soon">
-      Coming Soon — Check Back for Updates
+    <div class="hero-buttons">
+      <a href="#programs" class="btn">
+        Practice Availability
+      </a>
+
+      <a href="clinics.html" class="secondary-btn">
+        Upcoming Events
+      </a>
     </div>
   </section>
 
-  <section class="details">
-    <div class="section-label">Session Details</div>
-    <h2>Coming Soon.</h2>
+  <section class="intro">
+    <div class="section-label">Luth Wrestling Academy</div>
 
-    <div class="detail-grid">
+    <h2>
+      Focused Training.<br>
+      Individual Development.
+    </h2>
 
-      <div class="detail-card">
-        <div class="detail-label">Schedule</div>
-        <div class="detail-main">Monday Nights</div>
-        <div class="detail-sub">
-          Start date and weekly session time will be announced soon.
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-label">Location</div>
-        <div class="detail-main">Biddiscombe Wrestling Room</div>
-        <div class="detail-sub">
-          Wesleyan University · Middletown, Connecticut
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-label">Who</div>
-        <div class="detail-main">6th Grade &amp; Older</div>
-        <div class="detail-sub">
-          Wrestlers of all experience levels are welcome to come train.
-          New wrestlers welcome. Adults welcome.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="how-it-works">
-    <div class="section-label">How It Works</div>
-    <h2>Get Extra Work In.</h2>
-
-    <p>
-      Open Mat sessions will give wrestlers the freedom to wrestle with their
-      partners based on what they need most. One mat will be dedicated to a
-      guided practice, with another mat open for free drilling and wrestling.
-      A coach will be available throughout the session for feedback and
-      instruction. Guided practice will vary depending on the needs of the
-      group.
-    </p>
-
-    <p>
-      There will be no advance registration required. Simply complete the
-      required waiver before your first session.
-    </p>
-
-    <p class="supplemental-note">
-      *These sessions are not designed to replace weekly training with a
-      wrestler's team, but rather to provide an opportunity for wrestlers to
-      get extra work in, or for anyone interested in learning more about the
-      sport.
-    </p>
-
-    <p class="ciac-note">
-      *Under CIAC guidelines, wrestlers ARE permitted to receive supplemental
-      instruction at private clubs during their high school season, provided
-      the instruction is in addition to their high school team practices and
-      is not provided by a member of their high school coaching staff.
-    </p>
-  </section>
-
-  <section class="pricing">
-    <div class="section-label">Open Mat Pricing</div>
-    <h2>Simple Options.</h2>
-
-    <div class="pricing-grid">
-
-      <div class="price-card">
-        <h3>Single Session</h3>
-        <div class="price">$20</div>
-        <p>
-          Drop in for any Open Mat Monday session.
-        </p>
-      </div>
-
-      <div class="price-card">
-        <h3>4-Session Pass</h3>
-        <div class="price">$65</div>
-        <p>
-          Four Open Mat sessions for $16.25 per session.
-        </p>
-      </div>
-
-      <div class="price-card">
-        <h3>Private Lesson Benefit</h3>
-        <div class="price">Free</div>
-        <p>
-          Open Mat is free if you have booked a private lesson within the
-          past month.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="waiver">
-    <div class="section-label">Before You Arrive</div>
-    <h2>Complete Your Waiver.</h2>
-
-    <p>
-      There is no advance registration required for Open Mat. All wrestlers
-      must have a completed waiver on file before participating for the first
-      time. You may print and complete the waiver ahead of time or complete a
-      copy in person before your first session.
-    </p>
-
-    <a
-      href="USA-Wrestling-Waiver.pdf"
-      target="_blank"
-      rel="noopener"
-      class="btn"
-    >
-      View &amp; Print Waiver
-    </a>
-
-    <div class="membership-box">
-      <h3>USA Wrestling Membership &amp; Waiver Required</h3>
-
+    <div class="intro-text">
       <p>
-        A valid USA Wrestling membership and completed waiver are required
-        before participation.
+        We specialize in providing focused, individualized, supplemental
+        training in private lessons, small group sessions, and film review.
+        Additionally, we plan to offer a weekly open-mat practice for wrestlers
+        of all skill levels to have access to high-level coaching, and we will
+        also begin running clinics on specific techniques and skill sets
+        beginning in the Fall of 2026.
       </p>
 
       <p>
+        See below for our rates, availability, and additional information.
+      </p>
+
+      <div class="location-block">
+        <p class="location-line">
+          📍 Biddiscombe Wrestling Room · 161 Cross St, Middletown, CT
+        </p>
+
+        <p class="location-disclaimer">
+          *Luth Wrestling Academy is independently operated and is not a
+          program of Wesleyan University or Wesleyan Wrestling. Training
+          sessions are held in the Biddiscombe Wrestling Room.
+        </p>
+      </div>
+
+      <p class="waiver-note">
+        All wrestlers are required to have a valid USA Wrestling membership
+        and complete a waiver before participating.
+        <br>
         Don't have a USA Wrestling membership?
         <a
           href="https://www.usawmembership.com/"
@@ -480,9 +574,7 @@
         >
           Get one here.
         </a>
-      </p>
-
-      <p>
+        <br>
         View and print the required waiver
         <a
           href="USA-Wrestling-Waiver.pdf"
@@ -493,13 +585,236 @@
         </a>
       </p>
     </div>
+  </section>
 
-    <p class="contact-link">
-      Questions?
-      <a href="mailto:luthwrestling@gmail.com">
-        Email luthwrestling@gmail.com
+  <section class="programs" id="programs">
+    <div class="programs-header">
+      <div class="section-label">Ways To Train</div>
+      <h2>Find Your Training.</h2>
+    </div>
+
+    <div class="program-grid">
+
+      <a href="private-lessons.html" class="program-card featured">
+        <div class="program-number">01</div>
+
+        <h3>Private Lessons</h3>
+
+        <p>
+          We specialize in focused, individual development with our wrestlers.
+          Schedule private individual / small group lessons here. Click to see
+          rates &amp; availability.
+        </p>
+
+        <div class="program-link">
+          View Private Lessons →
+        </div>
       </a>
+
+      <a href="clinics.html" class="program-card">
+        <div class="program-number">02</div>
+
+        <h3>Upcoming Clinics</h3>
+
+        <p>
+          Click here to see information on any upcoming clinics, pricing, and
+          how to register. Clinics are a great way to hone in on a specific
+          skill, learn new tricks from different clinicians, and work with new
+          wrestlers!
+        </p>
+
+        <div class="program-link">
+          View Clinics →
+        </div>
+      </a>
+
+      <a href="open-mat.html" class="program-card">
+        <div class="program-number">03</div>
+
+        <h3>Open Mat Mondays</h3>
+
+        <p>
+          Our weekly open mat sessions will offer guided instruction,
+          additional mat time, and a low-stakes practice environment. All
+          skill levels are welcome, must be 5th grade or older. Adults
+          welcome.
+          <strong>Coming Soon — Check Back for Updates.</strong>
+        </p>
+
+        <div class="program-link">
+          View Open Mat →
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="coaches">
+    <div class="section-label">Our Coaches</div>
+
+    <h2>
+      Experienced<br>
+      Coaching.
+    </h2>
+
+    <div class="coach-subheading">
+      Private Lesson Coaches
+    </div>
+
+    <div class="coach-card">
+      <h3>Ryan Luth</h3>
+
+      <div class="coach-role">
+        Associate Head Coach · Wesleyan University
+      </div>
+
+      <div class="coach-highlights">
+        <div class="coach-highlight">3X All-American</div>
+        <div class="coach-highlight">101–11 Collegiate Record</div>
+        <div class="coach-highlight">220–19 High School Record</div>
+      </div>
+
+      <p>
+        Ryan Luth is the Associate Head Coach at Wesleyan University. Prior
+        to arriving at Wesleyan, he spent one season as an assistant coach
+        at Washington and Lee University, his alma mater. Across three
+        seasons of collegiate coaching, Coach Luth has helped develop four
+        NCAA Division III national qualifiers, two All-Americans, and more
+        than 10 regional placewinners. He has also worked privately with
+        multiple Connecticut state champions, New England placewinners, and
+        high school All-Americans.
+      </p>
+
+      <p>
+        As a collegiate wrestler at Washington and Lee, Luth was a
+        three-time All-American at 157 pounds, placing fifth nationally in
+        2023, fourth in 2022, and earning First-Team All-America honors in
+        2020. He was also a two-time regional champion and three-time
+        conference champion. Luth finished his collegiate career with a
+        101–11 record and was named Washington and Lee's Athlete of the Year
+        in both 2022 and 2023. He also received the Pres Brown Most Valuable
+        Senior Male Athlete Award and was a three-time NWCA Academic
+        All-American.
+      </p>
+
+      <p>
+        A 2018 graduate of Joseph A. Foran High School, Luth finished his
+        high school career with a 220–19 record, setting the Connecticut high
+        school record for career wins. He was a three-time NHSCA All-American,
+        two-time New England Champion, two-time State Open Champion, two-time
+        Class M Champion, and four-time Southern Connecticut Conference
+        Champion. He was named the State Open Most Outstanding Wrestler in
+        2017 and Class M Most Outstanding Wrestler in 2018 and earned Scholar
+        All-American honors in all four years of high school.
+      </p>
+    </div>
+
+    <p class="additional-coach">
+      Additional Private Lesson Coach Schedule and Info Coming Soon
     </p>
+
+    <div class="coach-divider"></div>
+
+    <div class="coach-subheading">
+      Clinician Coaches
+    </div>
+
+    <div class="clinician-grid">
+
+      <div class="clinician-card">
+        <img
+          src="cj-luth.jpg"
+          alt="C.J. Luth"
+          class="clinician-photo"
+        >
+
+        <div class="clinician-content">
+          <h3>C.J. Luth</h3>
+
+          <p>
+            C.J. Luth is a Doctor of Physical Therapy specializing in
+            orthopedic and sports medicine in private practice. He wrestled
+            collegiately at the University of Southern Maine, where he
+            compiled 117 career wins. He was a two-time Northeast Region
+            placewinner, finishing fifth on two occasions, and was a
+            four-time NWCA Scholar All-American.
+          </p>
+
+          <p>
+            In high school, Luth compiled a 155–21 career record. He was a
+            Connecticut State Open Champion, two-time Class M State Champion,
+            and placed fourth at the New England High School Championships.
+          </p>
+        </div>
+      </div>
+
+      <div class="clinician-card">
+        <img
+          src="cj-shea.jpg"
+          alt="C.J. Shea"
+          class="clinician-photo cj-shea-photo"
+        >
+
+        <div class="clinician-content">
+          <h3>C.J. Shea</h3>
+
+          <p>
+            C.J. Shea was a two-time captain at Wesleyan University and a
+            three-time NCAA Northeast Regional placewinner. He won the
+            Northeast Region championship, was voted the tournament's Most
+            Outstanding Wrestler, and went on to place seventh at the NCAA
+            Division III Championships in 2025, earning All-America honors.
+          </p>
+
+          <p>
+            Shea was also a three-time NWCA Academic All-American and received
+            Wesleyan University's Maynard Award, presented annually to the
+            school's top senior men's and women's athletes. Prior to Wesleyan,
+            Shea attended Greens Farms Academy, where he was a National Prep
+            All-American as a senior.
+          </p>
+
+          <p>
+            Outside of wrestling, Shea owns and operates Sheascapes, a
+            sustainable landscaping business.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content">
+      <div class="section-label">Get Started</div>
+
+      <h2>Let's Work.</h2>
+
+      <p>
+        Reach out to schedule a lesson or ask any questions about training.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="private-lessons.html" class="btn">
+          Schedule A Lesson
+        </a>
+
+        <a
+          href="mailto:luthwrestling@gmail.com"
+          class="secondary-btn"
+        >
+          Questions? Contact Us Here
+        </a>
+      </div>
+
+      <p class="contact-details">
+        <a href="tel:2038156699">203-815-6699</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:luthwrestling@gmail.com">
+          luthwrestling@gmail.com
+        </a>
+      </p>
+    </div>
   </section>
 
   <footer>
@@ -509,12 +824,12 @@
         luthwrestling@gmail.com
       </a>
       ·
-      <a href="tel:2038156699">
-        203-815-6699
-      </a>
+      <a href="tel:2038156699">203-815-6699</a>
     </div>
 
-    <div>Middletown, Connecticut</div>
+    <div>
+      Middletown, Connecticut
+    </div>
   </footer>
 
 </body>
