@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,35 +147,52 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 25px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 22px;
     }
 
     .price-option {
       background: #f4f1ea;
-      padding: 22px;
+      padding: 25px;
     }
 
     .price-label {
       color: #777;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 900;
-      letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
 
     .price {
-      font-size: 28px;
+      font-size: 34px;
       font-weight: 900;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .price-detail {
       color: #666;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    .clinic-details {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .clinic-details p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .clinic-details strong {
+      color: #111;
     }
 
     .register-link {
@@ -206,50 +224,37 @@
       font-size: 19px;
     }
 
-    .additional-clinics {
-      margin-top: 32px;
-      color: #777;
-      font-size: 15px;
-      font-style: italic;
+    .registration {
+      background: #f4f1ea;
+      color: #111;
+      padding: 80px 8%;
     }
 
-    .registration {
-      background: #1c1c1c;
-      padding: 80px 8%;
-      color: white;
+    .registration .section-label,
+    .requirements .section-label {
+      color: #777;
     }
 
     .registration h2 {
       font-size: clamp(36px, 5vw, 58px);
-      line-height: .98;
       text-transform: uppercase;
       letter-spacing: -2px;
-      margin-bottom: 30px;
-      color: white;
+      margin-bottom: 25px;
     }
 
-    .registration-intro {
-      max-width: 850px;
-      color: #ccc;
-      font-size: 18px;
+    .registration p {
+      max-width: 900px;
+      color: #555;
+      font-size: 17px;
       line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    .registration-note {
-      max-width: 850px;
-      color: #aaa;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      font-style: italic;
+      margin-bottom: 20px;
     }
 
     .contact-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 25px;
+      margin-top: 28px;
     }
 
     .btn,
@@ -264,52 +269,46 @@
     }
 
     .btn {
-      background: white;
-      color: #111;
-      border: 2px solid white;
+      background: #111;
+      color: white;
+      border: 2px solid #111;
     }
 
     .secondary-btn {
       background: transparent;
-      color: white;
-      border: 2px solid white;
+      color: #111;
+      border: 2px solid #111;
     }
 
-    .contact-info {
-      color: #aaa;
-      line-height: 1.8;
-    }
-
-    .contact-info a {
-      color: white;
-      text-decoration: none;
+    .registration-note {
+      margin-top: 28px;
+      font-size: 14px !important;
+      font-style: italic;
+      color: #777 !important;
     }
 
     .requirements {
-      background: #f4f1ea;
+      background: white;
       color: #111;
       padding: 80px 8%;
     }
 
-    .requirements .section-label {
-      color: #777;
-    }
-
     .membership-box {
-      max-width: 900px;
+      max-width: 950px;
     }
 
     .membership-box h3 {
+      font-size: 22px;
       text-transform: uppercase;
-      font-size: 20px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .membership-box p {
       font-size: 17px;
       line-height: 1.65;
       color: #555;
-      margin-bottom: 8px;
+      font-style: italic;
+      margin-bottom: 12px;
     }
 
     .membership-box a {
@@ -409,11 +408,40 @@
 
     <div class="clinic-list">
 
-      <!-- LEG RIDING / TOP TURNS CLINIC -->
       <div class="clinic-card">
-        <div class="clinic-date">
-          October 25, 2026
+        <div class="clinic-date">Date To Be Announced</div>
+
+        <h3>Neutral Attacks Clinic</h3>
+
+        <div class="clinicians">
+          With Coach Ryan Luth &amp; Coach C.J. Shea
         </div>
+
+        <p class="clinic-description">
+          Develop your neutral offense with a focus on effective setups,
+          attacks, and finishes. This clinic will focus on the details
+          needed to create scoring opportunities and finish attacks
+          against tough opponents.
+        </p>
+
+        <div class="clinic-details">
+          <p><strong>Date:</strong> To Be Announced</p>
+          <p><strong>Time:</strong> To Be Announced</p>
+          <p><strong>Registration:</strong> Coming Soon</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="clinics" style="background:#f4f1ea;">
+    <div class="section-label">Past Clinics</div>
+
+    <div class="clinic-list">
+
+      <div class="clinic-card">
+        <div class="clinic-date">October 25, 2026</div>
 
         <h3>Leg Riding / Top Turns Clinic</h3>
 
@@ -426,162 +454,83 @@
           positioning with the two Coach Luths! Both coaches use different
           leg riding positions and techniques that helped them become dominant
           wrestlers on top. A great opportunity to expand your top game.
-          <br><br>
-          <strong>Session 1:</strong> 10:00–11:30 AM
-          <br>
-          <strong>Session 2:</strong> 12:00–1:30 PM
         </p>
 
-        <div class="pricing-grid">
-
-          <div class="price-option">
-            <div class="price-label">Standard Registration</div>
-            <div class="price">$80</div>
-
-            <div class="price-detail">
-              Standard individual clinic registration. Walk-ins are accepted
-              if space is available.
-            </div>
-          </div>
-
-          <div class="price-option">
-            <div class="price-label">Bring-A-Friend Rate</div>
-            <div class="price">$40 Each</div>
-
-            <div class="price-detail">
-              Register with a friend and both wrestlers receive the
-              discounted rate.
-            </div>
-          </div>
-
+        <div class="clinic-details">
+          <p><strong>Date:</strong> Sunday, October 25, 2026</p>
+          <p><strong>Session 1:</strong> 10:00–11:30 AM</p>
+          <p><strong>Session 2:</strong> 12:00–1:30 PM</p>
+          <p><strong>Status:</strong> Completed</p>
         </div>
 
-        <div class="register-link featured-register">
-          <strong>Ready to register?</strong>
-          <a
-            href="https://forms.gle/g9vK8HU1T9rVEkzT9"
-            target="_blank"
-            rel="noopener"
-          >
-            REGISTER ONLINE HERE
-          </a>
-        </div>
-      </div>
-
-      <!-- NEUTRAL ATTACKS CLINIC -->
-      <div class="clinic-card">
-        <div class="clinic-date">
-          TBD
-        </div>
-
-        <h3>Neutral Attacks Clinic</h3>
-
-        <div class="clinicians">
-          With Coach Ryan Luth &amp; Coach C.J. Shea
-        </div>
-
-        <p class="clinic-description">
-          Coach Luth and Coach Shea show the setups, attacks, and finishes
-          that helped them reach All-American status.
-        </p>
-
-        <div class="pricing-grid">
-
-          <div class="price-option">
-            <div class="price-label">Registration</div>
-            <div class="price">TBD</div>
-
-            <div class="price-detail">
-              Registration pricing will be announced soon.
-            </div>
-          </div>
-
-        </div>
-
-        <div class="register-link">
-          <strong>Ready to register?</strong>
-          <a href="#registration">
-            See below for registration information ↓
-          </a>
-        </div>
       </div>
 
     </div>
-
-    <p class="additional-clinics">
-      Additional clinics to be added in the future.
-    </p>
   </section>
 
-  <section class="registration" id="registration">
-    <div class="section-label">Registration</div>
+  <section class="registration">
+    <div class="section-label">How To Register</div>
 
-    <h2>How To Register.</h2>
+    <h2>Join An Upcoming Clinic.</h2>
 
-    <p class="registration-intro">
-      <a
-        href="https://forms.gle/g9vK8HU1T9rVEkzT9"
-        target="_blank"
-        rel="noopener"
-        class="btn"
-      >
-        Register Online Here
-      </a>
+    <p>
+      Registration information for future clinics will be posted here
+      as new clinic dates are announced.
     </p>
 
+    <p>
+      Interested in attending a future clinic or have questions?
+      Contact us directly.
+    </p>
+
+    <div class="contact-buttons">
+      <a href="mailto:luthwrestling@gmail.com?subject=Clinic%20Inquiry" class="btn">
+        Email Us
+      </a>
+      <a href="tel:2038156699" class="secondary-btn">
+        Call Us
+      </a>
+    </div>
+
     <p class="registration-note">
-      Walk-ins accepted if space is available. Payment can be made by cash,
-      check made payable to Ryan Luth, Venmo (@ryan_luth), or Zelle
-      (203-815-6699). A valid USA Wrestling membership is required. See below
-      for the waiver and USA Wrestling membership links.
+      A valid USA Wrestling membership and completed waiver are required
+      for participation. See below for more information.
     </p>
   </section>
 
   <section class="requirements">
-  <div class="section-label">Before You Participate</div>
+    <div class="section-label">Before You Participate</div>
 
-  <div class="membership-box">
-    <h3>USA Wrestling Membership &amp; Waiver Required</h3>
+    <div class="membership-box">
+      <h3>USA Wrestling Membership &amp; Waiver Required</h3>
 
-    <p>
-      A valid USA Wrestling membership and completed waiver are required
-      before participation.
-    </p>
+      <p>
+        A valid USA Wrestling membership and completed waiver are required
+        before participation.
+      </p>
 
-    <p>
-      Don't have a USA Wrestling membership?
-      <a
-        href="https://www.usawmembership.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Get one here.
-      </a>
-    </p>
+      <p>
+        Don't have a USA Wrestling membership?
+        <a href="https://www.usawmembership.com/" target="_blank" rel="noopener">
+          Get one here.
+        </a>
+      </p>
 
-    <p>
-      Complete the required waiver
-      <a
-        href="https://forms.gle/ZjLTe2W2pYq9t7CQ8"
-        target="_blank"
-        rel="noopener"
-      >
-        online here.
-      </a>
-    </p>
+      <p>
+        Complete the required waiver
+        <a href="https://forms.gle/ZjLTe2W2pYq9t7CQ8" target="_blank" rel="noopener">
+          online here.
+        </a>
+      </p>
 
-    <p>
-      Prefer a physical copy? View and print the waiver
-      <a
-        href="USA-Wrestling-Waiver.pdf"
-        target="_blank"
-        rel="noopener"
-      >
-        here.
-      </a>
-    </p>
-  </div>
-</section>
+      <p>
+        Prefer a physical copy? View and print the waiver
+        <a href="USA-Wrestling-Waiver.pdf" target="_blank" rel="noopener">
+          here.
+        </a>
+      </p>
+    </div>
+  </section>
 
   <footer>
     <div>
@@ -595,9 +544,7 @@
       </a>
     </div>
 
-    <div>
-      Middletown, Connecticut
-    </div>
+    <div>Middletown, Connecticut</div>
   </footer>
 
 </body>
