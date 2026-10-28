@@ -102,6 +102,48 @@
       margin-bottom: 28px;
     }
 
+    /* COMPACT PAST CLINICS SECTION */
+
+    .past-clinics {
+      background: #f4f1ea;
+      padding-top: 38px;
+      padding-bottom: 32px;
+    }
+
+    .past-clinics .section-label {
+      margin-bottom: 16px;
+    }
+
+    .past-clinics .clinic-list {
+      max-width: 780px;
+    }
+
+    .past-clinics .clinic-card {
+      padding: 24px 28px;
+      margin-bottom: 0;
+    }
+
+    .past-clinics .clinic-date {
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+
+    .past-clinics .clinic-card h3 {
+      font-size: clamp(22px, 3vw, 29px);
+      margin-bottom: 6px;
+    }
+
+    .past-clinics .clinicians {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .past-clinics .clinic-description {
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
     .clinic-list {
       max-width: 1100px;
     }
@@ -147,52 +189,35 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-bottom: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 25px;
     }
 
     .price-option {
       background: #f4f1ea;
-      padding: 25px;
+      padding: 22px;
     }
 
     .price-label {
       color: #777;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
-      text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 10px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .price {
-      font-size: 34px;
+      font-size: 28px;
       font-weight: 900;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .price-detail {
       color: #666;
       font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .clinic-details {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-    }
-
-    .clinic-details p {
-      color: #555;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 6px;
-    }
-
-    .clinic-details strong {
-      color: #111;
+      line-height: 1.5;
     }
 
     .register-link {
@@ -212,49 +237,50 @@
       text-underline-offset: 3px;
     }
 
-    .featured-register {
-      font-size: 19px;
-    }
-
-    .featured-register strong {
-      font-weight: 900;
-    }
-
-    .featured-register a {
-      font-size: 19px;
+    .additional-clinics {
+      margin-top: 32px;
+      color: #777;
+      font-size: 15px;
+      font-style: italic;
     }
 
     .registration {
-      background: #f4f1ea;
-      color: #111;
+      background: #1c1c1c;
       padding: 80px 8%;
-    }
-
-    .registration .section-label,
-    .requirements .section-label {
-      color: #777;
+      color: white;
     }
 
     .registration h2 {
       font-size: clamp(36px, 5vw, 58px);
+      line-height: .98;
       text-transform: uppercase;
       letter-spacing: -2px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      color: white;
     }
 
-    .registration p {
-      max-width: 900px;
-      color: #555;
-      font-size: 17px;
+    .registration-intro {
+      max-width: 850px;
+      color: #ccc;
+      font-size: 18px;
       line-height: 1.7;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .registration-note {
+      max-width: 850px;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-style: italic;
     }
 
     .contact-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-bottom: 25px;
     }
 
     .btn,
@@ -269,46 +295,52 @@
     }
 
     .btn {
-      background: #111;
-      color: white;
-      border: 2px solid #111;
+      background: white;
+      color: #111;
+      border: 2px solid white;
     }
 
     .secondary-btn {
       background: transparent;
-      color: #111;
-      border: 2px solid #111;
+      color: white;
+      border: 2px solid white;
     }
 
-    .registration-note {
-      margin-top: 28px;
-      font-size: 14px !important;
-      font-style: italic;
-      color: #777 !important;
+    .contact-info {
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
     }
 
     .requirements {
-      background: white;
+      background: #f4f1ea;
       color: #111;
       padding: 80px 8%;
     }
 
+    .requirements .section-label {
+      color: #777;
+    }
+
     .membership-box {
-      max-width: 950px;
+      max-width: 900px;
     }
 
     .membership-box h3 {
-      font-size: 22px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      font-size: 20px;
+      margin-bottom: 15px;
     }
 
     .membership-box p {
       font-size: 17px;
       line-height: 1.65;
       color: #555;
-      font-style: italic;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .membership-box a {
@@ -405,96 +437,57 @@
 
   <section class="clinics">
     <div class="section-label">Upcoming Clinics</div>
-
     <div class="clinic-list">
-
       <div class="clinic-card">
-        <div class="clinic-date">Date To Be Announced</div>
-
-        <h3>Neutral Attacks Clinic</h3>
-
-        <div class="clinicians">
-          With Coach Ryan Luth &amp; Coach C.J. Shea
-        </div>
-
+        <div class="clinic-date">Sunday, November 22, 2026</div>
+        <h3>Neutral Attacks: Set-ups and Finishes</h3>
+        <div class="clinicians">With Coach Ryan Luth &amp; Coach C.J. Shea</div>
         <p class="clinic-description">
           Develop your neutral offense with a focus on effective setups,
-          attacks, and finishes. This clinic will focus on the details
-          needed to create scoring opportunities and finish attacks
-          against tough opponents.
+          attacks, and finishes. This clinic will focus on the neutral
+          scores that helped Coach Luth and Coach Shea become All-Americans.
         </p>
-
-        <div class="clinic-details">
-          <p><strong>Date:</strong> To Be Announced</p>
-          <p><strong>Time:</strong> To Be Announced</p>
-          <p><strong>Registration:</strong> Coming Soon</p>
+        <div class="register-link">
+          <strong>Sunday, November 22, 2026</strong><br>
+          Session 1: 10:00–11:30 AM<br>
+          Session 2: 12:00–1:30 PM<br><br>
+          <strong>Registration details coming soon.</strong>
         </div>
-
       </div>
-
     </div>
+    <p class="additional-clinics">Additional clinics to be announced.</p>
   </section>
 
-  <section class="clinics" style="background:#f4f1ea;">
+  <section class="clinics past-clinics">
     <div class="section-label">Past Clinics</div>
-
     <div class="clinic-list">
-
       <div class="clinic-card">
-        <div class="clinic-date">October 25, 2026</div>
-
+        <div class="clinic-date">October 25, 2026 · Completed</div>
         <h3>Leg Riding / Top Turns Clinic</h3>
-
-        <div class="clinicians">
-          With Coach Ryan Luth &amp; Coach C.J. Luth
-        </div>
-
+        <div class="clinicians">With Coach Ryan Luth &amp; Coach C.J. Luth</div>
         <p class="clinic-description">
-          Elevate your game by learning the ins and outs of leg riding
-          positioning with the two Coach Luths! Both coaches use different
-          leg riding positions and techniques that helped them become dominant
-          wrestlers on top. A great opportunity to expand your top game.
+          A two-session clinic focused on leg riding positioning, control,
+          and turns from the top position.
         </p>
-
-        <div class="clinic-details">
-          <p><strong>Date:</strong> Sunday, October 25, 2026</p>
-          <p><strong>Session 1:</strong> 10:00–11:30 AM</p>
-          <p><strong>Session 2:</strong> 12:00–1:30 PM</p>
-          <p><strong>Status:</strong> Completed</p>
-        </div>
-
       </div>
-
     </div>
   </section>
 
-  <section class="registration">
-    <div class="section-label">How To Register</div>
-
-    <h2>Join An Upcoming Clinic.</h2>
-
-    <p>
-      Registration information for future clinics will be posted here
-      as new clinic dates are announced.
+  <section class="registration" id="registration">
+    <div class="section-label">Registration</div>
+    <h2>How To Register.</h2>
+    <p class="registration-intro">
+      Registration for upcoming clinics will be available here once dates
+      are announced. For questions about future clinics, contact us below.
     </p>
-
-    <p>
-      Interested in attending a future clinic or have questions?
-      Contact us directly.
-    </p>
-
     <div class="contact-buttons">
-      <a href="mailto:luthwrestling@gmail.com?subject=Clinic%20Inquiry" class="btn">
-        Email Us
-      </a>
-      <a href="tel:2038156699" class="secondary-btn">
-        Call Us
-      </a>
+      <a href="tel:2038156699" class="btn">Call Us</a>
+      <a href="sms:2038156699" class="secondary-btn">Text Us</a>
+      <a href="mailto:luthwrestling@gmail.com?subject=Clinic%20Inquiry" class="secondary-btn">Email Us</a>
     </div>
-
-    <p class="registration-note">
-      A valid USA Wrestling membership and completed waiver are required
-      for participation. See below for more information.
+    <p class="contact-info">
+      <strong>Phone:</strong> <a href="tel:2038156699">203-815-6699</a><br>
+      <strong>Email:</strong> <a href="mailto:luthwrestling@gmail.com">luthwrestling@gmail.com</a>
     </p>
   </section>
 
@@ -511,7 +504,11 @@
 
       <p>
         Don't have a USA Wrestling membership?
-        <a href="https://www.usawmembership.com/" target="_blank" rel="noopener">
+        <a
+          href="https://www.usawmembership.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Get one here.
         </a>
       </p>
@@ -525,7 +522,11 @@
 
       <p>
         Prefer a physical copy? View and print the waiver
-        <a href="USA-Wrestling-Waiver.pdf" target="_blank" rel="noopener">
+        <a
+          href="USA-Wrestling-Waiver.pdf"
+          target="_blank"
+          rel="noopener"
+        >
           here.
         </a>
       </p>
@@ -544,7 +545,9 @@
       </a>
     </div>
 
-    <div>Middletown, Connecticut</div>
+    <div>
+      Middletown, Connecticut
+    </div>
   </footer>
 
 </body>
